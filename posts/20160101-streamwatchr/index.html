@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamwatchr — Inside the world's playlist</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20160101-streamwatchr/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                        <a href="../../research/">Research</a>
+                    
+                        <a href="../../highlights/">Highlights</a>
+                    
+                        <a href="../../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Streamwatchr — Inside the world's playlist</h1>
+
+
+    
+        <h4>Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke</h4>
+    
+
+
+
+<h5>01 January 2016</h5>
+
+
+<h5><b>Keywords:</b> social media, music, named entity linking, lyrics extraction, real-time trends</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>Streamwatchr (2013–2016), developed at the University of Amsterdam, leveraged machine learning and named entity extraction to track global music listening behavior in real time through tweets. It offered features like Top-100 charts, interactive maps, and a “radio” stream mode driven by a dynamic recommender system. Using Python and MongoDB, it processed over 438 million tweets, identified 660,941 artists, and linked them to MusicBrainz and YouTube videos. This innovative blend of analytics and entity linking earned it a spot in the Dutch delegation at South by Southwest (SXSW).</p>
+<p>Streamwatchr (2013&ndash;2016) was a web application developed at the University of Amsterdam, by Wouter Weerkamp, Maarten de Rijke, and myself. Streamwatchr monitored the Twitter feed for #nowplaying, and  tracked how people interacted with songs, artists, albums, in real-time. In its latest version it also identified which parts of the lyrics were the most sung along!</p>
+<p>Streamwatchr’s innovative approach earned it a place in the Dutch delegation for innovation at the internationally renowned South by Southwest (SXSW) festival.</p>
+<figure>
+    <a href="https://www.youtube.com/watch?v=A3qrUfRBMt4"><img src="https://img.youtube.com/vi/A3qrUfRBMt4/0.jpg" title="Video demo of Streamwatchr on YouTube."></img></a>
+    <figcaption>Screencast of Streamtchr on YouTube. The video covers all the features of the platform.
+    <figcaption>
+</figure>
+
+<p>Streamwatchr provided unique insights into global music listening behavior through features such as Top-100 charts, interactive maps, and a “radio” stream mode. The radio stream played a sequence of YouTube videos, with each song following the next based on the probability of them being played together. This was achieved by linking identified songs to YouTube videos and generating playlists driven by a recommender system. Behind the scenes, the system utilized a directed graph, where nodes represented songs, and edge weights encoded the likelihood of transitioning from one song to another. These weights were dynamically updated with every incoming tweet.</p>
+<p>The engineering behind Streamwatchr was equally groundbreaking [<a href="#1">1</a>]. It collected music-related tweets in real time, extracted song and artist information, and mapped them to MusicBrainz, a comprehensive music database, and corresponding YouTube video clips. Every aspect of Streamwatchr, from popularity charts and trending music to song recommendations and analytics, was refreshed with each new tweet, ensuring a dynamic and up-to-date user experience.</p>
+<p>Streamwatchr leveraged a tech stack of Python and MongoDB for analytics and recommendations. Its real-time capabilities were powered by efficient data structures and algorithms that minimized the computational overhead required for updates, delivering a seamless and responsive experience.</p>
+<p>The millions of tweets and the hundreds of thousands of artists that Streamwatchr has listened to over the years have been distilled to a handful of noteworthy factoids:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Factoid</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">tweets listened</td>
+<td>438,225,941</td>
+</tr>
+<tr>
+<td style="text-align: right;">artists seen</td>
+<td>660,941</td>
+</tr>
+<tr>
+<td style="text-align: right;">most popular song</td>
+<td>Passenger – Let Her Go, 196,986 times</td>
+</tr>
+<tr>
+<td style="text-align: right;">most sung along song</td>
+<td>John Legend – All of Me, 541 times</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id='1'>[1]: Wouter Weerkamp, Manos Tsagkias, and Maarten de Rijke. <em>Inside the world&rsquo;s playlist</em>. In International Conference of Knowledge Management (ICKM) 2013. <a href="https://dl.acm.org/doi/abs/10.1145/2505515.2508216">ACM Library</a>; <a href="/pdf/cikm2013-streamwatchr-demo.pdf">PDF</a></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>Before waving goodbye, we would like to take a moment and extend a big thank you to everyone who has been involved with 904Labs, directly or indirectly: Our customers, engineers, sales people, university, mentors, shareholders, network, and last, but not least, our families and friends who’ve been very supportive throughout this entire journey. It’s been a fun ride but not always easy. We wouldn’t have made it so far without their support. Thank you!</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">9.81% similar</span>
+                <span>— <a href="/posts/20191117-goodbye-904labs/">904Labs: Goodbye and thanks for all the clicks!</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>This year I talked at the industry track where I shared my experiences from running a search startup in the Netherlands. I received positive feedback, and it was good to catch up with old friends and meet new people. If you want a short recap from the latest and greatest trends in search technology, read on my summary on 904Labs blog.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">9.32% similar</span>
+                <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>/// figure-caption &ldquo;Detecting Algorithmic Discrimination&rdquo; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands. ///</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">9.08% similar</span>
+                <span>— <a href="/posts/20161210-dir/">Attending DIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>During a three-week A/B test we&rsquo;ve shown a 38% improvement in revenue and a 34% increase in conversion rate compared to the in-house Apache Solr search engine. This shows once more that adding A.I. to your search engine really makes a difference! Read the full story here.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">7.45% similar</span>
+                <span>— <a href="/posts/20171104-another-historical-moment-904labs/">Another historical moment for 904Labs</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Our work has been published at ECIR 2012, and it has been awarded the best paper award.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">5.37% similar</span>
+                <span>— <a href="/highlights/">Highlights</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>MyYard (WasteLogics since 2013) is a U.K.-based software company that offers entreprise resource planning (ERP) suite for waste management. I co-founded MyYard in 2005, and I was involved in designing and engineering the MyYard software until 2007. MyYard was the first in its kind to be offered in the cloud with a pay-as-you-go business model–business properties that still keep it ahead of the curve.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">3.79% similar</span>
+                <span>— <a href="/ventures/">Ventures</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

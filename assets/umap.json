@@ -2,139 +2,157 @@
     {
         "slug": "ventures/",
         "title": "Ventures",
-        "x": 4.285643577575684,
-        "y": -0.0783952921628952
+        "x": 7.734342098236084,
+        "y": 6.095925807952881
     },
     {
         "slug": "posts/20200622-sigir-forum-ecommerce/",
         "title": "Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations",
-        "x": 7.159541606903076,
-        "y": 1.4803402423858643
+        "x": 3.950485944747925,
+        "y": 7.357687950134277
     },
     {
         "slug": "posts/20180330-ecir2018/",
         "title": "Talk at ECIR 2018 Industry day",
-        "x": 6.823066711425781,
-        "y": -1.494349479675293
+        "x": 5.0471649169921875,
+        "y": 4.806369304656982
     },
     {
         "slug": "posts/20210214-icassp/",
         "title": "Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants",
-        "x": 3.022177219390869,
-        "y": 0.0687275305390358
+        "x": 7.317343711853027,
+        "y": 5.10250997543335
     },
     {
         "slug": "posts/20180211-emakina/",
         "title": "Talk at A.I. for Commerce meetup",
-        "x": 6.298110008239746,
-        "y": -1.8479443788528442
+        "x": 5.208155632019043,
+        "y": 4.077305316925049
+    },
+    {
+        "slug": "posts/20160101-streamwatchr/",
+        "title": "Streamwatchr — Inside the world's playlist",
+        "x": 5.303792953491211,
+        "y": 6.581789493560791
     },
     {
         "slug": "posts/20180618-query-engine-upgrade/",
         "title": "New Version for 904Labs Query Intent Engine",
-        "x": 5.452980995178223,
-        "y": 0.950200080871582
+        "x": 6.3548688888549805,
+        "y": 7.219937801361084
     },
     {
         "slug": "posts/20161210-sigir/",
         "title": "Presenting at the Industry Day at SIGIR 2016",
-        "x": 6.707949161529541,
-        "y": 2.083106517791748
+        "x": 3.722202777862549,
+        "y": 6.586819171905518
     },
     {
         "slug": "research/",
         "title": "Research",
-        "x": 7.39645528793335,
-        "y": 0.5988268852233887
+        "x": 4.51619815826416,
+        "y": 7.272703647613525
     },
     {
         "slug": "posts/20180702-aiexpo/",
         "title": "Exhibiting at A.I. Expo Europe 2018",
-        "x": 7.019825458526611,
-        "y": -2.711332082748413
+        "x": 4.684402942657471,
+        "y": 3.5966477394104004
     },
     {
         "slug": "posts/20170418-historical-moment-904labs/",
         "title": "A historical moment for 904Labs",
-        "x": 6.580621242523193,
-        "y": 0.9381412863731384
+        "x": 4.65349817276001,
+        "y": 6.895945072174072
     },
     {
         "slug": "posts/20200722-sigir2020/",
         "title": "Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants",
-        "x": 2.8138771057128906,
-        "y": -0.4764144718647003
+        "x": 7.4518537521362305,
+        "y": 5.40170955657959
     },
     {
         "slug": "posts/20180308-frankfurt/",
         "title": "Talk at Frankfurt Data Science meetup",
-        "x": 7.585874080657959,
-        "y": -2.5995395183563232
+        "x": 3.8134241104125977,
+        "y": 3.4006547927856445
+    },
+    {
+        "slug": "posts/20191118-joining-apple/",
+        "title": "Joining Siri at Apple",
+        "x": 3.4366815090179443,
+        "y": 4.514960765838623
     },
     {
         "slug": "posts/20191117-goodbye-904labs/",
         "title": "904Labs: Goodbye and thanks for all the clicks!",
-        "x": 4.997281074523926,
-        "y": 0.3206601142883301
+        "x": 6.69437313079834,
+        "y": 6.373290538787842
     },
     {
         "slug": "posts/20171213-ams-city/",
         "title": "Talk at Amsterdam City A.I. Event",
-        "x": 7.4784064292907715,
-        "y": -3.176321268081665
+        "x": 4.266123294830322,
+        "y": 3.1096248626708984
     },
     {
         "slug": "posts/20190718-ecommerce-workshop/",
         "title": "Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce",
-        "x": 6.273534774780273,
-        "y": 1.762595295906067
+        "x": 3.315640687942505,
+        "y": 7.006298065185547
     },
     {
         "slug": "posts/20171021-ai2future/",
         "title": "Keynote speech at AI2Future",
-        "x": 6.352138519287109,
-        "y": -3.0946152210235596
+        "x": 3.9862706661224365,
+        "y": 4.3332929611206055
     },
     {
         "slug": "posts/20180618-query-engine/",
         "title": "What is a Query Intent/Understanding engine?",
-        "x": 5.50629997253418,
-        "y": 1.4938973188400269
+        "x": 6.7632060050964355,
+        "y": 7.5766143798828125
     },
     {
         "slug": "posts/20180601-techloop/",
         "title": "Talk at TECH Talks Amsterdam",
-        "x": 6.930183410644531,
-        "y": -3.451533317565918
+        "x": 4.0190043449401855,
+        "y": 3.7728047370910645
     },
     {
         "slug": "posts/20171104-another-historical-moment-904labs/",
         "title": "Another historical moment for 904Labs",
-        "x": 6.7367095947265625,
-        "y": -0.292117714881897
+        "x": 5.39811897277832,
+        "y": 5.848183631896973
     },
     {
         "slug": "highlights/",
         "title": "Highlights",
-        "x": 6.210453510284424,
-        "y": 0.3792237937450409
+        "x": 5.488895416259766,
+        "y": 7.246610164642334
     },
     {
         "slug": "posts/20161210-dir/",
         "title": "Attending DIR 2016",
-        "x": 7.516866207122803,
-        "y": -1.272444248199463
+        "x": 4.6229987144470215,
+        "y": 5.342270374298096
+    },
+    {
+        "slug": "posts/20241130-blog-migration_draft/",
+        "title": "Blog Migration No.4",
+        "x": 4.83444881439209,
+        "y": 7.883906841278076
     },
     {
         "slug": "",
         "title": "",
-        "x": 3.574329137802124,
-        "y": -0.4016283452510834
+        "x": 8.117291450500488,
+        "y": 5.748751163482666
     },
     {
         "slug": "about/",
         "title": "About",
-        "x": 3.779350757598877,
-        "y": 0.25258752703666687
+        "x": 8.024036407470703,
+        "y": 5.033361434936523
     }
 ]
