@@ -38,6 +38,10 @@
 svg {
     width: 100%;
     height: 100%;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none; /* Safari-specific prefix */
+    -ms-user-select: none; /* Older versions of IE */
+    pointer-events: auto; /* Enables interactivity */
 }
 
 #map-overlay.index {
