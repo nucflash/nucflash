@@ -1,140 +1,140 @@
 [
     {
         "slug": "ventures/",
-        "title": "Ventures — My three startups",
-        "x": -2.204267978668213,
-        "y": 9.061524391174316
+        "title": "Ventures",
+        "x": 4.285643577575684,
+        "y": -0.0783952921628952
     },
     {
         "slug": "posts/20200622-sigir-forum-ecommerce/",
         "title": "Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations",
-        "x": -4.575329780578613,
-        "y": 9.712672233581543
+        "x": 7.159541606903076,
+        "y": 1.4803402423858643
     },
     {
         "slug": "posts/20180330-ecir2018/",
         "title": "Talk at ECIR 2018 Industry day",
-        "x": 0.1749177724123001,
-        "y": 6.92680549621582
+        "x": 6.823066711425781,
+        "y": -1.494349479675293
     },
     {
         "slug": "posts/20210214-icassp/",
         "title": "Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants",
-        "x": -1.1471335887908936,
-        "y": 8.4378080368042
+        "x": 3.022177219390869,
+        "y": 0.0687275305390358
     },
     {
         "slug": "posts/20180211-emakina/",
         "title": "Talk at A.I. for Commerce meetup",
-        "x": 0.7049504518508911,
-        "y": 6.754101753234863
+        "x": 6.298110008239746,
+        "y": -1.8479443788528442
     },
     {
         "slug": "posts/20180618-query-engine-upgrade/",
         "title": "New Version for 904Labs Query Intent Engine",
-        "x": -3.286525011062622,
-        "y": 9.471024513244629
+        "x": 5.452980995178223,
+        "y": 0.950200080871582
     },
     {
         "slug": "posts/20161210-sigir/",
         "title": "Presenting at the Industry Day at SIGIR 2016",
-        "x": -4.522309303283691,
-        "y": 10.362520217895508
+        "x": 6.707949161529541,
+        "y": 2.083106517791748
     },
     {
         "slug": "research/",
         "title": "Research",
-        "x": -4.702254772186279,
-        "y": 9.031213760375977
+        "x": 7.39645528793335,
+        "y": 0.5988268852233887
     },
     {
         "slug": "posts/20180702-aiexpo/",
         "title": "Exhibiting at A.I. Expo Europe 2018",
-        "x": 0.7839070558547974,
-        "y": 5.600768566131592
+        "x": 7.019825458526611,
+        "y": -2.711332082748413
     },
     {
         "slug": "posts/20170418-historical-moment-904labs/",
         "title": "A historical moment for 904Labs",
-        "x": -3.4174177646636963,
-        "y": 10.344730377197266
+        "x": 6.580621242523193,
+        "y": 0.9381412863731384
     },
     {
         "slug": "posts/20200722-sigir2020/",
         "title": "Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants",
-        "x": -0.8640996813774109,
-        "y": 9.07536506652832
+        "x": 2.8138771057128906,
+        "y": -0.4764144718647003
     },
     {
         "slug": "posts/20180308-frankfurt/",
         "title": "Talk at Frankfurt Data Science meetup",
-        "x": 0.0773673802614212,
-        "y": 5.230576992034912
+        "x": 7.585874080657959,
+        "y": -2.5995395183563232
     },
     {
         "slug": "posts/20191117-goodbye-904labs/",
         "title": "904Labs: Goodbye and thanks for all the clicks!",
-        "x": -2.552978992462158,
-        "y": 9.458467483520508
+        "x": 4.997281074523926,
+        "y": 0.3206601142883301
     },
     {
         "slug": "posts/20171213-ams-city/",
         "title": "Talk at Amsterdam City A.I. Event",
-        "x": 0.723932147026062,
-        "y": 5.208767890930176
+        "x": 7.4784064292907715,
+        "y": -3.176321268081665
     },
     {
         "slug": "posts/20190718-ecommerce-workshop/",
         "title": "Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce",
-        "x": -5.163937091827393,
-        "y": 9.774913787841797
+        "x": 6.273534774780273,
+        "y": 1.762595295906067
     },
     {
         "slug": "posts/20171021-ai2future/",
         "title": "Keynote speech at AI2Future",
-        "x": 1.1790717840194702,
-        "y": 6.2129340171813965
+        "x": 6.352138519287109,
+        "y": -3.0946152210235596
     },
     {
         "slug": "posts/20180618-query-engine/",
         "title": "What is a Query Intent/Understanding engine?",
-        "x": -3.7513933181762695,
-        "y": 8.927328109741211
+        "x": 5.50629997253418,
+        "y": 1.4938973188400269
     },
     {
         "slug": "posts/20180601-techloop/",
         "title": "Talk at TECH Talks Amsterdam",
-        "x": 0.27596166729927063,
-        "y": 5.964260101318359
+        "x": 6.930183410644531,
+        "y": -3.451533317565918
     },
     {
         "slug": "posts/20171104-another-historical-moment-904labs/",
         "title": "Another historical moment for 904Labs",
-        "x": -2.093657970428467,
-        "y": 10.226863861083984
+        "x": 6.7367095947265625,
+        "y": -0.292117714881897
     },
     {
         "slug": "highlights/",
         "title": "Highlights",
-        "x": -2.7942631244659424,
-        "y": 10.217787742614746
+        "x": 6.210453510284424,
+        "y": 0.3792237937450409
     },
     {
         "slug": "posts/20161210-dir/",
         "title": "Attending DIR 2016",
-        "x": -0.3136173188686371,
-        "y": 6.287696361541748
+        "x": 7.516866207122803,
+        "y": -1.272444248199463
     },
     {
         "slug": "",
         "title": "",
-        "x": -1.5696386098861694,
-        "y": 9.230916023254395
+        "x": 3.574329137802124,
+        "y": -0.4016283452510834
     },
     {
         "slug": "about/",
         "title": "About",
-        "x": -1.7691322565078735,
-        "y": 8.300863265991211
+        "x": 3.779350757598877,
+        "y": 0.25258752703666687
     }
 ]
