@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlights</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "highlights/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../about/">About</a>
+                    
+                        <a href="../research/">Research</a>
+                    
+                        <a href="./">Highlights</a>
+                    
+                        <a href="../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Highlights</h1>
+
+
+
+
+<h5>04 December 2016</h5>
+
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p>Over the years I have worked on a wide range of projects. Here I list a bunch of recent ones that I&rsquo;m particularly fond of:</p>
+<div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#904labs-self-learning-search-engine">904Labs self-learning search engine</a></li>
+<li><a href="#streamwatchr">Streamwatchr</a></li>
+<li><a href="#periscope">Periscope</a></li>
+<li><a href="#predicting-imdb-movie-ratings">Predicting IMDB movie ratings</a></li>
+</ul>
+</div>
+<h2 id="904labs-self-learning-search-engine">904Labs self-learning search engine<a class="headerlink" href="#904labs-self-learning-search-engine" title="Permanent link">&para;</a></h2>
+<p>904Labs self-learning search engine (904SLS) is the first commercially available self-learning search engine for e-commerce and content publishers. It optimizes search results from user behavior for increasing conversion.</p>
+<p>904SLS offers all core aspects of search: from pre-search, e.g., query understanding, to automatic document augmentation and post-search, e.g., result re-ranking. The engine is able to update in near real-time so that it can quickly adapt to swift changes in user search behavior, without retraining. 904SLS is available as software-as-a-service or virtual machine, and it can re-use the existing search infrastructure if it is Lucene-based so that no re-indexing is required.</p>
+<p>The amount of engineering that our team has put in, given the timeframe and human resources, is, in my opinion, mind blowing. We&rsquo;ve had to solve core machine learning limitations (e.g., delayed feedback), scalability challenges (i.e., minimize latency whithout harming effectiveness), and domain-dependent challenges (i.e., how much search is eCommerce search?), but also to setup a full-blown infrastructure with experimental, staging, and production environments so that our customers have no down-time when we push new features to production. The results have been rewarding; <a href="https://www.904labs.com/2016/08/19/best-results-letor4-0/">904SLS outperforms state-of-the-art learning-to-rank systems in academic datasets</a>, and <a href="https://www.904labs.com/en/self-learning-search-improves-revenue-for-e-commerce">it has proven to uplift revenue by 30% on live, e-commerce shops</a>.</p>
+<h2 id="streamwatchr">Streamwatchr<a class="headerlink" href="#streamwatchr" title="Permanent link">&para;</a></h2>
+<p>Streamwatchr listened to the world and tried to understand what was happening. It monitored Twitter to find out to which music people were listening. Streamwatchr offered real-time insights into music listening behavior around the world. It ran from 2013 until 2016.</p>
+<p><a href="https://www.youtube.com/watch?v=A3qrUfRBMt4"><img alt="IMAGE ALT TEXT HERE" src="https://img.youtube.com/vi/A3qrUfRBMt4/0.jpg" /></a></p>
+<p>The millions of tweets and the hundreds of thousands of artists that Streamwatchr has listened to over the years have been distilled to a handful of noteworthy factoids:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tweets listened</td>
+<td>438,225,941</td>
+</tr>
+<tr>
+<td>artists seen</td>
+<td>660,941</td>
+</tr>
+<tr>
+<td>most popular song</td>
+<td>Passenger – Let Her Go, 196,986 times</td>
+</tr>
+<tr>
+<td>most sung along song</td>
+<td>John Legend – All of Me, 541 times</td>
+</tr>
+</tbody>
+</table>
+<p>The engineering behind Streamwatchr was impressive. Streamwatchr collected music-related tweets, extracted songs and artists, mapped these to a MusicBrainz, a music database, and to YouTube video clips, all in real-time. All information shown on Streamwatchr was refreshed with every single tweet, from popularity charts, music analytics, trending music, and song recommendations.</p>
+<p>Streamwatchr used a stack of Python, and MongoDB for analytics and recommendations. Most of the magic behind real-time updates relied on clever data structures and algorithms that minimized the amount of updates needed.</p>
+<h2 id="periscope">Periscope<a class="headerlink" href="#periscope" title="Permanent link">&para;</a></h2>
+<p>Periscope was a project that highlighted what topics on Twitter will break viral before they did. It was meant for media analysts to keep ahead of the curve and for average users to keep the clutter away.</p>
+<h2 id="predicting-imdb-movie-ratings">Predicting IMDB movie ratings<a class="headerlink" href="#predicting-imdb-movie-ratings" title="Permanent link">&para;</a></h2>
+<p>Part of the Artificial Intelligence Masters programme in which I used to teach was one month hands-on project. I have supervised Andrei Oghina and Mathias Breuss on whether <em>can we predict a movie&rsquo;s IMDB rating from social media before the movie is out</em>.</p>
+<p>Andrei and Mathias collected tweets about movies and their respective YouTube trailers, and they extracted several features which were used for training a rating classifier. We have found out that we are able predict a movie&rsquo;s IMDB rating with ±0.25 accuracy. That is if a movie gets an average IMDB rating of 8, we would predict 7.75 or 8.25. This is quite impressive for predicting a movie&rsquo;s success before it is even released.</p>
+<p>Our work has been published at ECIR 2012, and it has been awarded the best paper award.</p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../js/d3-umap.js"></script>
+      <script src="../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

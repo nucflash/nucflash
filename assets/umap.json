@@ -1,0 +1,146 @@
+[
+    {
+        "slug": "ventures/",
+        "title": "Ventures — My three startups",
+        "x": 3.5028767585754395,
+        "y": -0.43369293212890625
+    },
+    {
+        "slug": "posts/20200622-sigir-forum-ecommerce/",
+        "title": "Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations",
+        "x": 0.22132599353790283,
+        "y": -0.3186590373516083
+    },
+    {
+        "slug": "posts/20180330-ecir2018/",
+        "title": "Talk at ECIR 2018 Industry day",
+        "x": 3.9779720306396484,
+        "y": 1.5245630741119385
+    },
+    {
+        "slug": "posts/20210214-icassp/",
+        "title": "Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants",
+        "x": 3.043138027191162,
+        "y": -1.9655393362045288
+    },
+    {
+        "slug": "posts/20180211-emakina/",
+        "title": "Talk at A.I. for Commerce meetup",
+        "x": 3.9206762313842773,
+        "y": 2.2220962047576904
+    },
+    {
+        "slug": "posts/20180618-query-engine-upgrade/",
+        "title": "New Version for 904Labs Query Intent Engine",
+        "x": 2.069819927215576,
+        "y": -0.33449119329452515
+    },
+    {
+        "slug": "posts/20161210-sigir/",
+        "title": "Presenting at the Industry Day at SIGIR 2016",
+        "x": 0.6965391039848328,
+        "y": -0.2297273725271225
+    },
+    {
+        "slug": "research/",
+        "title": "Research",
+        "x": 0.9648948311805725,
+        "y": -1.5600864887237549
+    },
+    {
+        "slug": "posts/20180702-aiexpo/",
+        "title": "Exhibiting at A.I. Expo Europe 2018",
+        "x": 5.244554042816162,
+        "y": 2.667104721069336
+    },
+    {
+        "slug": "posts/20170418-historical-moment-904labs/",
+        "title": "A historical moment for 904Labs",
+        "x": 1.6619504690170288,
+        "y": 0.40700986981391907
+    },
+    {
+        "slug": "posts/20200722-sigir2020/",
+        "title": "Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants",
+        "x": 2.4500319957733154,
+        "y": -1.9421297311782837
+    },
+    {
+        "slug": "posts/20180308-frankfurt/",
+        "title": "Talk at Frankfurt Data Science meetup",
+        "x": 5.71506929397583,
+        "y": 1.8031312227249146
+    },
+    {
+        "slug": "posts/20191117-goodbye-904labs/",
+        "title": "904Labs: Goodbye and thanks for all the clicks!",
+        "x": 2.9272263050079346,
+        "y": 0.01964823342859745
+    },
+    {
+        "slug": "posts/20171213-ams-city/",
+        "title": "Talk at Amsterdam City A.I. Event",
+        "x": 5.775113105773926,
+        "y": 2.465137004852295
+    },
+    {
+        "slug": "posts/20190718-ecommerce-workshop/",
+        "title": "Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce",
+        "x": 0.723451554775238,
+        "y": -0.9240503907203674
+    },
+    {
+        "slug": "posts/20171021-ai2future/",
+        "title": "Keynote speech at AI2Future",
+        "x": 4.550780773162842,
+        "y": 2.135213613510132
+    },
+    {
+        "slug": "posts/20180618-query-engine/",
+        "title": "What is a Query Intent/Understanding engine?",
+        "x": 1.5974810123443604,
+        "y": -1.0651187896728516
+    },
+    {
+        "slug": "posts/20180601-techloop/",
+        "title": "Talk at TECH Talks Amsterdam",
+        "x": 5.070495128631592,
+        "y": 2.0137598514556885
+    },
+    {
+        "slug": "posts/20171104-another-historical-moment-904labs/",
+        "title": "Another historical moment for 904Labs",
+        "x": 3.0162270069122314,
+        "y": 0.9199568033218384
+    },
+    {
+        "slug": "posts/20241130-blog-migration/",
+        "title": "Blog Migration No.4",
+        "x": 0.914583146572113,
+        "y": 0.6098771095275879
+    },
+    {
+        "slug": "highlights/",
+        "title": "Highlights",
+        "x": 2.0888991355895996,
+        "y": 0.8561182618141174
+    },
+    {
+        "slug": "posts/20161210-dir/",
+        "title": "Attending DIR 2016",
+        "x": 4.76321268081665,
+        "y": 1.1782655715942383
+    },
+    {
+        "slug": "",
+        "title": "",
+        "x": 3.0370571613311768,
+        "y": -1.3262057304382324
+    },
+    {
+        "slug": "about/",
+        "title": "About",
+        "x": 3.7242982387542725,
+        "y": -1.1164461374282837
+    }
+]

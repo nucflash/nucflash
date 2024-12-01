@@ -1,0 +1,256 @@
+/**
+ * mdmath.latex.css
+ *
+ * Inspired by: https://github.com/vincentdoerig/latex-css
+ */
+ @font-face {
+    font-family: 'New Computer Modern';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/newcm-7.0.0/NewCM10-Regular.otf') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'New Computer Modern';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/newcm-7.0.0/NewCM10-BookItalic.otf') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'New Computer Modern';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('/fonts/newcm-7.0.0/NewCM10-Bold.otf') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'New Computer Modern';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url('/fonts/newcm-7.0.0/NewCM10-BoldItalic.otf') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'New Computer Modern Mono';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/newcm-7.0.0/NewCMMono10-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'New Computer Modern Mono';
+    font-style: italic;
+    font-weight: normal;
+    src: url('/fonts/newcm-7.0.0/NewCMMono10-BookItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'New Computer Modern Mono';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/newcm-7.0.0/NewCMMono10-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'New Computer Modern Mono';
+    font-style: italic;
+    font-weight: bold;
+    src: url('/fonts/newcm-7.0.0/NewCMMono10-BoldOblique.otf') format('opentype');
+}
+
+/* Libertinus */
+
+@font-face {
+    font-family: 'Libertinus Serif';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/libertinus/woff2/LibertinusSerif-Regular.woff2') format('woff2'),
+  }
+  
+  @font-face {
+    font-family: 'Libertinus Serif';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/libertinus/woff2/LibertinusSerif-Italic.woff2') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'Libertinus Serif';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('/fonts/libertinus/woff2/LibertinusSerif-Bold.woff2') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'Libertinus Serif';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url('/fonts/libertinus/woff2/LibertinusSerif-BoldItalic.woff2') format('opentype'),
+  }
+  
+  @font-face {
+    font-family: 'Libertinus Mono';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/libertinus/woff2/LibertinusMono-Regular.woff2') format('opentype');
+}
+
+
+/* Make default font-size 1rem and add smooth scrolling to anchors */
+  
+/* body {
+    font-family: "Libertinus Serif", "New Computer Modern", "Book Antiqua", Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+code, kbd {
+    font-family: "Libertinus Mono", 'New Computer Modern Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+  pre > code > code > div,
+  pre > code.code-line > div {
+    font-family: 'Libertinus Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+
+@media print {
+body {
+    font-family: 'Libertinus Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+}   */
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
+
+.dancing-script-journey {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.allura-regular {
+  font-family: "Allura", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alex-brush-regular {
+  font-family: "Alex Brush", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  /* end of custom */
+
+figcaption p {
+    text-align: center;
+}
+.posts-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Remove the top border from the first two rows */
+/* .posts-table tr:first-child td,
+.posts-table tr:nth-child(2) td {
+    border-top: none; 
+} */
+
+.posts-table td {
+    border: none; /* Remove all borders by default */
+    padding: 8px;
+    vertical-align: top;
+}
+
+.posts-table .year-change td {
+    border-top: 1px solid #000; /* allow the original border */
+}
+
+.posts-table .date-column {
+    text-align: left;
+    font-weight: bold;
+    width: 20%;
+    white-space: nowrap;
+    /* border-left: 1px solid #333; Add a vertical line */
+    padding-left: 12px; /* Add space between the line and the text */
+}
+
+.posts-table .post-column {
+    text-align: left;
+    width: 78%;
+    padding-right: 12px; /* Add space to the left of the post titles */
+    /* border-right: 1px solid #333; Add a vertical line */
+}
+
+.posts-table .counter-column {
+    text-align: right;
+    width: 2%; /* Adjust the width as needed */
+    font-size: 0.85em;
+    font-weight: normal;
+    color: #999; 
+    padding-top: 9.3px; /* 8px (from td; l17) * (1 + (1-0.85em from 3 lines above l44)) */
+}
+
+.posts-table a,
+.related-links a,
+a.related {
+    text-decoration: none; /* Remove underlining */
+}
+
+.posts-table a:hover,
+.related-links a,
+a.related:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Style the metadata container */
+.snippet-meta {
+    display: flex;
+    justify-content: space-between; /* Align children to edges */
+    align-items: center; /* Vertically align score and link */
+    margin-top: 0.2em; /* Add some space above */
+    font-size: 0.85em; /* Smaller font size */
+}
+
+/* Style the score */
+.snippet-meta .score {
+    color: #777; /* Gray color for less prominence */
+}
+
+/* Style the link */
+.snippet-meta .dynamic-link {
+    text-decoration: none; /* Remove underline */
+}
+
+.snippet-meta .dynamic-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* search styling */
+
+.dimmed {
+  opacity: 0.2;
+}
+
+/* DRAFT warning following h2 style */
+.mkdocs-draft-marker {
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: red;
+}

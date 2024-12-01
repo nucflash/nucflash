@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20190718-ecommerce-workshop/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                        <a href="../../research/">Research</a>
+                    
+                        <a href="../../highlights/">Highlights</a>
+                    
+                        <a href="../../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</h1>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+<h5>18 July 2019</h5>
+
+
+<h5><b>Keywords:</b> 904Labs, conference, workshop, sigir, sigir-ecom, invited-talk, information retrieval, machine learning, industry day</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p>I was invited to give a talk at the <a href="https://sigir-ecom.github.io">SIGIR Workshop On eCommerce 2019</a> but unfortunately, I am not attending SIGIR this year. Instead I wrote down some thoughts on interesting problems, ideas and challenges in the e-commerce domain. Here they are:</p>
+<h2 id="the-vocabulary-gap-is-still-an-open-problem">The vocabulary gap is still an open problem.<a class="headerlink" href="#the-vocabulary-gap-is-still-an-open-problem" title="Permanent link">&para;</a></h2>
+<p>People refer to products in different ways that products are described in the catalogue. Neural networks, learning to rank, query intent engines are all important. Our experience at <a href="https://904labs.com">904Labs</a> shown that a query intent engine that boosts specific product categories given a query, boosts our learning to rank system by more than 16% in additional revenue. These results suggest that effective initial ranking is very important for effective learning to rank. To this end, we foresee an increasing interest in methods that can re-rank the entire collection and not only the top-N documents. This is particularly important for larger shops with large inventories (more than hundred of thousands of items) where a query can return hundreds of items, and only the top few are re-ranked.</p>
+<h2 id="e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match">E-commerce search is as much as about exploration as it is about finding the best match.<a class="headerlink" href="#e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match" title="Permanent link">&para;</a></h2>
+<p>From our experience at 904Labs, we see a large fraction of queries to revolve around categories, or combinations of categories, e.g., <code>red shoes</code>, <code>kitchen tables</code>, <code>dvd players</code>, <code>ebooks for 12 years old</code>. This type of queries go beyond our typical search and require understanding the query and generating a list of recommended relevant items. This proposition is supported by the surprising effectiveness of sorting by popularity; the most popular items for a query are potential good candidates for this “recommendation list” that the user is looking for. Back to query understanding of this type of exploratory queries, one would think that natural language processing can help here but in the e-commerce setting, queries are very short and any language analysis falls short. </p>
+<p>An open question here is how can we go from these broad queries to a good set of recommendations? </p>
+<p>A natural way is to devise a hybrid system of search and recommendations: We fire the query to a search system and then we take the first few items as seed to a recommender system for getting similar items. Or a system that transforms a query to an image (think AttnGAN or similar) and each product to an image and then rank documents by their image similarity to the query’s–the image representation may constraint the latent space, abstract the language of the query and that of the document and be able to capture semantics that are otherwise difficult to encode in textual form. The image representation of queries and documents also offers explainability when it comes to explaining the rankings of the system; which is becoming increasingly important in machine learning-based systems.</p>
+<h2 id="evaluation-metrics-in-e-commerce">Evaluation metrics in e-commerce.<a class="headerlink" href="#evaluation-metrics-in-e-commerce" title="Permanent link">&para;</a></h2>
+<p>There are several directions here that we need do more work. First, the e-commerce setting is a conjunction of exploratory search, typical search, and recommendations. Using the standard IR precision and recall measures for e-commerce may not tell us the entire story for how happy makes its users. We need to discover the aspects of a system that makes users happy for designing one or more metrics for evaluating search and recommendation systems. These metrics should also correlate well with revenue but also with customer loyalty (measured in returning customers and in shortening the time between returns). Such a metric (or a multiple of metrics) will then allow us to run offline experiments and make predictions on revenue, which is the main KPI that systems are evaluated in production for most e-commerce business.</p>
+<p>Last, an extra tip: we found that boolean scoring may be on par or outperform tf.idf or BM25 scoring in the e-commerce domain, it&rsquo;s worth checking its effectiveness on your own data ;)</p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

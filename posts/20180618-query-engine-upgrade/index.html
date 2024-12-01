@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Version for 904Labs Query Intent Engine</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20180618-query-engine-upgrade/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                        <a href="../../research/">Research</a>
+                    
+                        <a href="../../highlights/">Highlights</a>
+                    
+                        <a href="../../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>New Version for 904Labs Query Intent Engine</h1>
+
+<h3>The latest upgrade is out, and the results are great.</h3>
+
+
+
+
+<h5>18 June 2018</h5>
+
+
+<h5><b>Keywords:</b> 904Labs, information-retrieval, semantic-search</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#some-relatively-simple-cases">Some relatively simple cases</a></li>
+<li><a href="#some-more-difficult-cases">Some more difficult cases</a></li>
+<li><a href="#some-very-difficult-cases">Some very difficult cases</a></li>
+</ul>
+</div>
+<p>Today at <a href="https://904labs.com">904Labs Search</a> we&rsquo;ve been having fun with the next version of our Query Intent/Understanding engine.</p>
+<p>If you don&rsquo;t know what a Query Intent/Understanding engine is, here&rsquo;s <a href="../20180618-query-engine/">some background</a>; otherwise keep reading.</p>
+<p>Our Query Intent/Understanding engine is closing to one year old, and it&rsquo;s pretty cool: it can quickly boostrap a knowledge graph and continuously update it straight from our customer&rsquo;s data. Since its introduction in September 2017, it has been tested in many different domains and languages and has shown substantial revenue uplift across customers.</p>
+<p>In the last couple of weeks, our team has been busy tweaking our engine and pushing it even further. Our Query Intent/Understanding engine was doing already a good job, mapping query free text to product attributes such as category, or brands. However, we&rsquo;ve never tested going deeper into particular product attributes, such the product weight or even, wattage. Our engineers managed to extend the logic and the scalability of the algorithm to support very fine grained suggestions, if such fine-grained information exists in the index. It is quite a feat and I&rsquo;m very proud of our team!</p>
+<p>On top of the engineering feat, the algorithm itself is pretty lean and has quite a few distinctive features that are hard to find in other engines: it does not depend on external dependencies (read Wikipedia), nor it needs periodic re-training. The only thing that a customer has to do is to plug in our system to a Apache Solr/Elasticsearch, and 904Labs Query Intent engine is built incrementally, one click/add-to-basket/purchase at a time. Oh, and it doesn&rsquo;t write anything on your index. Magic!</p>
+<p>Here&rsquo;s a few interesting examples that came out from today&rsquo;s experimentation:</p>
+<p>(the examples are in Dutch; I try to translate the queries into English. Field attributes and values may be partially redacted for anonymity)</p>
+<h2 id="some-relatively-simple-cases">Some relatively simple cases<a class="headerlink" href="#some-relatively-simple-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>The system learns to map the query: <code>lampen</code> (lamps) to Solr&rsquo;s directive: <code>category:Lampen</code>. Learning of this mapping is automatic and based on only from user interactions.</p>
+</li>
+<li>
+<p>Query: <code>Tent</code> → <code>category:Tenten</code>. Note how the system has learned the mapping from singular to plural without using of manual synonyms.</p>
+</li>
+<li>
+<p>Query: <code>Stoel kussens</code> (chair pillows) → <code>category:Kussens</code> (pillows). In this example, the system maps a specific query to a broader category. This highlights a productive synergy between human and machine: the site’s taxonomy lacked a dedicated leaf node for chair pillows, so the system intelligently selected the closest broader category. This choice influences the downstream learning-to-rank process, bringing greater focus to the broader category of pillows.</p>
+</li>
+</ul>
+<h2 id="some-more-difficult-cases">Some more difficult cases<a class="headerlink" href="#some-more-difficult-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Query: <code>Bed 160x200</code> → <code>size:160x200 cm</code> and <code>size:160 x 200 cm</code>. Note how the system has learned the discrepency in attribute values and suggests both; in the first one there are no spaces in the representation of the dimension, in the second one there are.</p>
+</li>
+<li>
+<p>Query: <code>stoelen</code> (chairs) → <code>category:... en eetkamerstoelen</code> (kitchens and dining chairs). Here the system attempts to infer the intented category for a broad query such as &ldquo;chairs&rdquo;. Although there is a category labeled &ldquo;chairs&rdquo;, the system decides to suggest a particular leaf within the taxonomy branch of chairs.</p>
+</li>
+<li>
+<p>Query: <code>tuinset</code> (garden set) → <code>number_of_persons:12</code>. The system implicitly defines the size and dimensions of the garden set from historical user behavior. Given the lack of a user profile, suggestions like this aim at capturing the interests of the average user of the shop.</p>
+</li>
+</ul>
+<h2 id="some-very-difficult-cases">Some very difficult cases<a class="headerlink" href="#some-very-difficult-cases" title="Permanent link">&para;</a></h2>
+<p>Finally, two of my favorites, where the system attempts to infer several attributes of products from broad queries—</p>
+<ul>
+<li>
+<p>Query: <code>prieel</code> (garden house) → <code>material:XXX, color:Beige, weight:4.9 kg</code>. Here the system maps a broad query to distinct set of attributes, i.e., the material, the color, and even the weight of the garden house. Again, with no user profile provided, these suggestions attempt to capture the interests of the average user of the shop.</p>
+</li>
+<li>
+<p>Query: <code>eenpersoons bed</code> (one person bed) → <code>size:90 x 200 cm</code>. The system maps the query to exact dimensions for the bed!</p>
+</li>
+<li>
+<p>Query: <code>XXX lounge</code> (brand redacted) → <code>model:White XXX</code>. Here the system manages to map a brand and type of products from this brand to a specific product model from this brand. Again, without user profiling. Quite impressive!</p>
+</li>
+</ul>
+<p>I hope you also find exciting what the new version of 904Labs Query Intent/Understanding engine can do. You can have this technology working for you too and straight away, by <a href="mailto:info@904labs.com?subject=I like your Query Intent examples, and I want to have it too. Please get in touch."><del>getting in touch with us</del></a>. Plus, unlike other search engine providers, with us you keep your index, and we don&rsquo;t touch it so we don&rsquo;t lock you in. The first month is for free, terminable monthly.</p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

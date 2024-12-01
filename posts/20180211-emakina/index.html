@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk at A.I. for Commerce meetup</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20180211-emakina/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                        <a href="../../research/">Research</a>
+                    
+                        <a href="../../highlights/">Highlights</a>
+                    
+                        <a href="../../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Talk at A.I. for Commerce meetup</h1>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+<h5>11 February 2018</h5>
+
+
+<h5><b>Keywords:</b> meetup, invited-speaker, keynote</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p>Emakina, one of the largest web agencies in Europe, works with internationally acclaimed brands on their branding and electronic presence. To keep their customers ahead of the curve, Emakina has recently started a series of meetups where experts in a wide range of fields come and talk about the latest developments in their field. The last meetup was held last Thursday, 8 February 2018, and with the topic: &ldquo;A.I. for Commerce&rdquo;, three talks were scheduled: one from Emakina, one from 904Labs, and one from Salesforce.</p>
+<figure>
+    <img src="https://pbs.twimg.com/media/DVhqC5-WkAAh7K8?format=jpg&name=medium"/>
+    <figcaption><a href="https://x.com/emakinanl/status/961635124201885696?s=61">Tweet</a> from the event.</figcaption>
+</figure>
+
+<p>In our talk, I described the importance of search in e-commerce by giving examples of failed searches in a number of settings, from finding advertized items using onsite search to mobile search. I followed by with why people choose Amazon to start their product search and highlighted that 54% of them choose Amazon because of their great search functionality–that is the reason number five for people to go to Amazon. Then, I explained why optimizing the ranking manually is close to impossible for humans by laying out the insane amount of options available and enumerating the search space (which can be at millions of millions of choices). With this as foundation, I talked about machine learning and the particular type of machine learning that we use at 904Labs for optimizing search rankings in real-time. I followed up with describing our query intent engine, which is powered by 904Sense, and our automatic synonym extraction engine. In my conclusions, I re-iterated that A.I. for Search can boost search-driven revenue by 30% and that search is becoming part of platforms. In this angle, it is important for online retailers to test the claims of their vendors by doing A/B tests before they opt in for a solution.</p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

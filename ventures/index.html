@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventures</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "ventures/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../about/">About</a>
+                    
+                        <a href="../research/">Research</a>
+                    
+                        <a href="../highlights/">Highlights</a>
+                    
+                        <a href="./">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Ventures — My three startups</h1>
+
+<h3>Between 2005 and 2019, I founded, bootstrapped, and successfully exited three companies.</h3>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+<h5>23 February 2018</h5>
+
+
+<h5><b>Keywords:</b> startups, ventures, 904Labs, Solumbro, MyYard</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p><a href="https://904labs.com">904Labs</a> is an Amsterdam-based artificial intelligence company that offers the first commercially available self-learning search engine. I co-founded 904Labs in 2014 and led  the company until late 2019. I worked on setting business strategy and development, as well as on the research agenda and the engineering roadmap for 904Labs&rsquo; core search and recommendation algorithms.</p>
+<p><a href="http://solumbro.com">Solumbro</a> was an Athens-based Internet-of-Things company that designed and manufactured smart outdoor parasols. Solumbro was founded in 2015 and operated until late 2019. Solumbro was fully bootstrapped and got to a <a href="https://youtu.be/lyrix-jC35I">fully-working</a> <a href="https://youtu.be/1z5_oUbkEps">prototype</a>, which made the <a href="https://youtu.be/k6oAvZJO64E">news</a>. I was an advisor at Solumbro in machine learning, big data, and software infrastructure.</p>
+<p><a href="http://wastelogics.com">MyYard</a> (WasteLogics since 2013) is a U.K.-based software company that offers entreprise resource planning (ERP) suite for waste management. I co-founded MyYard in 2005, and I was involved in designing and engineering the MyYard software until 2007. MyYard was the first in its kind to be offered in the cloud with a pay-as-you-go business model–business properties that still keep it ahead of the curve.</p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../js/d3-umap.js"></script>
+      <script src="../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is a Query Intent/Understanding engine?</title>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20180618-query-engine/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                        <a href="../../research/">Research</a>
+                    
+                        <a href="../../highlights/">Highlights</a>
+                    
+                        <a href="../../ventures/">Ventures</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>What is a Query Intent/Understanding engine?</h1>
+
+
+
+
+<h5>18 June 2018</h5>
+
+
+<h5><b>Keywords:</b> 904Labs, information-retrieval, semantic-search</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p>In the past year, at <a href="https://904labs.com">904Labs A.I. for Search</a>, we&rsquo;ve put a lot of effort to optimize and push further the technology behind query intent/understanding engines. If you are in the search engine/information retrieval community, you know the term and how challenging the problem is. But if you are not familiar with the problem, it is hard to grasp its importance and challenges. Here&rsquo;s my attempt to explain it in simple words.</p>
+<p><em>A Query Intent/Understanding engine aims at identifying the intent of a user&rsquo;s query and ultimately at translating it to a set of search directives.</em></p>
+<p>Consider a user coming to your e-shop and typing in the search box: &ldquo;red shoes&rdquo;. The query may look pretty straightforward to you when it comes to what products to show to the user but, for a machine, it&rsquo;s pretty hard to figure out what the person meant.</p>
+<p>To get into the machine&rsquo;s shoes (pun intended) think for a moment that you were born and raised in a warehouse, which is isolated from the rest of the world but has all the inventory of an e-shop. You&rsquo;ve never left the warehouse so you don&rsquo;t know anything about the world. It&rsquo;s quite grim world but bare with me. One day someone slips a message under the door of the warehouse with the words &ldquo;red shoes&rdquo;. Now your task is to select a set of products that satisfy/cover that person&rsquo;s information need. Obviously you know nothing about that mysterious person, let alone their preferences, and you barely understand the language of the message–perhaps you are able to recognize characters and words and match them to words found on the labels of products, but that&rsquo;s pretty much it.</p>
+<p>In such a surreal world, you can imagine that it is quite difficult, even for you, a human, to select a set of products that relate to &ldquo;red shoes&rdquo;. The challenge lies in that much of the important, contextual, information that we have access to from our constant interactions with the real world by living in it, it is very much missing in this artificial setting: We don&rsquo;t know whether the user is a he or a she (and therefore we don&rsquo;t know if we should pick male or female type of shoes), we don&rsquo;t know what is the &ldquo;hot&rdquo; color of the season, nor the most popular brand, nor whether the person is looking for sneakers or boots or high-heels. There are  lots of unknowns.</p>
+<p>A Query Intent/Understanding engine is an algorithm that tries to make sense of the world for machines, or other entities, which are locked up in a similar warehouse as the one we described above and have no access to contextual information. A Query Intent/Understanding algorithm aims at mapping free text (a user query) to a series of directives (rules) that when applied, they will yield a useful set of products for the user.  In our &ldquo;red shoes&rdquo; example, we are looking for directives that look as the following: &ldquo;filter on products that have attribute:red and category:shoes&rdquo;. At a first glance, the mapping looks simple but as of now you&rsquo;ve seen from our warehouse setting that it can be quite daunting.</p>
+<p>Researchers and practitioners have been working on this problem for quite some time and progress has been made; however the community has still some way to go before solving it. At the core of current solutions, there is a lot of complex technology such as neural networks that power NLP (Natural Language Processing) tools and other pipelines that require lots of human annotations (read expensive). These approaches yield relatively good accuracy, however, putting these systems into production may still be a challenging engineering problem–from setting up the data pipelining to scaling up, to retraining, and to monitoring system effectiveness and efficiency.</p>
+<p>At 904Labs we&rsquo;ve developed a Query Intent/Understanding engine that hooks up on an e-shop&rsquo;s data, bootstraps a knowledge graph, and it learns the mapping to directives automatically, i.e.,  without supervision (read without human annotations). It doesn&rsquo;t require retraining nor external dependencies, and you can use it straight away, today, on your own Apache Solr or Elasticsearch index (from which we only read and never write and we never lock you in). If that sounds appealing, <a href="mailto:info@904labs.com?subject=I read about your Query Intent engine, and I want to give a try. Please get in touch."><del>get in touch for a one month free trial!</del></a></p></p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>
