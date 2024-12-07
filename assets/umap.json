@@ -1,0 +1,158 @@
+[
+    {
+        "slug": "posts/20200622-sigir-forum-ecommerce/",
+        "title": "Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations",
+        "x": 1.063867449760437,
+        "y": 8.25364875793457
+    },
+    {
+        "slug": "posts/20180330-ecir2018/",
+        "title": "Talk at ECIR 2018 Industry day",
+        "x": 3.8508718013763428,
+        "y": 6.76432466506958
+    },
+    {
+        "slug": "posts/20210214-icassp/",
+        "title": "Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants",
+        "x": 0.6645669937133789,
+        "y": 10.419327735900879
+    },
+    {
+        "slug": "posts/20180211-emakina/",
+        "title": "Talk at A.I. for Commerce meetup",
+        "x": 3.533165454864502,
+        "y": 6.098275184631348
+    },
+    {
+        "slug": "posts/20160101-streamwatchr/",
+        "title": "Streamwatchr — Inside the world's playlist",
+        "x": 3.0386533737182617,
+        "y": 7.1457648277282715
+    },
+    {
+        "slug": "posts/20180618-query-engine-upgrade/",
+        "title": "New Version for 904Labs Query Intent Engine",
+        "x": 2.754793643951416,
+        "y": 8.924534797668457
+    },
+    {
+        "slug": "posts/20161210-sigir/",
+        "title": "Presenting at the Industry Day at SIGIR 2016",
+        "x": 1.6539617776870728,
+        "y": 7.793859004974365
+    },
+    {
+        "slug": "posts/20180702-aiexpo/",
+        "title": "Exhibiting at A.I. Expo Europe 2018",
+        "x": 4.411731243133545,
+        "y": 6.329339981079102
+    },
+    {
+        "slug": "posts/20170418-historical-moment-904labs/",
+        "title": "A historical moment for 904Labs",
+        "x": 1.97365403175354,
+        "y": 8.24917984008789
+    },
+    {
+        "slug": "posts/20200722-sigir2020/",
+        "title": "Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants",
+        "x": 1.4690181016921997,
+        "y": 10.133016586303711
+    },
+    {
+        "slug": "posts/20180308-frankfurt/",
+        "title": "Talk at Frankfurt Data Science meetup",
+        "x": 5.2191853523254395,
+        "y": 6.025875091552734
+    },
+    {
+        "slug": "posts/20191118-joining-apple/",
+        "title": "Joining Siri at Apple",
+        "x": 4.871830940246582,
+        "y": 4.975776672363281
+    },
+    {
+        "slug": "posts/20191117-goodbye-904labs/",
+        "title": "904Labs: Goodbye and thanks for all the clicks!",
+        "x": 2.972318649291992,
+        "y": 8.285104751586914
+    },
+    {
+        "slug": "posts/20171213-ams-city/",
+        "title": "Talk at Amsterdam City A.I. Event",
+        "x": 4.691947937011719,
+        "y": 6.231386661529541
+    },
+    {
+        "slug": "posts/20190718-ecommerce-workshop/",
+        "title": "Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce",
+        "x": 1.6625558137893677,
+        "y": 8.814624786376953
+    },
+    {
+        "slug": "posts/20171021-ai2future/",
+        "title": "Keynote speech at AI2Future",
+        "x": 4.75819730758667,
+        "y": 5.342796802520752
+    },
+    {
+        "slug": "posts/20180618-query-engine/",
+        "title": "What is a Query Intent/Understanding engine?",
+        "x": 2.430434465408325,
+        "y": 9.405107498168945
+    },
+    {
+        "slug": "posts/20180601-techloop/",
+        "title": "Talk at TECH Talks Amsterdam",
+        "x": 4.233057498931885,
+        "y": 5.651886463165283
+    },
+    {
+        "slug": "posts/20171104-another-historical-moment-904labs/",
+        "title": "Another historical moment for 904Labs",
+        "x": 3.4706053733825684,
+        "y": 7.6161322593688965
+    },
+    {
+        "slug": "posts/20120329-ecir2012/",
+        "title": "Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media",
+        "x": 1.2320582866668701,
+        "y": 10.684392929077148
+    },
+    {
+        "slug": "posts/20101002-kl-divergence/",
+        "title": "KL-divergence of Two Documents",
+        "x": 0.048693906515836716,
+        "y": 8.434276580810547
+    },
+    {
+        "slug": "posts/20241130-life-log_draft/",
+        "title": "Life Log — An Experiment",
+        "x": -0.019119614735245705,
+        "y": 10.11445426940918
+    },
+    {
+        "slug": "posts/20161210-dir/",
+        "title": "Attending DIR 2016",
+        "x": 4.185797214508057,
+        "y": 7.287341594696045
+    },
+    {
+        "slug": "posts/20241130-blog-migration_draft/",
+        "title": "Blog Migration No.4",
+        "x": 0.5126672983169556,
+        "y": 8.66653060913086
+    },
+    {
+        "slug": "",
+        "title": "",
+        "x": 0.9884397983551025,
+        "y": 9.774801254272461
+    },
+    {
+        "slug": "about/",
+        "title": "About",
+        "x": 0.19108900427818298,
+        "y": 10.6836519241333
+    }
+]
