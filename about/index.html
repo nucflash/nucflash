@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/about/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>About - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "about/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="./">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>About</h1>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+<h5><a href='mailto:hi@manostsagkias.com?subject=Hi%20from%20manostsagkias.com!'>hi@manostsagkias.com</a></h5>
+
+
+<h5>05 December 2024</h5>
+
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="short-bio">Short bio<a class="headerlink" href="#short-bio" title="Permanent link">&para;</a></h3>
+<p>I design scalable systems for speech, search, recommendation, and predictive analytics, combining theory with elegant engineering to enhance user experiences. With a Ph.D. in Machine Learning and a strong foundation in Physics, I have founded three companies: MyYard, the first cloud-based ERP system for the waste management industry; 904Labs, the world’s first self-learning product search engine offered as a service; and Solumbro, which introduced the first solar-powered umbrella with a virtual assistant. As an academic, my research has earned an H-index of 20, with over 55 published papers. I have co-supervised a Ph.D. thesis and guided more than 10 master’s theses. Currently, I’m an R&amp;D Engineer at Apple, tackling virtual assistants at the challenging intersection of speech and search.</p>
+<div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#highlights">Highlights</a></li>
+<li><a href="#ventures">Ventures</a></li>
+<li><a href="#research">Research</a></li>
+</ul>
+</div>
+<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<h3 id="904labs-self-learning-search-engine">904Labs self-learning search engine<a class="headerlink" href="#904labs-self-learning-search-engine" title="Permanent link">&para;</a></h3>
+<p>904Labs’ self-learning search engine (904SLS) revolutionized e-commerce and content search as the first commercially available self-learning search engine. By optimizing search results in near real-time based on user behavior, 904SLS increased conversion rates and achieved a <a href="../posts/20171104-another-historical-moment-904labs/">30% revenue uplift for live e-commerce shops</a>, <a href="../posts/20170418-historical-moment-904labs/">consistently</a>. Offering comprehensive search capabilities from <a href="../posts/20180618-query-engine-upgrade/">query understanding</a> to result re-ranking, 904SLS seamlessly integrates with Lucene-based infrastructures without requiring re-indexing. The team’s exceptional engineering tackled challenges in machine learning, scalability, and domain-specific needs, delivering a state-of-the-art system that outperformed traditional learning-to-rank solutions.</p>
+<h3 id="streamwatchr">Streamwatchr<a class="headerlink" href="#streamwatchr" title="Permanent link">&para;</a></h3>
+<p><a href="../posts/20160101-streamwatchr/">Streamwatchr (2013–2016)</a>, developed at the University of Amsterdam, used machine learning and named entity extraction to track real-time global music listening behavior from tweets. Offering features like Top-100 charts, interactive maps, and a “radio” stream mode powered by a dynamic recommender system, it analyzed over 438 million tweets, identifying 660,941 artists and linking them to MusicBrainz and YouTube videos. Streamwatchr’s innovative engineering and real-time analytics, built with Python and MongoDB, provided unique insights into music trends and earned it a spot in the Dutch delegation at South by Southwest (SXSW). <a href="../posts/20160101-streamwatchr/">Read more about Streamwatchr</a>.</p>
+<h3 id="predicting-imdb-movie-ratings">Predicting IMDB movie ratings<a class="headerlink" href="#predicting-imdb-movie-ratings" title="Permanent link">&para;</a></h3>
+<p>In collaboration with master’s students Andrei Oghina and Mathias Breuss, I supervised a hands-on project exploring whether a movie’s IMDB rating could be predicted from social media activity before its release. By analyzing tweets about movies and their YouTube trailers, the team extracted features to train a rating classifier. The model achieved an impressive ±0.25 accuracy, predicting ratings such as 7.75 or 8.25 for movies with an average IMDB rating of 8. This groundbreaking work, published at ECIR 2012, earned the Best Paper Award for its novel approach to forecasting movie success. Read the <a href="../posts/20120329-ecir2012/">more about the paper</a>.</p>
+<h2 id="ventures">Ventures<a class="headerlink" href="#ventures" title="Permanent link">&para;</a></h2>
+<p><a href="https://904labs.com">904Labs</a> was an Amsterdam-based artificial intelligence company that offers the first commercially available self-learning search engine. I co-founded 904Labs in 2014 and led  the company until late 2019. I worked on setting business strategy and development, as well as on the research agenda and the engineering roadmap for 904Labs&rsquo; core search and recommendation algorithms.</p>
+<p><a href="http://solumbro.com">Solumbro</a> was an Athens-based Internet-of-Things company that designed and manufactured smart outdoor parasols. Solumbro was founded in 2015 and operated until late 2019. Solumbro was fully bootstrapped and got to a <a href="https://youtu.be/lyrix-jC35I">fully-working</a> <a href="https://youtu.be/1z5_oUbkEps">prototype</a>, which made the <a href="https://youtu.be/k6oAvZJO64E">news</a>. I was an advisor at Solumbro in machine learning, big data, and software infrastructure.</p>
+<p><a href="http://wastelogics.com">MyYard</a> (WasteLogics since 2013) is a U.K.-based software company that offers entreprise resource planning (ERP) suite for waste management. I co-founded MyYard in 2005, and I was involved in designing and engineering the MyYard software until 2007. MyYard was the first in its kind to be offered in the cloud with a pay-as-you-go business model–business properties that still keep it ahead of the curve.</p>
+<h2 id="research">Research<a class="headerlink" href="#research" title="Permanent link">&para;</a></h2>
+<p>My research spans a broad spectrum of information access challenges, from predictive analytics to entity linking, online learning to rank, and voice search. Over the years, I’ve explored these topics at the University of Amsterdam, 904Labs, and Apple, resulting in 55+ publications and an H-index of 20. I’ve also contributed to the academic community as a program committee member for top-tier conferences and journals, and supervised numerous Ph.D., M.Sc., and B.Sc. theses, with some earning national and international recognition.</p>
+<p>Community engagement and academic collaboration have been pivotal, with active roles in conferences like SIGIR, WWW, and WSDM, among others. My Ph.D. thesis, Mining Social Media: Tracking Content and Predicting Behavior, delves into tracking news content in social media and modeling user behavior. This work, alongside my industry research, continues to shape my understanding and application of machine learning and information retrieval to solve real-world problems.</p>
+<h3 id="research-interests">Research Interests<a class="headerlink" href="#research-interests" title="Permanent link">&para;</a></h3>
+<p>I have worked on a wide spectrum of information access problems ranging from predictive analytics and content tracking to entity linking and online learning to rank. Most of  my research has been conducted during 2007–2014 at <a href="http://ilps.science.uva.nl/">Information and Language Processing Systems (ILPS)</a> at the University of Amsterdam and it continues today at Apple. In the table below, I list an overview of my research interests over the years:</p>
+<table>
+<thead>
+<tr>
+<th>Time span</th>
+<th>Research topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024–</td>
+<td>Apple Intelligence, evaluation, training</td>
+</tr>
+<tr>
+<td>2020–2024</td>
+<td>Voice search, voice editing, evaluation</td>
+</tr>
+<tr>
+<td>2014–2019</td>
+<td>Product search, online learning to rank, evaluation</td>
+</tr>
+<tr>
+<td>2012–2014</td>
+<td>Entity linking, summarization, recommender systems</td>
+</tr>
+<tr>
+<td>2008–2012</td>
+<td>Predictive analytics, social media, content tracking</td>
+</tr>
+<tr>
+<td>2007–2008</td>
+<td>Speech recognition in user generated content</td>
+</tr>
+</tbody>
+</table>
+<p>As of September 6, 2021, I have published 55 papers with a total of 1,829 citations; my H-index is 20. You can access my publications via my <a href="https://scholar.google.nl/citations?user=rKOWoqcAAAAJ&amp;hl=en">Google Scholar profile</a>.</p>
+<h3 id="member-of-phd-examining-committees">Member of Ph.D. Examining Committees<a class="headerlink" href="#member-of-phd-examining-committees" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>My Role</th>
+<th>Ph.D. candidate</th>
+<th>Research topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>Examiner</td>
+<td>Seyyed Hadi Hashemi</td>
+<td>Modeling Users Interacting with Smart Devices</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Copromotor</td>
+<td>David Graus</td>
+<td>Entities of Interest</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>Examiner</td>
+<td>Damiano Spina Valenti</td>
+<td>Entity-based Filtering and Topic Detection for Online Reputation Monitoring in Twitter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="student-supervision">Student Supervision<a class="headerlink" href="#student-supervision" title="Permanent link">&para;</a></h3>
+<p>I am happy to have worked with more than a dozen of Ph.D., M.Sc., and B.Sc. students on a variety of research topics for their theses. Some of these masters theses have made it to a publication, some have won national thesis awards and some others have won best paper/poster awards.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Year</th>
+<th style="text-align: left;">Student and research topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2021</td>
+<td style="text-align: left;">M.Sc. Param Popat on application-specific language models</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020</td>
+<td style="text-align: left;">M.Sc. Sashank Gondala on error-driven pruning of language models</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">B.Sc. Sahas Dendukuri on acoustic embeddings</td>
+</tr>
+<tr>
+<td style="text-align: center;">2017</td>
+<td style="text-align: left;">Ph.D. David Graus on Entities of Interest</td>
+</tr>
+<tr>
+<td style="text-align: center;">2014</td>
+<td style="text-align: left;">B.Sc. Thijs van der Velden on real-time music charts on Twitter</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Bart Eijk on recommendation ensembles for music discovery</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Varvara Tzika on retrieval of classifieds in auction sites</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Guido van Bruggen on analyzing real-time context of TV broadcasts</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Selvi Ratnasingam on information diffusion across languages in news and social media</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Nikos Voskarides on learning entity relations in big data</td>
+</tr>
+<tr>
+<td style="text-align: center;">2013</td>
+<td style="text-align: left;">M.Sc. Kerim Meijer on evaluating performance of distributed search systems</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Andrei Oghina on recommending content on news sites</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">M.Sc. Mathias Breuss on recommending content on Twitter</td>
+</tr>
+<tr>
+<td style="text-align: center;">2012</td>
+<td style="text-align: left;">M.Sc. Mark Bakker on predicting movie Awards using Twitter</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">B.Sc. Gijs van der Voort on classifying tweets as reviews</td>
+</tr>
+<tr>
+<td style="text-align: center;">2011</td>
+<td style="text-align: left;">B.Sc. Philo Kamenade on information propagation in Twitter</td>
+</tr>
+<tr>
+<td style="text-align: center;">2010</td>
+<td style="text-align: left;">M.Sc. Kamran Massoudi on microblog retrieval</td>
+</tr>
+</tbody>
+</table>
+<!-- If you are B.Sc. or M.Sc. student looking for an internship or project on the area of query understanding, online learning to rank, and/or evaluation of learning to rank methods, get in touch. We usually have a bunch of cool projects on these areas. -->
+
+<h3 id="phd-thesis">Ph.D. Thesis<a class="headerlink" href="#phd-thesis" title="Permanent link">&para;</a></h3>
+<aside>
+    <figure>
+        <img src="/img/20121026-Thesis-ManosTsagkias-finalfront.jpg"/>
+        <figcaption> Mining Social Media: Tracking Content and Predicting Behavior. (<a href="/pdf/Mining%20Social%20Media-Tracking%20Content%20and%20Predicting%20Behavior.pdf">PDF, 3.7MB</a>)</figcaption>
+    </figure>
+</aside>
+
+<p>From the back cover of my thesis, <em>Mining Social Media: Tracking Content and Predicting Behavior</em>:</p>
+<blockquote>
+<p>The advent of social media has established a symbiotic relationship
+between social media and online news. This relationship can be
+leveraged for tracking news content, and predicting behavior with
+tangible real-world applications, e.g., online reputation
+management, ad pricing, news ranking, and media analysis. In this
+thesis we focus on tracking news content in social media, and
+predicting user behavior.</p>
+<p>In the first part, we develop methods for tracking content which
+build upon, and extend practices in Information Retrieval. We
+begin with discovering social media posts that discuss a news
+article yet they do not provide a hyperlink to it. Our methods model
+news articles using several channels of information, either
+endogenous or exogenous to the article. These models are then used
+to query an index of social media posts. During this process we
+found that the query models are close in size to the documents to be
+retrieved, violating a standard assumption of language
+modeling. We correct for this discrepancy by introducing two
+hypergeometric language models for modeling both queries, and
+documents to be retrieved.</p>
+<p>In the second part, we focus on predicting behavior. First we look
+at predicting listeners&rsquo; preference in spoken user generated
+content, namely, podcasts. Then, we predict popularity of news
+articles from several news agents in terms of the volume of comments
+they receive. We develop models for predicting the popularity of an
+article for both before and after it is published. Finally, we look
+at a different aspect of news impact: how reading a news article
+affects future user browsing behavior. In each setting, we find
+patterns that characterize the underlying behavior and extract
+features that we then use to establish models for predicting online
+behavior.</p>
+</blockquote>
+<p>I defended my Ph.D. thesis in December 2012. I worked on it at the University of Amsterdam, under the supervision of Prof.Dr.Maarten de Rijke. Maarten has been a great supervisor and exemplary researcher. Without his guidance and the people from ILPS and my co-authors, this thesis would not have been possible. Thank you!</p>
+<p><a href="../pdf/Mining%20Social%20Media-Tracking%20Content%20and%20Predicting%20Behavior.pdf">Download a copy (PDF, 3.7MB)</a></p>
+<h3 id="community-service">Community Service<a class="headerlink" href="#community-service" title="Permanent link">&para;</a></h3>
+<p>I have served in the program committee member of the following venues.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Year</th>
+<th style="text-align: left;">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2021</td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">International Conference on Information and Knowledge Management (CIKM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">SIGIR Workshop on eCommerce (SIGIReCom)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Multimedia Systems Journal (MMSJ)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Journal of Information Retrieval (IRJ)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020</td>
+<td style="text-align: left;">Web Search and Data Mining (WSDM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">SIGIR Workshop on eCommerce (SIGIReCom)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">European Conference on Informantion Retrieval (ECIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2019</td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">SIGIR Workshop on eCommerce (SIGIReCom)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Word Wide Web conference (WWW)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Web Search and Data Mining (WSDM) – Outstanding PC Member Award, Session chair on Graphs</td>
+</tr>
+<tr>
+<td style="text-align: center;">2018</td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">The Dutch-Belgian Information Retrieval Workshop (DIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Word Wide Web conference (WWW)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2017</td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2016</td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2015</td>
+<td style="text-align: left;">International Conference on Knowledge Discovery and Information Retrieval (KDIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">International Conference on Information and Knowledge Management (CIKM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Information Processing &amp; Management (IPM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Web Search and Data Mining (WSDM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Artificial Intelligence (AIRE)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2014</td>
+<td style="text-align: left;">Workshop on Machine Learning for Predictive Models Information Processing &amp; Management (IPM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Information Retrieval Facility Conference (IRFC)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Workshop on Social Multimedia and Storytelling Neurocomputing Journal</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Information Retrieval Journal (IRJ)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Social News On the Web</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">IEEE’s Transactions on Knowledge and Data Engineering</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">European Conference on Informantion Retrieval (ECIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2013</td>
+<td style="text-align: left;">Journal of Internet Services and Applications</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">International Joint Conference on Natural Language Processing</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">International Workshop and Challenge on News Recommender Systems</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Information Retrieval Facility Conference (IRFC)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Information Processing &amp; Management (IPM)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Special Interest Group on Information Retrieval (SIGIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">The Dutch-Belgian Information Retrieval Workshop (DIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on Information Systems (TOIS)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">European Conference on Informantion Retrieval (ECIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Transactions on the Web (ToW)</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Journal of the Association for Information Science and Technology (JASIST)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2012</td>
+<td style="text-align: left;">The Dutch-Belgian Information Retrieval Workshop</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">European Conference on Informantion Retrieval (ECIR)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2011</td>
+<td style="text-align: left;">Journal of Computer Assisted Learning (JCAL)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2009</td>
+<td style="text-align: left;">Symposium on String Processing and Information Retrieval (SPIRE)</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>Science](http://amsterdamdatascience.nl) and its activites, and then I shared my experiences on founding and developing <a href="http://904labs.com">904Labs</a>, before I delved into one of my favorite topics: machine learning and search.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">23.26% similar</span>
+                <span>— <a href="/posts/20180308-frankfurt/">Talk at Frankfurt Data Science meetup</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Language models (LMs) for virtual assistants (VAs) are typically trained on large amounts of data, resulting in prohibitively large models which require excessive memory and/or cannot be used to serve user requests in real-time. Entropy pruning results in smaller models but with significant degradation of effectiveness in the tail of the user request distribution. We customize entropy pruning by allowing for a keep list of infrequent n-grams that require a more relaxed pruning threshold, and</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">20.91% similar</span>
+                <span>— <a href="/posts/20210214-icassp/">Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I was invited to give one of the two keynote talks. The first keynote focused on conversational agents and natural language processing and mine followed up with insights how search powers a large spectrum of applications from search, question and answering, and recommendations. I focused on the work we do at 904Labs and illustrated the principles of online learning to rank through real-world examples from our experimences with our customers.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">19.86% similar</span>
+                <span>— <a href="/posts/20171021-ai2future/">Keynote speech at AI2Future</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.16% similar</span>
+                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>On 31 May, I was invited to give a talk at <a href="https://www.meetup.com/TECH-Talks-Meetup-Amsterdam/">TECH Talks in Amsterdam</a>. TECH Talks is a new meetup organized by <a href="https://techloop.io">Techloop.io</a>, a new way for matching jobs and talent in IT. My talk revolved on how we built an e-commerce focused search engine using machine learning (or as most people know it, A.I.). The meetup had a great start with more than 200 registered people and more than 100 people showed up; the room at TQ was at its</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">14.26% similar</span>
+                <span>— <a href="/posts/20180601-techloop/">Talk at TECH Talks Amsterdam</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Today marks my first day at Apple! I’ve joined the Apple Speech Recognition team within Siri, part of the AI/ML (Artificial Intelligence and Machine Learning) organization. After 12 wonderful years in Amsterdam, I’ve relocated to Cupertino, California, in the United States. I’m thrilled to be working at Apple Park, one of the most iconic and beautiful buildings in the world. Excited for the journey ahead!</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">13.21% similar</span>
+                <span>— <a href="/posts/20191118-joining-apple/">Joining Siri at Apple</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../js/d3-umap.js"></script>
+      <script src="../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

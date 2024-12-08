@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20120623-sigir2012-language-intent-models/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20120623-sigir2012-language-intent-models/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</h1>
+
+
+    
+        <h4>Manos Tsagkias<sup>1</sup> and Roi Blanco<sup>2</sup></h4>
+    
+
+
+<h5><sup>1</sup>University of Amsterdam, <sup>2</sup>Yahoo! Research</h5>
+
+
+<h5>23 June 2012</h5>
+
+
+<h5><b>Keywords:</b> paper, sigir</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>Modeling user browsing behavior is an active research area with
+tangible real-world applications, e.g., organizations can adapt
+their online presence to their visitors browsing behavior with
+positive effects in user engagement, and revenue. We concentrate on
+online news agents, and present a semi-supervised method for
+predicting news articles that a user will visit after reading an
+initial article. Our method tackles the problem using language
+intent models trained on historical data which can cope
+with unseen articles. We evaluate our method on a large set of
+articles and in several experimental settings. Our results
+demonstrate the utility of language intent models for predicting
+user browsing behavior within online news sites.</p>
+<p>I am very happy that our paper <em>Language Intent Models for Inferring User Browsing Behavior</em> by Manos Tsagkias, and Roi Blanco [<a href="#1">1</a>] has been accepted at SIGIR 2013, which will be held in Portland, Oregon, 12–16 August 2012. The paper was realized during my three-month internship at Yahoo! Research Barcelona during September–December 2011.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id="1"/>[1] Manos Tsagkias and Roi Blanco. 2012. <em>Language intent models for inferring user browsing behavior</em>. In Proceedings of the 35<sup>th</sup> international ACM SIGIR conference on research and development in information retrieval (SIGIR &lsquo;12). Association for Computing Machinery, New York, NY, USA, 335–344. <a href="https://doi.org/10.1145/2348283.2348330">ACM Link</a>. <a href="../../pdf/sigir2012-Language_Intent_Models_for_Inferring_Use.pdf">PDF</a></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>retrieved, violating a standard assumption of language
+modeling. We correct for this discrepancy by introducing two
+hypergeometric language models for modeling both queries, and
+documents to be retrieved.</p>
+<blockquote>
+<p>In the second part, we focus on predicting behavior. First we look
+at predicting listeners&rsquo; preference in spoken user generated
+content, namely, podcasts. Then, we predict popularity of news
+articles from several news agents in terms of the volume of comments</p>
+</blockquote>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">33.70% similar</span>
+                <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">29.87% similar</span>
+                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.20% similar</span>
+                <span>— <a href="/posts/20210214-icassp/">Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>A natural way is to devise a hybrid system of search and recommendations: We fire the query to a search system and then we take the first few items as seed to a recommender system for getting similar items. Or a system that transforms a query to an image (think AttnGAN or similar) and each product to an image and then rank documents by their image similarity to the query’s–the image representation may constraint the latent space, abstract the language of the query and that of the document and</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">23.26% similar</span>
+                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>This summer I was happy to be back at the Special Interest Group in Information Retrieval (SIGIR), this time, in Pisa, Italy. Last time I was at SIGIR was in Portland back in 2012, where I was presenting the work I did at Yahoo! Barcelona. SIGIR is the top international conference on search engines, and it&rsquo;s always good fun to hear the latest developments and exchange new ideas.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">18.27% similar</span>
+                <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>With the rapid adoption of online shopping, academic research in the eCommerce domain has gained traction. However, significant research challenges remain, spanning from classic eCommerce search problems such as matching textual queries to multi-modal documents and ranking optimization for two-sided marketplaces to human-computer interaction and recom- mender systems for discovery and browsing. These research areas are important for under- standing customer behavior, driving engagement, and</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.96% similar</span>
+                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.44% similar</span>
+                <span>— <a href="/posts/20120329-ecir2012/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

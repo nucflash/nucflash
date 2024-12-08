@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20101002-kl-divergence/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>KL-divergence of Two Documents - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20101002-kl-divergence/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>KL-divergence of Two Documents</h1>
+
+<h3>A hands-on tutorial</h3>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+<h5>University of Amsterdam<br/><a href='mailto:hi@manostsagkias.com?subject=Hi%20from%20manostsagkias.com!'>hi@manostsagkias.com</a></h5>
+
+
+<h5>06 December 2010</h5>
+
+
+<h5><b>Keywords:</b> information theory</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <blockquote>
+<p><em>6 December 2024—Note:</em> This post is a restoration of an older post, which is no longer available online. Content-wise this version is identical to the original. The original version can still be found in the <a href="http://web.archive.org/web/20130508191111/http://staff.science.uva.nl/~tsagias/?p=185">WayBack Machine</a>.</p>
+</blockquote>
+<div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#working-with-documents">Working with documents</a></li>
+<li><a href="#symmetric-kl-divergence">Symmetric KL-divergence</a></li>
+<li><a href="#over-which-random-variables">Over which random variables?</a></li>
+<li><a href="#simple-back-off">Simple back-off</a></li>
+<li><a href="#the-code">The code</a></li>
+</ul>
+</div>
+<p>Let <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(Q\)</span> be two probability distributions of a discrete random variable. If the following two properties hold:</p>
+<ol>
+<li>when <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(Q\)</span> both sum to <span class="arithmatex">\(1\)</span></li>
+<li>and for any <span class="arithmatex">\(i\)</span> such that <span class="arithmatex">\(P(i) &gt; 0\)</span> and <span class="arithmatex">\(Q(i) &gt; 0\)</span></li>
+</ol>
+<p>then, we can define their KL-divergence as:</p>
+<div class="arithmatex">\[D_{KL}(P||Q) = \sum_{i}P(i)log\frac{P(i)}{Q(i)},\]</div>
+<p>and it has three properties:</p>
+<ol>
+<li><span class="arithmatex">\(D_{KL}(P||Q) \neq D_{KL}(Q||P)\)</span> (asymmetry)</li>
+<li>it is additive for independent distributions</li>
+<li><span class="arithmatex">\(D_{KL} \geq 0\)</span> with <span class="arithmatex">\(D_{KL} = 0\)</span> iff <span class="arithmatex">\(P=Q\)</span></li>
+</ol>
+<h2 id="working-with-documents">Working with documents<a class="headerlink" href="#working-with-documents" title="Permanent link">&para;</a></h2>
+<p>We regard a document <span class="arithmatex">\(d\)</span> as discrete distribution of <span class="arithmatex">\(|d|\)</span> random variables, where <span class="arithmatex">\(|d|\)</span> is the number of words in the document. Now, let <span class="arithmatex">\(d_{1}\)</span> and <span class="arithmatex">\(d_{2}\)</span> be two documents for which we want to calculate their KL-divergence. We run into two problems:</p>
+<ol>
+<li>we need to compute the KL-divergence twice due to asymmetry: <span class="arithmatex">\(D_{KL}(d_{1}||d_{2})\)</span> and <span class="arithmatex">\(D_{KL}(d_{2}||d_{1})\)</span>.</li>
+<li>also, due to the 2<sup>nd</sup> constraint for defining KL-divergence, our calculations should only consider words occurring in both <span class="arithmatex">\(d_{1}\)</span> and <span class="arithmatex">\(d_{2}\)</span>.</li>
+</ol>
+<h2 id="symmetric-kl-divergence">Symmetric KL-divergence<a class="headerlink" href="#symmetric-kl-divergence" title="Permanent link">&para;</a></h2>
+<p>We start from the 2<sup>nd</sup> property of KL-divergence:</p>
+<div class="arithmatex">\[\begin{array}{rcl} D_{KL}(P||Q) + D_{KL}(Q||P) &amp; = &amp; \sum_{i}P(i)log\frac{P(i)}{Q(i)} + \sum_{i}Q(i)log\frac{Q(i)}{P(i)} \\&amp; = &amp; \sum_{i}P(i)log\frac{P(i)}{Q(i)}+Q(i)log\frac{Q(i)}{P(i)}\\ &amp; = &amp; \sum_{i}P(i)log\frac{P(i)}{Q(i)}-Q(i)log\frac{P(i)}{Q(i)}\\ &amp; = &amp; \sum_{i}(P(i)-Q(i))log\frac{P(i)}{Q(i)}\end{array}\]</div>
+<p>Ok! It looks good [<a href="#1">1</a>]! Now we need to compute KL-divergence only once for every pair of documents.</p>
+<h2 id="over-which-random-variables">Over which random variables?<a class="headerlink" href="#over-which-random-variables" title="Permanent link">&para;</a></h2>
+<p>Now let’s turn into how to handle documents with no or little overlapping vocabularies. To illustrate the problem, consider the following documents:</p>
+<p><code>d1</code>:</p>
+<blockquote>
+<p>This is a document</p>
+</blockquote>
+<p><code>d2</code>:</p>
+<blockquote>
+<p>This is a sentence</p>
+</blockquote>
+<p>For each document we remove stopwords (‘this’, ‘is’, ‘a’) so they become:</p>
+<p><code>d1</code>:</p>
+<blockquote>
+<p>document</p>
+</blockquote>
+<p><code>d2</code>:</p>
+<blockquote>
+<p>sentence</p>
+</blockquote>
+<p>According to constraint 2, we need to operate on the intersection of the documents’ vocabularies: <span class="arithmatex">\(d_{1}\cap d_{2}=\emptyset\)</span>. We end up with the empty set and therefore we cannot compute directly the KL-divergence. In this case we can assign it a large number like <span class="arithmatex">\(1e33\)</span>.</p>
+<p>Let’s see what happens when we have larger documents.</p>
+<p><code>d1</code>:</p>
+<blockquote>
+<p>Many research publications want you to use BibTeX which better organizes the whole process. Suppose for concreteness your source file is x.tex. Basically, you create a file x.bib containing the bibliography, and run bibtex on that file.</p>
+</blockquote>
+<p><code>d2</code>:</p>
+<blockquote>
+<p>In this case you must supply both a \left and a \right because the delimiter height are made to match whatever is contained between the two commands. But, the \left doesn&rsquo;t have to be an actual &lsquo;left delimiter&rsquo;, that is you can use &lsquo;\left)&rsquo; if there were some reason to do it.</p>
+</blockquote>
+<p>After stopword removal, lowercasing and discarding words less than <span class="arithmatex">\(2\)</span> characters, the documents become:</p>
+<p><code>d1</code>:</p>
+<blockquote>
+<p>many research publications want you use bibtex better organizes whole process suppose concreteness your source file tex basically you create file bib containing bibliography run bibtex file</p>
+</blockquote>
+<p><code>d2</code>:</p>
+<blockquote>
+<p>case you must supply both left right because delimiter height made match whatever contained between two commands left doesn have actual left delimiter you use left some reason</p>
+</blockquote>
+<p>The vocabulary intersection of the documents consists of two terms: “use” and “you”. In <span class="arithmatex">\(d_{1}\)</span> “use” occurs 1 time and “you” occurs 2 times. Surprisingly, in <span class="arithmatex">\(d_{2}\)</span> “use” also occurs <span class="arithmatex">\(1\)</span> time and “you” occurs <span class="arithmatex">\(2\)</span> times too. The distributions <span class="arithmatex">\(D_{1}\)</span> and <span class="arithmatex">\(D_{2}\)</span> are equal, and therefore <span class="arithmatex">\(D_{KLsym}(D_{1}||D_{2}) = 0\)</span>. So these documents are deemed equal! A better stopword list could have removed “use” and “you” and in that case the documents would have an infinite KL-divergence as in the first example. However it is easy to think of similar examples where stopword lists wouldn’t have been of much help.</p>
+<p>So, how can we overcome this problem?</p>
+<h2 id="simple-back-off">Simple back-off<a class="headerlink" href="#simple-back-off" title="Permanent link">&para;</a></h2>
+<p>Since operating on the vocabulary intersection is not an option, we need to find a trick that allows us to consider the entire vocabulary of the documents. Smoothing comes to mind. Dirichlet and Laplacian smoothing are amongst the most popular smoothing techniques but after smoothing the probability distribution doesn’t sum up to <span class="arithmatex">\(1\)</span> and violates the first constraint for defining KL-divergence.</p>
+<p>Brigette Biggi [<a href="#2">2</a>] suggested a back off smoothing method which keeps the probability distributions sums to <span class="arithmatex">\(1\)</span> and also allows operating on the entire vocabulary. According to their proposed back-off method, the smoothed probability <span class="arithmatex">\(P'(t, d)\)</span> of a term <span class="arithmatex">\(t\)</span> in a document <span class="arithmatex">\(d\)</span> is:</p>
+<div class="arithmatex">\[P'(t_{i},d) = \left\{ \begin{array}{ll} \gamma P(t_{i}|d) &amp; \quad \text{if it occurs in d}\\ \epsilon &amp; \quad \text{otherwise}\\ \end{array} \right.\]</div>
+<p>where</p>
+<div class="arithmatex">\[P(t_{i}|d) = \frac{tf(t_{i}, d)}{\sum_{x\in d}tf(t_{x},d)}\]</div>
+<p>the interesting part is on how <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(\epsilon\)</span> are calculated. In order to keep the term probabilities for <span class="arithmatex">\(d_{1}\)</span> and <span class="arithmatex">\(d_{2}\)</span> summing up to <span class="arithmatex">\(1\)</span>, the following constraint should be met:</p>
+<div class="arithmatex">\[\sum_{i \in d}\gamma P(t_{i}|d) + \sum_{i \in d_{1}, i \notin d_{2}}\epsilon = 1\]</div>
+<p>where <span class="arithmatex">\(\gamma\)</span> is a normalization coefficient:</p>
+<div class="arithmatex">\[\gamma = 1 - \sum_{i \in d_{1}, i \notin d_{2}}\epsilon\]</div>
+<p>and <span class="arithmatex">\(\epsilon\)</span> is a positive number smaller than the minimum term probability occurring in either <span class="arithmatex">\(d_{1}\)</span> or <span class="arithmatex">\(d_{2}\)</span>.</p>
+<h2 id="the-code">The code<a class="headerlink" href="#the-code" title="Permanent link">&para;</a></h2>
+<p>To illustrate the above, I wrote a small Python script:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">re</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">math</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">collections</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">tokenize</span>(_str):
+    stopwords <span style="color: #666666">=</span> [<span style="color: #BA2121">&#39;and&#39;</span>, <span style="color: #BA2121">&#39;for&#39;</span>, <span style="color: #BA2121">&#39;if&#39;</span>, <span style="color: #BA2121">&#39;the&#39;</span>, <span style="color: #BA2121">&#39;then&#39;</span>, <span style="color: #BA2121">&#39;be&#39;</span>, <span style="color: #BA2121">&#39;is&#39;</span>, <span style="color: #BA2121">&#39;are&#39;</span>, <span style="color: #BA2121">&#39;will&#39;</span>, <span style="color: #BA2121">&#39;in&#39;</span>, <span style="color: #BA2121">&#39;it&#39;</span>, <span style="color: #BA2121">&#39;to&#39;</span>, <span style="color: #BA2121">&#39;that&#39;</span>]
+    tokens <span style="color: #666666">=</span> collections<span style="color: #666666">.</span>defaultdict(<span style="color: #008000; font-weight: bold">lambda</span>: <span style="color: #666666">0.</span>)
+    <span style="color: #008000; font-weight: bold">for</span> m <span style="color: #AA22FF; font-weight: bold">in</span> re<span style="color: #666666">.</span>finditer(<span style="color: #BA2121">r&quot;(\w+)&quot;</span>, _str, re<span style="color: #666666">.</span>UNICODE):
+        m <span style="color: #666666">=</span> m<span style="color: #666666">.</span>group(<span style="color: #666666">1</span>)<span style="color: #666666">.</span>lower()
+        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(m) <span style="color: #666666">&lt;</span> <span style="color: #666666">2</span>: <span style="color: #008000; font-weight: bold">continue</span>
+        <span style="color: #008000; font-weight: bold">if</span> m <span style="color: #AA22FF; font-weight: bold">in</span> stopwords: <span style="color: #008000; font-weight: bold">continue</span>
+        tokens[m] <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
+
+    <span style="color: #008000; font-weight: bold">return</span> tokens
+<span style="color: #3D7B7B; font-style: italic">#end of tokenize</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">kldiv</span>(_s, _t):
+    <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #008000">len</span>(_s) <span style="color: #666666">==</span> <span style="color: #666666">0</span>):
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1e33</span>
+
+    <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #008000">len</span>(_t) <span style="color: #666666">==</span> <span style="color: #666666">0</span>):
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1e33</span>
+
+    ssum <span style="color: #666666">=</span> <span style="color: #666666">0.</span> <span style="color: #666666">+</span> <span style="color: #008000">sum</span>(_s<span style="color: #666666">.</span>values())
+    slen <span style="color: #666666">=</span> <span style="color: #008000">len</span>(_s)
+
+    tsum <span style="color: #666666">=</span> <span style="color: #666666">0.</span> <span style="color: #666666">+</span> <span style="color: #008000">sum</span>(_t<span style="color: #666666">.</span>values())
+    tlen <span style="color: #666666">=</span> <span style="color: #008000">len</span>(_t)
+
+    vocabdiff <span style="color: #666666">=</span> <span style="color: #008000">set</span>(_s<span style="color: #666666">.</span>keys())<span style="color: #666666">.</span>difference(<span style="color: #008000">set</span>(_t<span style="color: #666666">.</span>keys()))
+    lenvocabdiff <span style="color: #666666">=</span> <span style="color: #008000">len</span>(vocabdiff)
+
+<span style="color: #bbbbbb">    </span><span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; epsilon &quot;&quot;&quot;</span>
+    epsilon <span style="color: #666666">=</span> <span style="color: #008000">min</span>(<span style="color: #008000">min</span>(_s<span style="color: #666666">.</span>values())<span style="color: #666666">/</span>ssum, <span style="color: #008000">min</span>(_t<span style="color: #666666">.</span>values())<span style="color: #666666">/</span>tsum) <span style="color: #666666">*</span> <span style="color: #666666">0.001</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; gamma &quot;&quot;&quot;</span>
+    gamma <span style="color: #666666">=</span> <span style="color: #666666">1</span> <span style="color: #666666">-</span> lenvocabdiff <span style="color: #666666">*</span> epsilon
+
+    <span style="color: #3D7B7B; font-style: italic"># print &quot;_s: %s&quot; % _s</span>
+    <span style="color: #3D7B7B; font-style: italic"># print &quot;_t: %s&quot; % _t</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; Check if distribution probabilities sum to 1&quot;&quot;&quot;</span>
+    sc <span style="color: #666666">=</span> <span style="color: #008000">sum</span>([v<span style="color: #666666">/</span>ssum <span style="color: #008000; font-weight: bold">for</span> v <span style="color: #AA22FF; font-weight: bold">in</span> _s<span style="color: #666666">.</span>itervalues()])
+    st <span style="color: #666666">=</span> <span style="color: #008000">sum</span>([v<span style="color: #666666">/</span>tsum <span style="color: #008000; font-weight: bold">for</span> v <span style="color: #AA22FF; font-weight: bold">in</span> _t<span style="color: #666666">.</span>itervalues()])
+
+    <span style="color: #008000; font-weight: bold">if</span> sc <span style="color: #666666">&lt;</span> <span style="color: #666666">9e-6</span>:
+        <span style="color: #008000">print</span> <span style="color: #BA2121">&quot;Sum P: </span><span style="color: #A45A77; font-weight: bold">%e</span><span style="color: #BA2121">, Sum Q: </span><span style="color: #A45A77; font-weight: bold">%e</span><span style="color: #BA2121">&quot;</span> <span style="color: #666666">%</span> (sc, st)
+        <span style="color: #008000">print</span> <span style="color: #BA2121">&quot;*** ERROR: sc does not sum up to 1. Bailing out ..&quot;</span>
+        sys<span style="color: #666666">.</span>exit(<span style="color: #666666">2</span>)
+    <span style="color: #008000; font-weight: bold">if</span> st <span style="color: #666666">&lt;</span> <span style="color: #666666">9e-6</span>:
+        <span style="color: #008000">print</span> <span style="color: #BA2121">&quot;Sum P: </span><span style="color: #A45A77; font-weight: bold">%e</span><span style="color: #BA2121">, Sum Q: </span><span style="color: #A45A77; font-weight: bold">%e</span><span style="color: #BA2121">&quot;</span> <span style="color: #666666">%</span> (sc, st)
+        <span style="color: #008000">print</span> <span style="color: #BA2121">&quot;*** ERROR: st does not sum up to 1. Bailing out ..&quot;</span>
+        sys<span style="color: #666666">.</span>exit(<span style="color: #666666">2</span>)
+
+    div <span style="color: #666666">=</span> <span style="color: #666666">0.</span>
+    <span style="color: #008000; font-weight: bold">for</span> t, v <span style="color: #AA22FF; font-weight: bold">in</span> _s<span style="color: #666666">.</span>iteritems():
+        pts <span style="color: #666666">=</span> v <span style="color: #666666">/</span> ssum
+
+        ptt <span style="color: #666666">=</span> epsilon
+        <span style="color: #008000; font-weight: bold">if</span> t <span style="color: #AA22FF; font-weight: bold">in</span> _t:
+            ptt <span style="color: #666666">=</span> gamma <span style="color: #666666">*</span> (_t[t] <span style="color: #666666">/</span> tsum)
+
+        ckl <span style="color: #666666">=</span> (pts <span style="color: #666666">-</span> ptt) <span style="color: #666666">*</span> math<span style="color: #666666">.</span>log(pts <span style="color: #666666">/</span> ptt)
+
+        div <span style="color: #666666">+=</span>  ckl
+
+    <span style="color: #008000; font-weight: bold">return</span> div
+<span style="color: #3D7B7B; font-style: italic">#end of kldiv</span>
+
+d1 <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;Many research publications want you to use BibTeX, which better</span>
+<span style="color: #BA2121">organizes the whole process. Suppose for concreteness your source</span>
+<span style="color: #BA2121">file is x.tex. Basically, you create a file x.bib containing the</span>
+<span style="color: #BA2121">bibliography, and run bibtex on that file.&quot;&quot;&quot;</span>
+
+d2 <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;In this case you must supply both a \left and a </span><span style="color: #AA5D1F; font-weight: bold">\r</span><span style="color: #BA2121">ight because the</span>
+<span style="color: #BA2121">delimiter height are made to match whatever is contained between the</span>
+<span style="color: #BA2121">two commands. But, the \left doesn&#39;t have to be an actual &#39;left</span>
+<span style="color: #BA2121">delimiter&#39;, that is you can use &#39;\left)&#39; if there were some reason</span>
+<span style="color: #BA2121">to do it.&quot;&quot;&quot;</span>
+
+<span style="color: #008000">print</span> <span style="color: #BA2121">&quot;KL-divergence between d1 and d2:&quot;</span>, kldiv(tokenize(d1), tokenize(d2))
+<span style="color: #008000">print</span> <span style="color: #BA2121">&quot;KL-divergence between d2 and d1:&quot;</span>, kldiv(tokenize(d2), tokenize(d1))
+</code></pre></div>
+<p>The output looks like this:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>KL-divergence between d1 and d2: 6.52185430964
+KL-divergence between d2 and d1: 6.51142363095
+</code></pre></div>
+<p>Now, KL-divergence is greater than zero, so the documents are not thought to be the same as before! Good job. Looking at KL symmetry, although the divergence of the two pairs is not identical, it is sufficiently close [<a href="#1">1</a>].</p>
+<h4 id="acknowledgments">Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">&para;</a></h4>
+<p>The above is a compilation of knowledge found in Wikipedia and from the paper “Reducing the Plagiarism Detection Search Space on the basis of Kullback-Leibler Distance” by Alberto Barron-Cedeno, Paolo Rosso, and Jose-Miguel Benedi [<a href="#1">1</a>]. Examples and code are mine and you are free to use them.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id="1"/>[1] Pinto, D., Benedí, JM., Rosso, P. (2007). <em>Clustering Narrow-Domain Short Texts by Using the Kullback-Leibler Distance</em>. In Computational Linguistics and Intelligent Text Processing (CICLing 2007). Lecture Notes in Computer Science, vol 4394. Springer, Berlin, Heidelberg. <a href="https://link.springer.com/chapter/10.1007/978-3-540-70939-8_54">Link</a></p>
+<p><span id="2"/>[2] Bigi, B. (2003). <em>Using Kullback-Leibler Distance for Text Categorization</em>. In Advances in Information Retrieval (ECIR 2003). Lecture Notes in Computer Science, vol 2633. Springer, Berlin, Heidelberg. <a href="https://doi.org/10.1007/3-540-36618-0_22">Link</a></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>Our work has been published at ECIR 2012 [<a href="#1">1</a>], and it has been awarded the best paper award; <a href="../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
+<h3 id="references">References</h3>
+<p><span id='1'>[1]: Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke. <em>Predicting IMDB Move Ratings Using Social Media</em>. In European Conference on Information Retrieval (ECIR) 2012. <a href="https://dl.acm.org/doi/10.1007/978-3-642-28997-2_51">ACM Library</a>; <a href="../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">10.20% similar</span>
+                <span>— <a href="/posts/20120329-ecir2012/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I will defend my Ph.D. thesis on Wednesday, 5 December 2012, at 14:00 (GMT+1), at Agnietenkapel, Amsterdam. You are most welcome to join.</p>
+<p>In the meantime, please feel free to <a href="../pdf/Mining%20Social%20Media-Tracking%20Content%20and%20Predicting%20Behavior.pdf">grab a copy</a>, and cite the book:</p>
+<p>``` bibtex
+@phdthesis{tsagkias2012-thesis,
+Title = {Mining Social Media: Tracking Content and Predicting Behavior},
+Author = {Manos Tsagkias},
+Year = {2012},
+School = {University of Amsterdam}
+}</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">10.11% similar</span>
+                <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">9.04% similar</span>
+                <span>— <a href="/posts/20210214-icassp/">Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>is published in <a href="http://sigir.org/forum/issues/june-2020/">June 2020 issue of SIGIR Forum</a>.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">8.82% similar</span>
+                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I&rsquo;m very happy to share news on the latest success of <a href="https://904labs.com">904Labs A.I. for Search</a> with our new customer, <a href="https://eci.nl">eci.nl</a>.</p>
+<p>eci is one of the largest online book specialists in the Netherlands and Belgium, with an estimated yearly revenue of 15m euro for the Dutch part. For their site search, eci relied on a manually optimized Apache Solr, integrated into Intershop.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">8.20% similar</span>
+                <span>— <a href="/posts/20171104-another-historical-moment-904labs/">Another historical moment for 904Labs</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>These metrics should also correlate well with revenue but also with customer loyalty (measured in returning customers and in shortening the time between returns). Such a metric (or a multiple of metrics) will then allow us to run offline experiments and make predictions on revenue, which is the main KPI that systems are evaluated in production for most e-commerce business.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">8.13% similar</span>
+                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <figure id="__figure-caption_1">
+<p><img alt="&quot;Detecting Algorithmic Discrimination&quot; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands." src="https://manostsagkias.wordpress.com/wp-content/uploads/2016/12/img_2240.jpg" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figure 1.</span> &ldquo;Detecting Algorithmic Discrimination&rdquo; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands.</p>
+</figcaption>
+</figure>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">7.08% similar</span>
+                <span>— <a href="/posts/20161210-dir/">Attending DIR 2016</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

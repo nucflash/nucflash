@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20190718-ecommerce-workshop/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20190718-ecommerce-workshop/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</h1>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+<h5>18 July 2019</h5>
+
+
+<h5><b>Keywords:</b> 904Labs, conference, workshop, sigir, sigir-ecom, invited-talk, information retrieval, machine learning, industry day</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <p>I was invited to give a talk at the <a href="https://sigir-ecom.github.io">SIGIR Workshop On eCommerce 2019</a> but unfortunately, I am not attending SIGIR this year. Instead I wrote down some thoughts on interesting problems, ideas and challenges in the e-commerce domain. Here they are:</p>
+<h2 id="the-vocabulary-gap-is-still-an-open-problem">The vocabulary gap is still an open problem.<a class="headerlink" href="#the-vocabulary-gap-is-still-an-open-problem" title="Permanent link">&para;</a></h2>
+<p>People refer to products in different ways that products are described in the catalogue. Neural networks, learning to rank, query intent engines are all important. Our experience at <a href="https://904labs.com">904Labs</a> shown that a query intent engine that boosts specific product categories given a query, boosts our learning to rank system by more than 16% in additional revenue. These results suggest that effective initial ranking is very important for effective learning to rank. To this end, we foresee an increasing interest in methods that can re-rank the entire collection and not only the top-N documents. This is particularly important for larger shops with large inventories (more than hundred of thousands of items) where a query can return hundreds of items, and only the top few are re-ranked.</p>
+<h2 id="e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match">E-commerce search is as much as about exploration as it is about finding the best match.<a class="headerlink" href="#e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match" title="Permanent link">&para;</a></h2>
+<p>From our experience at 904Labs, we see a large fraction of queries to revolve around categories, or combinations of categories, e.g., <code>red shoes</code>, <code>kitchen tables</code>, <code>dvd players</code>, <code>ebooks for 12 years old</code>. This type of queries go beyond our typical search and require understanding the query and generating a list of recommended relevant items. This proposition is supported by the surprising effectiveness of sorting by popularity; the most popular items for a query are potential good candidates for this “recommendation list” that the user is looking for. Back to query understanding of this type of exploratory queries, one would think that natural language processing can help here but in the e-commerce setting, queries are very short and any language analysis falls short. </p>
+<p>An open question here is how can we go from these broad queries to a good set of recommendations? </p>
+<p>A natural way is to devise a hybrid system of search and recommendations: We fire the query to a search system and then we take the first few items as seed to a recommender system for getting similar items. Or a system that transforms a query to an image (think AttnGAN or similar) and each product to an image and then rank documents by their image similarity to the query’s–the image representation may constraint the latent space, abstract the language of the query and that of the document and be able to capture semantics that are otherwise difficult to encode in textual form. The image representation of queries and documents also offers explainability when it comes to explaining the rankings of the system; which is becoming increasingly important in machine learning-based systems.</p>
+<h2 id="evaluation-metrics-in-e-commerce">Evaluation metrics in e-commerce.<a class="headerlink" href="#evaluation-metrics-in-e-commerce" title="Permanent link">&para;</a></h2>
+<p>There are several directions here that we need do more work. First, the e-commerce setting is a conjunction of exploratory search, typical search, and recommendations. Using the standard IR precision and recall measures for e-commerce may not tell us the entire story for how happy makes its users. We need to discover the aspects of a system that makes users happy for designing one or more metrics for evaluating search and recommendation systems. These metrics should also correlate well with revenue but also with customer loyalty (measured in returning customers and in shortening the time between returns). Such a metric (or a multiple of metrics) will then allow us to run offline experiments and make predictions on revenue, which is the main KPI that systems are evaluated in production for most e-commerce business.</p>
+<p>Last, an extra tip: we found that boolean scoring may be on par or outperform tf.idf or BM25 scoring in the e-commerce domain, it&rsquo;s worth checking its effectiveness on your own data ;)</p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>With the rapid adoption of online shopping, academic research in the eCommerce domain has gained traction. However, significant research challenges remain, spanning from classic eCommerce search problems such as matching textual queries to multi-modal documents and ranking optimization for two-sided marketplaces to human-computer interaction and recom- mender systems for discovery and browsing. These research areas are important for under- standing customer behavior, driving engagement, and</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">56.02% similar</span>
+                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>This year I talked at the industry track where I shared my experiences from running a search startup in the Netherlands. I received positive feedback, and it was good to catch up with old friends and meet new people. If you want a <a href="https://www.904labs.com/2016/08/05/904labs-sigir-2016/">short recap from the latest and greatest trends in search technology, read on my summary on 904Labs blog</a>.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">35.34% similar</span>
+                <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>In our talk, I described the importance of search in e-commerce by giving examples of failed searches in a number of settings, from finding advertized items using onsite search to mobile search. I followed by with why people choose Amazon to start their product search and highlighted that 54% of them choose Amazon because of their great search functionality–that is the reason number five for people to go to Amazon. Then, I explained why optimizing the ranking manually is close to impossible for</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">31.16% similar</span>
+                <span>— <a href="/posts/20180211-emakina/">Talk at A.I. for Commerce meetup</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I&rsquo;m happy to share some great results with regards to the utility of self-learning search and revenue on e-commerce sites. 904Labs self-learning search improves revenue by 36% when compared to a highly, but manually, tuned Apache Solr search engine. Good job 904Labs team!</p>
+<p>Read the full blog post at 904Labs, here: <a href="https://www.904labs.com/en/self-learning-search-improves-revenue-for-e-commerce">https://www.904labs.com/en/self-learning-search-improves-revenue-for-e-commerce</a></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">29.73% similar</span>
+                <span>— <a href="/posts/20170418-historical-moment-904labs/">A historical moment for 904Labs</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>On 31 May, I was invited to give a talk at <a href="https://www.meetup.com/TECH-Talks-Meetup-Amsterdam/">TECH Talks in Amsterdam</a>. TECH Talks is a new meetup organized by <a href="https://techloop.io">Techloop.io</a>, a new way for matching jobs and talent in IT. My talk revolved on how we built an e-commerce focused search engine using machine learning (or as most people know it, A.I.). The meetup had a great start with more than 200 registered people and more than 100 people showed up; the room at TQ was at its</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">22.66% similar</span>
+                <span>— <a href="/posts/20180601-techloop/">Talk at TECH Talks Amsterdam</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <figure id="__figure-caption_1">
+<p><img alt="&quot;Detecting Algorithmic Discrimination&quot; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands." src="https://manostsagkias.wordpress.com/wp-content/uploads/2016/12/img_2240.jpg" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figure 1.</span> &ldquo;Detecting Algorithmic Discrimination&rdquo; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands.</p>
+</figcaption>
+</figure>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">21.55% similar</span>
+                <span>— <a href="/posts/20161210-dir/">Attending DIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Modeling user browsing behavior is an active research area with
+tangible real-world applications, e.g., organizations can adapt
+their online presence to their visitors browsing behavior with
+positive effects in user engagement, and revenue. We concentrate on
+online news agents, and present a semi-supervised method for
+predicting news articles that a user will visit after reading an
+initial article. Our method tackles the problem using language</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">21.55% similar</span>
+                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>
