@@ -120,10 +120,11 @@
 </div>
 <p>Today at <a href="https://904labs.com">904Labs Search</a> we&rsquo;ve been having fun with the next version of our Query Intent/Understanding engine.</p>
 <p>If you don&rsquo;t know what a Query Intent/Understanding engine is, here&rsquo;s <a href="20180618-query-engine.md">some background</a>; otherwise keep reading.</p>
+<p>Our Query Intent/Understanding engine is closing to one year old, and it&rsquo;s pretty cool: it can quickly boostrap a knowledge graph and continuously update it straight from our customer&rsquo;s data. Since its introduction in September 2017, it has been tested in many different domains and languages and has shown substantial revenue uplift across customers.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">36.84% similar</span>
+                <span class="score">35.24% similar</span>
                 <span>— <a href="/posts/20180618-query-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
             </div>
         </li>
@@ -131,11 +132,13 @@
         <li>
             
             <blockquote>
-                <p>of the query and that of the document and be able to capture semantics that are otherwise difficult to encode in textual form. The image representation of queries and documents also offers explainability when it comes to explaining the rankings of the system; which is becoming increasingly important in machine learning-based systems.</p>
+                <h2 id="the-vocabulary-gap-is-still-an-open-problem">The vocabulary gap is still an open problem.</h2>
+<p>People refer to products in different ways that products are described in the catalogue. Neural networks, learning to rank, query intent engines are all important. Our experience at <a href="https://904labs.com">904Labs</a> shown that a query intent engine that boosts specific product categories given a query, boosts our learning to rank system by more than 16% in additional revenue. These results suggest that effective initial ranking is very important for effective learning to rank. To this end, we foresee an increasing interest in methods that can re-rank the entire collection and not only the top-N documents. This is particularly important for larger shops with large inventories (more than hundred of thousands of items) where a query can return hundreds of items, and only the top few are re-ranked.</p>
+<h2 id="e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match">E-commerce search is as much as about exploration as it is about finding the best match.</h2>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">20.98% similar</span>
+                <span class="score">21.00% similar</span>
                 <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
             </div>
         </li>
@@ -143,7 +146,15 @@
         <li>
             
             <blockquote>
-                <p>intent models trained on historical data which can cope
+                <h3 id="abstract">Abstract</h3>
+<p>Modeling user browsing behavior is an active research area with
+tangible real-world applications, e.g., organizations can adapt
+their online presence to their visitors browsing behavior with
+positive effects in user engagement, and revenue. We concentrate on
+online news agents, and present a semi-supervised method for
+predicting news articles that a user will visit after reading an
+initial article. Our method tackles the problem using language
+intent models trained on historical data which can cope
 with unseen articles. We evaluate our method on a large set of
 articles and in several experimental settings. Our results
 demonstrate the utility of language intent models for predicting
@@ -151,7 +162,7 @@ user browsing behavior within online news sites.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">17.59% similar</span>
+                <span class="score">14.60% similar</span>
                 <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
             </div>
         </li>
@@ -171,24 +182,27 @@ user browsing behavior within online news sites.</p>
         <li>
             
             <blockquote>
-                <p>used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.</p>
+                <h3 id="abstract">Abstract</h3>
+<p>We focus on improving the effectiveness of a Virtual Assistant (VA) in recognizing emerging entities in spoken queries. We introduce a method that uses historical user interactions to forecast which entities will gain in popularity and become trending, and it subse- quently integrates the predictions within the Automated Speech Recognition (ASR) component of the VA. Experiments show that our proposed approach results in a 20% relative reduction in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
+<p>Happy to share the news about my first joint pubication with the Siri Speech team at Apple. Our short paper <a href="https://arxiv.org/abs/2005.12816">Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a> with Christophe van Gysel, myself, Ernie Pusateri, and Ilya Oparin, is accepted at SIGIR 2020.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">10.93% similar</span>
-                <span>— <a href="/posts/2013-04-08-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
+                <span class="score">9.98% similar</span>
+                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
             </div>
         </li>
         
         <li>
             
             <blockquote>
-                <p>in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
+                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
+&nbsp;</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">10.06% similar</span>
-                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+                <span class="score">9.45% similar</span>
+                <span>— <a href="/posts/2013-04-08-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
             </div>
         </li>
         
