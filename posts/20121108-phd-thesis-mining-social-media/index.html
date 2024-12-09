@@ -161,6 +161,19 @@ behavior.</p>
         <li>
             
             <blockquote>
+                <p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
+&nbsp;</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">46.78% similar</span>
+                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
                 <h3 id="abstract">Abstract</h3>
 <p>Modeling user browsing behavior is an active research area with
 tangible real-world applications, e.g., organizations can adapt
@@ -185,6 +198,19 @@ user browsing behavior within online news sites.</p>
         <li>
             
             <blockquote>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke. 2009. <em>Predicting the volume of comments on online news stories</em>. In Proceedings of the 18<sup>th</sup> ACM conference on Information and knowledge management (CIKM &lsquo;09). Association for Computing Machinery, New York, NY, USA, 1765–1768. <a href="https://doi.org/10.1145/1645953.1646225">ACM Link</a> <a href="../pdf/cikm2009-predicting-volume-of-comments.pdf">PDF</a></span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">23.61% similar</span>
+                <span>— <a href="/posts/20090903-cikm2009-predicting-comments/">Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
                 <h3 id="abstract">Abstract</h3>
 <p>We predict IMDb movie ratings and consider two sets of features: surface and textual features. For the latter, we assume that no social media signal is isolated and use data from multiple channels that are linked to a particular movie, such as tweets from Twitter and comments from YouTube. We extract textual features from each channel to use in our prediction model and we explore whether data from either of these channels can help to extract a better set of textual feature for prediction. Our best performing model is able to rate movies very close to the observed values.</p>
 <aside>
@@ -197,7 +223,7 @@ user browsing behavior within online news sites.</p>
             
             <div class="snippet-meta">
                 <span class="score">21.85% similar</span>
-                <span>— <a href="/posts/20120329-ecir2012/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+                <span>— <a href="/posts/20120329-ecir2012-imdb/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
             </div>
         </li>
         
@@ -217,13 +243,14 @@ user browsing behavior within online news sites.</p>
         <li>
             
             <blockquote>
-                <p>A natural way is to devise a hybrid system of search and recommendations: We fire the query to a search system and then we take the first few items as seed to a recommender system for getting similar items. Or a system that transforms a query to an image (think AttnGAN or similar) and each product to an image and then rank documents by their image similarity to the query’s–the image representation may constraint the latent space, abstract the language of the query and that of the document and be able to capture semantics that are otherwise difficult to encode in textual form. The image representation of queries and documents also offers explainability when it comes to explaining the rankings of the system; which is becoming increasingly important in machine learning-based systems.</p>
-<h2 id="evaluation-metrics-in-e-commerce">Evaluation metrics in e-commerce.</h2>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">16.76% similar</span>
-                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
+                <span class="score">16.02% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
             </div>
         </li>
         
@@ -236,32 +263,6 @@ user browsing behavior within online news sites.</p>
             <div class="snippet-meta">
                 <span class="score">15.17% similar</span>
                 <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>I&rsquo;m happy to share some great results with regards to the utility of self-learning search and revenue on e-commerce sites. 904Labs self-learning search improves revenue by 36% when compared to a highly, but manually, tuned Apache Solr search engine. Good job 904Labs team!</p>
-<p>Read the full blog post at 904Labs, here: <a href="https://www.904labs.com/en/self-learning-search-improves-revenue-for-e-commerce">https://www.904labs.com/en/self-learning-search-improves-revenue-for-e-commerce</a></p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">13.55% similar</span>
-                <span>— <a href="/posts/20170418-historical-moment-904labs/">A historical moment for 904Labs</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
-&nbsp;</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">11.54% similar</span>
-                <span>— <a href="/posts/2013-04-08-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
             </div>
         </li>
         

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20110120-dir2011-language-identification/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20110120-dir2011-language-identification/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</h1>
+
+
+    
+        <h4>Simon Carter, Manos Tsagkias, and Wouter Weerkamp</h4>
+    
+
+
+
+<h5>20 January 2011</h5>
+
+
+<h5><b>Keywords:</b> paper, dir, language identification</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id="1">[1] Simon Carter, Manos Tsagkias, and Wouter Weerkamp. 2011. <em>Semi-Supervised Priors for Microblog Language Identification</em>. In DIR 2011: Dutch-Belgian Information Retrieval Workshop Amsterdam (pp.
+12-15). University of Amsterdam, Information and Language Processing group.
+<a href="../../pdf/dir2011-microblog-language-identification.pdf">PDF</a></span></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">52.36% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">32.10% similar</span>
+                <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>On-line news agents provide commenting facilities for readers to express their views with regard to news stories. The number of user supplied comments on a news article may be indicative of its importance or impact. We report on exploratory work that predicts the comment volume of news articles prior to publication using five feature sets. We address the prediction task as a two stage classification task: a binary classification identifies articles with the potential to receive comments, and a second binary classification receives the output from the first step to label articles &ldquo;low&rdquo; or &ldquo;high&rdquo; comment volume. The results show solid performance for the former task, while performance degrades for the latter.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.51% similar</span>
+                <span>— <a href="/posts/20090903-cikm2009-predicting-comments/">Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Happy to share yet another publication with the Siri Speech team at Apple, this time led by Sashank Gondala, who interned with us last year. Our full paper<a href="https://arxiv.org/pdf/2102.07219">Error-driven Pruning of Language Models for Virtual Assistants</a> is accepted at ICASSP 2021.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">25.53% similar</span>
+                <span>— <a href="/posts/20210214-icassp/">Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Spoken audio, like any time-continuous medium, is notoriously difficult to browse or skim without support of an interface providing semantically annotated jump points to signal the user where to listen in. Creation of time-aligned metadata by human annotators is prohibitively expensive, motivating the investigation of representations of segment-level semantic content based on transcripts generated by automatic speech recognition (ASR). This paper examines the feasibility of using term clouds to provide users with a structured representation of the semantic content of podcast episodes. Podcast episodes are visualized as a series of sub-episode segments, each represented by a term cloud derived from a transcript generated by automatic speech recognition (ASR). Quality of segment-level term clouds is measured quantitatively and their utility is investigated using a small-scale user study based on human labeled segment boundaries. Since the segment-level clouds generated from</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">24.97% similar</span>
+                <span>— <a href="/posts/20080720-sscs2008-speech-termclouds/">Paper at SSCS 2008 — Using Term Clouds to Represent Segment-Level Semantic Content of Podcasts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We focus on improving the effectiveness of a Virtual Assistant (VA) in recognizing emerging entities in spoken queries. We introduce a method that uses historical user interactions to forecast which entities will gain in popularity and become trending, and it subse- quently integrates the predictions within the Automated Speech Recognition (ASR) component of the VA. Experiments show that our proposed approach results in a 20% relative reduction in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
+<p>Happy to share the news about my first joint pubication with the Siri Speech team at Apple. Our short paper <a href="https://arxiv.org/abs/2005.12816">Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a> with Christophe van Gysel, myself, Ernie Pusateri, and Ilya Oparin, is accepted at SIGIR 2020.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">22.67% similar</span>
+                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] Manos Tsagkias, Martha Larson, and Maarten Rijke. 2009. Exploiting Surface Features for the Prediction of Podcast Preference. In Proceedings of the 31th European Conference on IR Research on Advances in Information Retrieval (ECIR &lsquo;09). Springer-Verlag, Berlin, Heidelberg, 473–484. <a href="https://doi.org/10.1007/978-3-642-00958-7_42">ACM Link</a> <a href="../pdf/ecir2009-Exploiting_surface_features_for_the_pred.pdf">PDF</a></span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">20.63% similar</span>
+                <span>— <a href="/posts/20090304-ecir2009-podcred-features/">Paper at ECIR 2009 — Exploiting Surface Features for the Prediction of Podcast Preference</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

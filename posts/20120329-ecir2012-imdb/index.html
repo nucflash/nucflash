@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20120329-ecir2012-imdb/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20120329-ecir2012-imdb/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</h1>
+
+<h3>Recipient of the Best Paper Award</h3>
+
+
+    
+        <h4>Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke</h4>
+    
+
+
+<h5>University of Amsterdam</h5>
+
+
+<h5>29 April 2012</h5>
+
+
+<h5><b>Keywords:</b> conference, paper, information retrieval, predictive analytics, best paper award</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>We predict IMDb movie ratings and consider two sets of features: surface and textual features. For the latter, we assume that no social media signal is isolated and use data from multiple channels that are linked to a particular movie, such as tweets from Twitter and comments from YouTube. We extract textual features from each channel to use in our prediction model and we explore whether data from either of these channels can help to extract a better set of textual feature for prediction. Our best performing model is able to rate movies very close to the observed values.</p>
+<aside>
+    <figure>
+        <img src="/img/ecir2012-imdb-poster.png" title="Poster of the paper 'Predicting IMDB Move Ratings Using Social Media' by Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke. Presented at ECIR 2012."/>
+        <figcaption>Poster of the paper presented at ECIR 2012.</a></figcaption>
+    <figure>
+</aside>
+
+<p>Part of the Artificial Intelligence Masters programme in which I used to teach was one month hands-on project. I have supervised Andrei Oghina and Mathias Breuss on whether <em>can we predict a movie&rsquo;s IMDB rating from social media before the movie is out</em>. Andrei and Mathias collected tweets about movies and their respective YouTube trailers, and they extracted several features which were used for training a rating classifier. We have found out that we are able predict a movie&rsquo;s IMDB rating with ±0.25 accuracy. That is if a movie gets an average IMDB rating of 8, we would predict 7.75 or 8.25. This is quite impressive for predicting a movie&rsquo;s success before it is even released.</p>
+<p>Our work has been published at ECIR 2012 [<a href="#1">1</a>], and it has been awarded the best paper award; <a href="../../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id='1'>[1]: Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke. <em>Predicting IMDB Move Ratings Using Social Media</em>. In European Conference on Information Retrieval (ECIR) 2012. <a href="https://dl.acm.org/doi/10.1007/978-3-642-28997-2_51">ACM Library</a>; <a href="../../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>&nbsp;
+For our experimental evaluation, we use data from Twitter, Digg, Delicious, the New York Times Community, Wikipedia, and the blogosphere to generate query models. We show that different query models, based on different data sources, provide complementary information and manage to retrieve different social media utterances from our target index. As a consequence, data fusion methods manage to significantly boost retrieval performance over individual approaches. Our graph-based term selection method is shown to help improve both effectiveness and efficiency.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">30.06% similar</span>
+                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Podcasts display an unevenness characteristic of domains dominated by user generated content, resulting in potentially radical variation of the user preference they enjoy. We report on work that uses easily extractable surface features of podcasts in order to achieve solid performance on two podcast preference prediction tasks: classification of preferred vs. non-preferred podcasts and ranking podcasts by level of preference. We identify features with good discriminative potential by carrying out manual data analysis, resulting in a refinement of the indicators of an existent podcast preference framework. Our preference prediction is useful for topic-independent ranking of podcasts, and can be used to support download suggestion or collection browsing.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">27.72% similar</span>
+                <span>— <a href="/posts/20090304-ecir2009-podcred-features/">Paper at ECIR 2009 — Exploiting Surface Features for the Prediction of Podcast Preference</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>On-line news agents provide commenting facilities for readers to express their views with regard to news stories. The number of user supplied comments on a news article may be indicative of its importance or impact. We report on exploratory work that predicts the comment volume of news articles prior to publication using five feature sets. We address the prediction task as a two stage classification task: a binary classification identifies articles with the potential to receive comments, and a second binary classification receives the output from the first step to label articles &ldquo;low&rdquo; or &ldquo;high&rdquo; comment volume. The results show solid performance for the former task, while performance degrades for the latter.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.33% similar</span>
+                <span>— <a href="/posts/20090903-cikm2009-predicting-comments/">Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>modeling. We correct for this discrepancy by introducing two
+hypergeometric language models for modeling both queries, and
+documents to be retrieved.</p>
+<blockquote>
+<p>In the second part, we focus on predicting behavior. First we look
+at predicting listeners&rsquo; preference in spoken user generated
+content, namely, podcasts. Then, we predict popularity of news
+articles from several news agents in terms of the volume of comments
+they receive. We develop models for predicting the popularity of an
+article for both before and after it is published. Finally, we look
+at a different aspect of news impact: how reading a news article
+affects future user browsing behavior. In each setting, we find
+patterns that characterize the underlying behavior and extract
+features that we then use to establish models for predicting online
+behavior.</p>
+</blockquote>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">25.41% similar</span>
+                <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">23.34% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We focus on improving the effectiveness of a Virtual Assistant (VA) in recognizing emerging entities in spoken queries. We introduce a method that uses historical user interactions to forecast which entities will gain in popularity and become trending, and it subse- quently integrates the predictions within the Automated Speech Recognition (ASR) component of the VA. Experiments show that our proposed approach results in a 20% relative reduction in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
+<p>Happy to share the news about my first joint pubication with the Siri Speech team at Apple. Our short paper <a href="https://arxiv.org/abs/2005.12816">Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a> with Christophe van Gysel, myself, Ernie Pusateri, and Ilya Oparin, is accepted at SIGIR 2020.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.59% similar</span>
+                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">14.07% similar</span>
+                <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

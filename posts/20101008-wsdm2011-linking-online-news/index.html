@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20101008-wsdm2011-linking-online-news/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Paper at WSDM 2011 — Linking online news and social media - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20101008-wsdm2011-linking-online-news/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Paper at WSDM 2011 — Linking online news and social media</h1>
+
+
+    
+        <h4>Manos Tsagkias, Maarten de Rijke, and Wouter Weerkamp</h4>
+    
+
+
+<h5>University of Amsterdam</h5>
+
+
+<h5>08 October 2010</h5>
+
+
+<h5><b>Keywords:</b> paper, cikm, information retrieval</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
+&nbsp;
+For our experimental evaluation, we use data from Twitter, Digg, Delicious, the New York Times Community, Wikipedia, and the blogosphere to generate query models. We show that different query models, based on different data sources, provide complementary information and manage to retrieve different social media utterances from our target index. As a consequence, data fusion methods manage to significantly boost retrieval performance over individual approaches. Our graph-based term selection method is shown to help improve both effectiveness and efficiency.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id="1">[1] Manos Tsagkias, Maarten de Rijke, and Wouter Weerkamp. 2011. <em>Linking online news and social media</em>. In Proceedings of the fourth ACM international conference on Web search and data mining (WSDM &lsquo;11). Association for Computing Machinery, New York, NY, USA, 565–574. <a href="https://doi.org/10.1145/1935826.1935906">ACM Link</a> <a href="../../pdf/wsdm2011-linking-online-news-and-social-media.pdf">PDF</a></span></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <blockquote>
+<p>The advent of social media has established a symbiotic relationship
+between social media and online news. This relationship can be
+leveraged for tracking news content, and predicting behavior with
+tangible real-world applications, e.g., online reputation
+management, ad pricing, news ranking, and media analysis. In this
+thesis we focus on tracking news content in social media, and
+predicting user behavior.</p>
+<p>In the first part, we develop methods for tracking content which
+build upon, and extend practices in Information Retrieval. We
+begin with discovering social media posts that discuss a news
+article yet they do not provide a hyperlink to it. Our methods model
+news articles using several channels of information, either
+endogenous or exogenous to the article. These models are then used
+to query an index of social media posts. During this process we
+found that the query models are close in size to the documents to be
+retrieved, violating a standard assumption of language</p>
+</blockquote>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">48.65% similar</span>
+                <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke. 2009. <em>Predicting the volume of comments on online news stories</em>. In Proceedings of the 18<sup>th</sup> ACM conference on Information and knowledge management (CIKM &lsquo;09). Association for Computing Machinery, New York, NY, USA, 1765–1768. <a href="https://doi.org/10.1145/1645953.1646225">ACM Link</a> <a href="../pdf/cikm2009-predicting-volume-of-comments.pdf">PDF</a></span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">40.84% similar</span>
+                <span>— <a href="/posts/20090903-cikm2009-predicting-comments/">Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We predict IMDb movie ratings and consider two sets of features: surface and textual features. For the latter, we assume that no social media signal is isolated and use data from multiple channels that are linked to a particular movie, such as tweets from Twitter and comments from YouTube. We extract textual features from each channel to use in our prediction model and we explore whether data from either of these channels can help to extract a better set of textual feature for prediction. Our best performing model is able to rate movies very close to the observed values.</p>
+<aside>
+    <figure>
+        <img src="/img/ecir2012-imdb-poster.png" title="Poster of the paper 'Predicting IMDB Move Ratings Using Social Media' by Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke. Presented at ECIR 2012."/>
+        <figcaption>Poster of the paper presented at ECIR 2012.</a></figcaption>
+    <figure>
+</aside>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">28.23% similar</span>
+                <span>— <a href="/posts/20120329-ecir2012-imdb/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">27.74% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Modeling user browsing behavior is an active research area with
+tangible real-world applications, e.g., organizations can adapt
+their online presence to their visitors browsing behavior with
+positive effects in user engagement, and revenue. We concentrate on
+online news agents, and present a semi-supervised method for
+predicting news articles that a user will visit after reading an
+initial article. Our method tackles the problem using language
+intent models trained on historical data which can cope
+with unseen articles. We evaluate our method on a large set of
+articles and in several experimental settings. Our results
+demonstrate the utility of language intent models for predicting
+user browsing behavior within online news sites.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">25.69% similar</span>
+                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">16.93% similar</span>
+                <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.82% similar</span>
+                <span>— <a href="/posts/20080720-sscs2008-speech-termclouds/">Paper at SSCS 2008 — Using Term Clouds to Represent Segment-Level Semantic Content of Podcasts</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>

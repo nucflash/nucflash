@@ -152,72 +152,56 @@ user browsing behavior within online news sites.</p>
         <li>
             
             <blockquote>
-                <p>modeling. We correct for this discrepancy by introducing two
-hypergeometric language models for modeling both queries, and
-documents to be retrieved.</p>
-<blockquote>
-<p>In the second part, we focus on predicting behavior. First we look
-at predicting listeners&rsquo; preference in spoken user generated
-content, namely, podcasts. Then, we predict popularity of news
-articles from several news agents in terms of the volume of comments
-they receive. We develop models for predicting the popularity of an
-article for both before and after it is published. Finally, we look
-at a different aspect of news impact: how reading a news article
-affects future user browsing behavior. In each setting, we find
-patterns that characterize the underlying behavior and extract
-features that we then use to establish models for predicting online
-behavior.</p>
-</blockquote>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">19.86% similar</span>
-                <span>— <a href="/about/">About</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <h2 id="the-vocabulary-gap-is-still-an-open-problem">The vocabulary gap is still an open problem.</h2>
-<p>People refer to products in different ways that products are described in the catalogue. Neural networks, learning to rank, query intent engines are all important. Our experience at <a href="https://904labs.com">904Labs</a> shown that a query intent engine that boosts specific product categories given a query, boosts our learning to rank system by more than 16% in additional revenue. These results suggest that effective initial ranking is very important for effective learning to rank. To this end, we foresee an increasing interest in methods that can re-rank the entire collection and not only the top-N documents. This is particularly important for larger shops with large inventories (more than hundred of thousands of items) where a query can return hundreds of items, and only the top few are re-ranked.</p>
-<h2 id="e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match">E-commerce search is as much as about exploration as it is about finding the best match.</h2>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">19.72% similar</span>
-                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <figure id="__figure-caption_1">
-<p><img alt="&quot;Detecting Algorithmic Discrimination&quot; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands." src="https://manostsagkias.wordpress.com/wp-content/uploads/2016/12/img_2240.jpg" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figure 1.</span> &ldquo;Detecting Algorithmic Discrimination&rdquo; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands.</p>
-</figcaption>
-</figure>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">19.16% similar</span>
-                <span>— <a href="/posts/20161210-dir/">Attending DIR 2016</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>Part of the Artificial Intelligence Masters programme in which I used to teach was one month hands-on project. I have supervised Andrei Oghina and Mathias Breuss on whether <em>can we predict a movie&rsquo;s IMDB rating from social media before the movie is out</em>. Andrei and Mathias collected tweets about movies and their respective YouTube trailers, and they extracted several features which were used for training a rating classifier. We have found out that we are able predict a movie&rsquo;s IMDB rating with ±0.25 accuracy. That is if a movie gets an average IMDB rating of 8, we would predict 7.75 or 8.25. This is quite impressive for predicting a movie&rsquo;s success before it is even released.</p>
-<p>Our work has been published at ECIR 2012 [<a href="#1">1</a>], and it has been awarded the best paper award; <a href="../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
+                <h3 id="abstract">Abstract</h3>
+<p>Podcasts display an unevenness characteristic of domains dominated by user generated content, resulting in potentially radical variation of the user preference they enjoy. We report on work that uses easily extractable surface features of podcasts in order to achieve solid performance on two podcast preference prediction tasks: classification of preferred vs. non-preferred podcasts and ranking podcasts by level of preference. We identify features with good discriminative potential by carrying out manual data analysis, resulting in a refinement of the indicators of an existent podcast preference framework. Our preference prediction is useful for topic-independent ranking of podcasts, and can be used to support download suggestion or collection browsing.</p>
 <h3 id="references">References</h3>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">17.25% similar</span>
-                <span>— <a href="/posts/20120329-ecir2012/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+                <span class="score">25.60% similar</span>
+                <span>— <a href="/posts/20090304-ecir2009-podcred-features/">Paper at ECIR 2009 — Exploiting Surface Features for the Prediction of Podcast Preference</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">22.67% similar</span>
+                <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>On-line news agents provide commenting facilities for readers to express their views with regard to news stories. The number of user supplied comments on a news article may be indicative of its importance or impact. We report on exploratory work that predicts the comment volume of news articles prior to publication using five feature sets. We address the prediction task as a two stage classification task: a binary classification identifies articles with the potential to receive comments, and a second binary classification receives the output from the first step to label articles &ldquo;low&rdquo; or &ldquo;high&rdquo; comment volume. The results show solid performance for the former task, while performance degrades for the latter.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">22.39% similar</span>
+                <span>— <a href="/posts/20090903-cikm2009-predicting-comments/">Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I took part in SIREN 2008 (+bonus link), a research event in the Netherlands, presenting our work with Martha Larson and Maarten de Rijke, on <em>Term Clouds as Surrogates for User Generated Speech</em> [<a href="#1">1</a>]; see <a href="20080620-sigir2008-speech-termclouds.md">post</a></p>
+<h3 id="references">References</h3>
+<p><span id="1">[1] Manos Tsagkias, Martha Larson, and Maarten de Rijke. 2008. <em>Term clouds as surrogates for user generated speech</em>. In Proceedings of the 31<sup>st</sup> annual international ACM SIGIR conference on Research and development in information retrieval (SIGIR &lsquo;08). Association for Computing Machinery, New York, NY, USA, 773–774. <a href="https://doi.org/10.1145/1390334.1390497">ACM Link</a> <a href="../pdf/sigir2008-termclouds.pdf">PDF</a></span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">20.21% similar</span>
+                <span>— <a href="/posts/20081202-siren2008-talk-speech-termclouds/">Talk at SIREN 2008 on Speech Term Clouds</a></span>
             </div>
         </li>
         
