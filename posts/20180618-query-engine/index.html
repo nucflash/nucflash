@@ -114,17 +114,13 @@
         <li>
             
             <blockquote>
-                <div class="toc">
-<ul></ul>
-</div>
-<p>Today at <a href="https://904labs.com">904Labs Search</a> we&rsquo;ve been having fun with the next version of our Query Intent/Understanding engine.</p>
-<p>If you don&rsquo;t know what a Query Intent/Understanding engine is, here&rsquo;s <a href="20180618-query-engine.md">some background</a>; otherwise keep reading.</p>
-<p>Our Query Intent/Understanding engine is closing to one year old, and it&rsquo;s pretty cool: it can quickly boostrap a knowledge graph and continuously update it straight from our customer&rsquo;s data. Since its introduction in September 2017, it has been tested in many different domains and languages and has shown substantial revenue uplift across customers.</p>
+                <p>As eCommerce is becoming increasingly important, we recruited a small team of researchers from major and not so major players in the field to share views and experiences on theoretical and practical challenges and future directions on eCommerce search and recommendations. The result of our effort, <a href="http://sigir.org/wp-content/uploads/2020/06/p04.pdf">Challenges and Research Opportunities in eCommerce Search and Recommendations</a> is published in <a href="http://sigir.org/forum/issues/june-2020/">June 2020 issue of SIGIR Forum</a>.</p>
+<p>This work is related to <a href="20190718-ecommerce-workshop.md">thoughts that I shared earlier on product search</a>, and to <a href="20180618-query-engine.md">904Labs&rsquo; Query Intent engine</a> and its <a href="20180618-query-engine-upgrade.md">magnificent results (examples)</a>.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">35.24% similar</span>
-                <span>— <a href="/posts/20180618-query-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
+                <span class="score">43.61% similar</span>
+                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
             </div>
         </li>
         
@@ -137,7 +133,7 @@
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">21.00% similar</span>
+                <span class="score">40.69% similar</span>
                 <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
             </div>
         </li>
@@ -145,24 +141,48 @@
         <li>
             
             <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>Modeling user browsing behavior is an active research area with
-tangible real-world applications, e.g., organizations can adapt
-their online presence to their visitors browsing behavior with
-positive effects in user engagement, and revenue. We concentrate on
-online news agents, and present a semi-supervised method for
-predicting news articles that a user will visit after reading an
-initial article. Our method tackles the problem using language
-intent models trained on historical data which can cope
-with unseen articles. We evaluate our method on a large set of
-articles and in several experimental settings. Our results
-demonstrate the utility of language intent models for predicting
-user browsing behavior within online news sites.</p>
+                <p>On top of the engineering feat, the algorithm itself is pretty lean and has quite a few distinctive features that are hard to find in other engines: it does not depend on external dependencies (read Wikipedia), nor it needs periodic re-training. The only thing that a customer has to do is to plug in our system to a Apache Solr/Elasticsearch, and 904Labs Query Intent engine is built incrementally, one click/add-to-basket/purchase at a time. Oh, and it doesn&rsquo;t write anything on your index. Magic!</p>
+<p>Here&rsquo;s a few interesting examples that came out from today&rsquo;s experimentation:</p>
+<p>(the examples are in Dutch; I try to translate the queries into English. Field attributes and values may be partially redacted for anonymity)</p>
+<h2 id="some-relatively-simple-cases">Some relatively simple cases</h2>
+<ul>
+<li>The system learns to map the query: <code>lampen</code> (lamps) to Solr&rsquo;s directive: <code>category:Lampen</code>. Learning of this mapping is automatic and based on only from user interactions.</li>
+</ul>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">14.60% similar</span>
-                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
+                <span class="score">39.23% similar</span>
+                <span>— <a href="/posts/20180618-query-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>In our talk, I described the importance of search in e-commerce by giving examples of failed searches in a number of settings, from finding advertized items using onsite search to mobile search. I followed by with why people choose Amazon to start their product search and highlighted that 54% of them choose Amazon because of their great search functionality–that is the reason number five for people to go to Amazon. Then, I explained why optimizing the ranking manually is close to impossible for humans by laying out the insane amount of options available and enumerating the search space (which can be at millions of millions of choices). With this as foundation, I talked about machine learning and the particular type of machine learning that we use at 904Labs for optimizing search rankings in real-time. I followed up with describing our query intent engine, which is powered by 904Sense, and our automatic synonym extraction engine. In my conclusions, I re-iterated that A.I. for Search</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">38.38% similar</span>
+                <span>— <a href="/posts/20180211-emakina/">Talk at A.I. for Commerce meetup</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <figure>
+    <img src="https://pbs.twimg.com/media/DZdL3MFX0AACod9?format=jpg&name=medium"/>
+    <figcaption>Starting my talk at ECIR 2018 Industry track. Courtesy of Gabriela Kazai.</figcaption>
+</figure>
+
+<p>European Conference on Information Retrieval (ECIR) is a annual European scientific conference around bhe topics of search engines, recommender systems, text analytics, user modeling, and evaluation. <a href="http://ecir2018.org">This year ECIR was held in Grenoble, France.</a> With more than 250 attendants and 4 days packed with tutorials, workshops, research, and industry talks, it was a great place to be to get updated with the latest and greatest about search engines.</p>
+<p>The theme of this year&rsquo;s Industry Day was to bring lessons learned from industry to academia. What are differences when developing a research algorithm and when we bring to practice? These lessons could inspire and inform our fellow academics for the challenges practitioners face when bring these algorithms to production.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">25.10% similar</span>
+                <span>— <a href="/posts/20180330-ecir2018/">Talk at ECIR 2018 Industry day</a></span>
             </div>
         </li>
         
@@ -173,35 +193,8 @@ user browsing behavior within online news sites.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">12.74% similar</span>
+                <span class="score">21.36% similar</span>
                 <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>&nbsp;
-For our experimental evaluation, we use data from Twitter, Digg, Delicious, the New York Times Community, Wikipedia, and the blogosphere to generate query models. We show that different query models, based on different data sources, provide complementary information and manage to retrieve different social media utterances from our target index. As a consequence, data fusion methods manage to significantly boost retrieval performance over individual approaches. Our graph-based term selection method is shown to help improve both effectiveness and efficiency.</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">10.90% similar</span>
-                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>We focus on improving the effectiveness of a Virtual Assistant (VA) in recognizing emerging entities in spoken queries. We introduce a method that uses historical user interactions to forecast which entities will gain in popularity and become trending, and it subse- quently integrates the predictions within the Automated Speech Recognition (ASR) component of the VA. Experiments show that our proposed approach results in a 20% relative reduction in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
-<p>Happy to share the news about my first joint pubication with the Siri Speech team at Apple. Our short paper <a href="https://arxiv.org/abs/2005.12816">Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a> with Christophe van Gysel, myself, Ernie Pusateri, and Ilya Oparin, is accepted at SIGIR 2020.</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">9.98% similar</span>
-                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
             </div>
         </li>
         

@@ -116,12 +116,12 @@
         <li>
             
             <blockquote>
-                <p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
-&nbsp;</p>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] Manos Tsagkias, Maarten de Rijke, and Wouter Weerkamp. 2011. <em>Linking online news and social media</em>. In Proceedings of the fourth ACM international conference on Web search and data mining (WSDM &lsquo;11). Association for Computing Machinery, New York, NY, USA, 565–574. <a href="https://doi.org/10.1145/1935826.1935906">ACM Link</a> <a href="../pdf/wsdm2011-linking-online-news-and-social-media.pdf">PDF</a></span></p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">37.51% similar</span>
+                <span class="score">40.40% similar</span>
                 <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
             </div>
         </li>
@@ -129,40 +129,28 @@
         <li>
             
             <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
-<h3 id="references">References</h3>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">31.72% similar</span>
-                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>modeling. We correct for this discrepancy by introducing two
-hypergeometric language models for modeling both queries, and
-documents to be retrieved.</p>
-<blockquote>
-<p>In the second part, we focus on predicting behavior. First we look
-at predicting listeners&rsquo; preference in spoken user generated
-content, namely, podcasts. Then, we predict popularity of news
-articles from several news agents in terms of the volume of comments
-they receive. We develop models for predicting the popularity of an
-article for both before and after it is published. Finally, we look
-at a different aspect of news impact: how reading a news article
-affects future user browsing behavior. In each setting, we find
-patterns that characterize the underlying behavior and extract
-features that we then use to establish models for predicting online
-behavior.</p>
+                <blockquote>
+<p>The advent of social media has established a symbiotic relationship
+between social media and online news. This relationship can be
+leveraged for tracking news content, and predicting behavior with
+tangible real-world applications, e.g., online reputation
+management, ad pricing, news ranking, and media analysis. In this
+thesis we focus on tracking news content in social media, and
+predicting user behavior.</p>
+<p>In the first part, we develop methods for tracking content which
+build upon, and extend practices in Information Retrieval. We
+begin with discovering social media posts that discuss a news
+article yet they do not provide a hyperlink to it. Our methods model
+news articles using several channels of information, either
+endogenous or exogenous to the article. These models are then used
+to query an index of social media posts. During this process we
+found that the query models are close in size to the documents to be
+retrieved, violating a standard assumption of language</p>
 </blockquote>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">29.16% similar</span>
+                <span class="score">37.12% similar</span>
                 <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
             </div>
         </li>
@@ -186,7 +174,7 @@ user browsing behavior within online news sites.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">27.79% similar</span>
+                <span class="score">33.60% similar</span>
                 <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
             </div>
         </li>
@@ -200,7 +188,7 @@ user browsing behavior within online news sites.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">26.51% similar</span>
+                <span class="score">30.89% similar</span>
                 <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
             </div>
         </li>
@@ -208,28 +196,39 @@ user browsing behavior within online news sites.</p>
         <li>
             
             <blockquote>
-                <p>Part of the Artificial Intelligence Masters programme in which I used to teach was one month hands-on project. I have supervised Andrei Oghina and Mathias Breuss on whether <em>can we predict a movie&rsquo;s IMDB rating from social media before the movie is out</em>. Andrei and Mathias collected tweets about movies and their respective YouTube trailers, and they extracted several features which were used for training a rating classifier. We have found out that we are able predict a movie&rsquo;s IMDB rating with ±0.25 accuracy. That is if a movie gets an average IMDB rating of 8, we would predict 7.75 or 8.25. This is quite impressive for predicting a movie&rsquo;s success before it is even released.</p>
-<p>Our work has been published at ECIR 2012 [<a href="#1">1</a>], and it has been awarded the best paper award; <a href="../pdf/ecir2012-imdb.pdf">PDF (495KB)</a>.</p>
-<h3 id="references">References</h3>
+                <p>Republished article finding is the task of identifying instances of articles that have been published in one source and republished more or less verbatim in another source, which is often a social media source. We address this task as an ad hoc retrieval problem, using the source article as a query. Our approach is based on language modeling. We revisit the assumptions underlying the unigram language model taking into account the fact that in our setup queries are as long as complete news articles. We argue that in this case, the underlying generative assumption of sampling words from a document with replacement, i.e., the multinomial modeling of documents, produces less accurate query likelihood estimates.
+&nbsp;</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">26.41% similar</span>
-                <span>— <a href="/posts/20120329-ecir2012-imdb/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
+                <span class="score">29.38% similar</span>
+                <span>— <a href="/posts/20110408-sigir2011-hypergeometric-language-models/">Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding</a></span>
             </div>
         </li>
         
         <li>
             
             <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>We focus on improving the effectiveness of a Virtual Assistant (VA) in recognizing emerging entities in spoken queries. We introduce a method that uses historical user interactions to forecast which entities will gain in popularity and become trending, and it subse- quently integrates the predictions within the Automated Speech Recognition (ASR) component of the VA. Experiments show that our proposed approach results in a 20% relative reduction in errors on emerging entity name utterances without degrading the overall recognition quality of the system.</p>
-<p>Happy to share the news about my first joint pubication with the Siri Speech team at Apple. Our short paper <a href="https://arxiv.org/abs/2005.12816">Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a> with Christophe van Gysel, myself, Ernie Pusateri, and Ilya Oparin, is accepted at SIGIR 2020.</p>
+                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
+&nbsp;</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">22.39% similar</span>
-                <span>— <a href="/posts/20200722-sigir2020/">Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants</a></span>
+                <span class="score">28.68% similar</span>
+                <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] Massoudi, K., Tsagkias, M., de Rijke, M., Weerkamp, W. (2011). <em>Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</em>. In Advances in Information Retrieval. ECIR 2011. Lecture Notes in Computer Science, vol 6611. Springer, Berlin, Heidelberg. <a href="https://doi.org/10.1007/978-3-642-20161-5_36">Springer link</a>; <a href="../pdf/ecir2011-query-expansion-microblogs.pdf">PDF</a></span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.61% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
             </div>
         </li>
         

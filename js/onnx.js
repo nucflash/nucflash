@@ -25,7 +25,8 @@ let embeddingCount = 0; // Global variable to cache the count
 
 
 async function setup() {
-    embeddingPipeline = await pipeline('feature-extraction', 'Xenova/paraphrase-multilingual-MiniLM-L12-v2');
+    // embeddingPipeline = await pipeline('feature-extraction', 'Xenova/paraphrase-multilingual-MiniLM-L12-v2');
+    embeddingPipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
     db = new Dexie('EmbeddingsDatabase');
     db.version(1).stores({
         embeddings: 'docId, embedding' // Index by docId
@@ -49,8 +50,8 @@ export async function search() {
         }
 
         // Step 2: Tokenize and embed the query
-        const queryEmbedding = await embeddingPipeline([query], {pooling: 'mean', 'normalize': true});
-        
+        const queryEmbedding = await embeddingPipeline([query], {pooling: 'mean', 'normalize': false});
+
         // Step 3: Initialize variables for finding the best matches
         const topDocs = [];
         const topN = embeddingCount;
@@ -84,7 +85,7 @@ export async function search() {
         // resultsDiv.innerHTML = topDocs
         //     .map(doc => `<p><strong>${doc.docId}</strong>: ${doc.similarity.toFixed(2)}</p>`)
         //     .join('');
-        
+
         // const dots = d3.selectAll("circle");
         // // Dim all dots initially
         // dots.classed("dimmed", true);
@@ -124,8 +125,8 @@ export async function search() {
         if (topDocs.length === 0) {
             dots.style("opacity", 1.0);
         }
-        
-    
+
+
     } catch (error) {
         console.error('Search failed:', error);
     }

@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="author" content="Manos Tsagkias">
-    <link rel="canonical" href="https://manostsagkias.com/posts/20110120-dir2011-language-identification/">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20110408-sigir2011-hypergeometric-language-models/">
     <!--
         The page_title contains the title for a page as shown in the navigation.
         Site name contains the name as defined in the mkdocs.yml
     -->
-    <title>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification - Connecting the Dots</title>
+    <title>Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding - Connecting the Dots</title>
     <!--
         Just add a favicon.ico image to the docs.
     -->
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="../../css/styles.css">
     <script>
         // Inject the current file name for the active page
-        const CURRENT_FILE = "posts/20110120-dir2011-language-identification/";
+        const CURRENT_FILE = "posts/20110408-sigir2011-hypergeometric-language-models/";
     </script>
 </head>
 <body><div id="map-overlay" class="hidden">
@@ -79,19 +79,21 @@
         
 
         
-            <h1>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</h1>
+            <h1>Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding</h1>
 
 
     
-        <h4>Simon Carter, Manos Tsagkias, and Wouter Weerkamp</h4>
+        <h4>Manos Tsagkias, Maarten de Rijke, and Wouter Weerkamp</h4>
     
 
 
+<h5>University of Amsterdam</h5>
 
-<h5>20 January 2011</h5>
+
+<h5>08 April 2011</h5>
 
 
-<h5><b>Keywords:</b> paper, dir, language identification</h5>
+<h5><b>Keywords:</b> paper, sigir, information retrieval</h5>
 
         
     </header>
@@ -99,11 +101,13 @@
     <main>
         <article>
     <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
-<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<p>Republished article finding is the task of identifying instances of articles that have been published in one source and republished more or less verbatim in another source, which is often a social media source. We address this task as an ad hoc retrieval problem, using the source article as a query. Our approach is based on language modeling. We revisit the assumptions underlying the unigram language model taking into account the fact that in our setup queries are as long as complete news articles. We argue that in this case, the underlying generative assumption of sampling words from a document with replacement, i.e., the multinomial modeling of documents, produces less accurate query likelihood estimates.
+&nbsp;
+To make up for this discrepancy, we consider distributions that emerge from sampling without replacement: the central and non-central hypergeometric distributions. We present two retrieval models that build on top of these distributions: a log odds model and a bayesian model where document parameters are estimated using the Dirichlet compound multinomial distribution.
+&nbsp;
+We analyse the behavior of our new models using a corpus of news articles and blog posts and find that for the task of republished article finding, where we deal with queries whose length approaches the length of the documents to be retrieved, models based on distributions associated with sampling without replacement outperform traditional models based on multinomial distributions.</p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
-<p><span id="1">[1] Simon Carter, Manos Tsagkias, and Wouter Weerkamp. 2011. <em>Semi-Supervised Priors for Microblog Language Identification</em>. In DIR 2011: Dutch-Belgian Information Retrieval Workshop Amsterdam (pp.
-12-15). University of Amsterdam, Information and Language Processing group.
-<a href="../../pdf/dir2011-microblog-language-identification.pdf">PDF</a></span></p>
+<p><span id="1">[1] Manos Tsagkias, Maarten de Rijke, and Wouter Weerkamp. 2011. <em>Hypergeometric language models for republished article finding</em>. In Proceedings of the 34<sup>th</sup> international ACM SIGIR conference on Research and development in Information Retrieval (SIGIR &lsquo;11). Association for Computing Machinery, New York, NY, USA, 485–494. <a href="https://doi.org/10.1145/2009916.2009983">ACM Link</a>; <a href="../../pdf/sigir2011-hypergeometric-language-models.pdf">PDF</a>.</span></p>
 </article>
 
 <hr/>
@@ -121,53 +125,8 @@
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">43.14% similar</span>
+                <span class="score">47.41% similar</span>
                 <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>In this paper we describe how Twitter is used in various languages.
-We observe notable differences between languages regarding the
-use of hashtags, links, mentions, and conversations. We propose
-two dimensions that can be used to classify languages, each of
-which is likely to require different ways of analysis.</p>
-<h3 id="references">References</h3>
-<p><span id="1">[1] Wouter Weerkamp, Simon Carter, and Manos Tsagkias. 2011. <em>How People use Twitter in Different Languages</em>. In Web Science 2011. <a href="https://hdl.handle.net/11245/1.361269">UVA Link</a>; <a href="../pdf/websci2011-How_People_use_Twitter_in_Different_Lang.pdf">PDF</a>.</span></p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">42.52% similar</span>
-                <span>— <a href="/posts/20110409-websci2011-twitter-use-in-languages/">Paper at WebScience 2011 — How People use Twitter in Different Languages</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">40.40% similar</span>
-                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
-<h3 id="references">References</h3>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">39.90% similar</span>
-                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
             </div>
         </li>
         
@@ -195,8 +154,48 @@ retrieved, violating a standard assumption of language</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">37.48% similar</span>
+                <span class="score">41.39% similar</span>
                 <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">34.40% similar</span>
+                <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">34.26% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">32.76% similar</span>
+                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
             </div>
         </li>
         
@@ -208,7 +207,7 @@ retrieved, violating a standard assumption of language</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">35.98% similar</span>
+                <span class="score">32.03% similar</span>
                 <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
             </div>
         </li>
@@ -216,13 +215,24 @@ retrieved, violating a standard assumption of language</p>
         <li>
             
             <blockquote>
-                <p>Republished article finding is the task of identifying instances of articles that have been published in one source and republished more or less verbatim in another source, which is often a social media source. We address this task as an ad hoc retrieval problem, using the source article as a query. Our approach is based on language modeling. We revisit the assumptions underlying the unigram language model taking into account the fact that in our setup queries are as long as complete news articles. We argue that in this case, the underlying generative assumption of sampling words from a document with replacement, i.e., the multinomial modeling of documents, produces less accurate query likelihood estimates.
-&nbsp;</p>
+                <h3 id="abstract">Abstract</h3>
+<p>Modeling user browsing behavior is an active research area with
+tangible real-world applications, e.g., organizations can adapt
+their online presence to their visitors browsing behavior with
+positive effects in user engagement, and revenue. We concentrate on
+online news agents, and present a semi-supervised method for
+predicting news articles that a user will visit after reading an
+initial article. Our method tackles the problem using language
+intent models trained on historical data which can cope
+with unseen articles. We evaluate our method on a large set of
+articles and in several experimental settings. Our results
+demonstrate the utility of language intent models for predicting
+user browsing behavior within online news sites.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">35.57% similar</span>
-                <span>— <a href="/posts/20110408-sigir2011-hypergeometric-language-models/">Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding</a></span>
+                <span class="score">28.86% similar</span>
+                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
             </div>
         </li>
         

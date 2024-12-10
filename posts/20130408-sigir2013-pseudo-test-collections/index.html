@@ -125,8 +125,62 @@ We use our pseudo test collections in two ways. First, we tune parameters of a v
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">33.11% similar</span>
+                <span class="score">41.10% similar</span>
                 <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
+&nbsp;</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">40.52% similar</span>
+                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">37.55% similar</span>
+                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <blockquote>
+<p>The advent of social media has established a symbiotic relationship
+between social media and online news. This relationship can be
+leveraged for tracking news content, and predicting behavior with
+tangible real-world applications, e.g., online reputation
+management, ad pricing, news ranking, and media analysis. In this
+thesis we focus on tracking news content in social media, and
+predicting user behavior.</p>
+<p>In the first part, we develop methods for tracking content which
+build upon, and extend practices in Information Retrieval. We
+begin with discovering social media posts that discuss a news
+article yet they do not provide a hyperlink to it. Our methods model
+news articles using several channels of information, either
+endogenous or exogenous to the article. These models are then used
+to query an index of social media posts. During this process we
+found that the query models are close in size to the documents to be
+retrieved, violating a standard assumption of language</p>
+</blockquote>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">36.08% similar</span>
+                <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
             </div>
         </li>
         
@@ -139,7 +193,7 @@ We use our pseudo test collections in two ways. First, we tune parameters of a v
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">31.03% similar</span>
+                <span class="score">34.26% similar</span>
                 <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
             </div>
         </li>
@@ -147,37 +201,15 @@ We use our pseudo test collections in two ways. First, we tune parameters of a v
         <li>
             
             <blockquote>
-                <p>This year I talked at the industry track where I shared my experiences from running a search startup in the Netherlands. I received positive feedback, and it was good to catch up with old friends and meet new people. If you want a <a href="https://www.904labs.com/2016/08/05/904labs-sigir-2016/">short recap from the latest and greatest trends in search technology, read on my summary on 904Labs blog</a>.</p>
+                <p>&nbsp;
+To make up for this discrepancy, we consider distributions that emerge from sampling without replacement: the central and non-central hypergeometric distributions. We present two retrieval models that build on top of these distributions: a log odds model and a bayesian model where document parameters are estimated using the Dirichlet compound multinomial distribution.
+&nbsp;
+We analyse the behavior of our new models using a corpus of news articles and blog posts and find that for the task of republished article finding, where we deal with queries whose length approaches the length of the documents to be retrieved, models based on distributions associated with sampling without replacement outperform traditional models based on multinomial distributions.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">19.56% similar</span>
-                <span>— <a href="/posts/20161210-sigir/">Presenting at the Industry Day at SIGIR 2016</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>Last, an extra tip: we found that boolean scoring may be on par or outperform tf.idf or BM25 scoring in the e-commerce domain, it&rsquo;s worth checking its effectiveness on your own data ;)</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">17.66% similar</span>
-                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>As eCommerce is becoming increasingly important, we recruited a small team of researchers from major and not so major players in the field to share views and experiences on theoretical and practical challenges and future directions on eCommerce search and recommendations. The result of our effort, <a href="http://sigir.org/wp-content/uploads/2020/06/p04.pdf">Challenges and Research Opportunities in eCommerce Search and Recommendations</a> is published in <a href="http://sigir.org/forum/issues/june-2020/">June 2020 issue of SIGIR Forum</a>.</p>
-<p>This work is related to <a href="20190718-ecommerce-workshop.md">thoughts that I shared earlier on product search</a>, and to <a href="20180618-query-engine.md">904Labs&rsquo; Query Intent engine</a> and its <a href="20180618-query-engine-upgrade.md">magnificent results (examples)</a>.</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">16.47% similar</span>
-                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper on eCommerce at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
+                <span class="score">32.68% similar</span>
+                <span>— <a href="/posts/20110408-sigir2011-hypergeometric-language-models/">Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding</a></span>
             </div>
         </li>
         
@@ -185,36 +217,18 @@ We use our pseudo test collections in two ways. First, we tune parameters of a v
             
             <blockquote>
                 <h3 id="abstract">Abstract</h3>
-<p>Modeling user browsing behavior is an active research area with
-tangible real-world applications, e.g., organizations can adapt
-their online presence to their visitors browsing behavior with
-positive effects in user engagement, and revenue. We concentrate on
-online news agents, and present a semi-supervised method for
-predicting news articles that a user will visit after reading an
-initial article. Our method tackles the problem using language
-intent models trained on historical data which can cope
-with unseen articles. We evaluate our method on a large set of
-articles and in several experimental settings. Our results
-demonstrate the utility of language intent models for predicting
-user browsing behavior within online news sites.</p>
+<p>We predict IMDb movie ratings and consider two sets of features: surface and textual features. For the latter, we assume that no social media signal is isolated and use data from multiple channels that are linked to a particular movie, such as tweets from Twitter and comments from YouTube. We extract textual features from each channel to use in our prediction model and we explore whether data from either of these channels can help to extract a better set of textual feature for prediction. Our best performing model is able to rate movies very close to the observed values.</p>
+<aside>
+    <figure>
+        <img src="/img/ecir2012-imdb-poster.png" title="Poster of the paper 'Predicting IMDB Move Ratings Using Social Media' by Andrei Oghina, Mathias Breuss, Manos Tsagkias, and Maarten de Rijke. Presented at ECIR 2012."/>
+        <figcaption>Poster of the paper presented at ECIR 2012.</a></figcaption>
+    <figure>
+</aside>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">14.24% similar</span>
-                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <h3 id="abstract">Abstract</h3>
-<p>Language models (LMs) for virtual assistants (VAs) are typically trained on large amounts of data, resulting in prohibitively large models which require excessive memory and/or cannot be used to serve user requests in real-time. Entropy pruning results in smaller models but with significant degradation of effectiveness in the tail of the user request distribution. We customize entropy pruning by allowing for a keep list of infrequent n-grams that require a more relaxed pruning threshold, and propose three methods to construct the keep list. Each method has its own advantages and disadvantages with respect to LM size, ASR accuracy and cost of constructing the keep list. Our best LM gives 8% average Word Error Rate (WER) reduction on a targeted test set, but is 3 times larger than the baseline. We also propose discriminative methods to reduce the size of the LM while retaining the majority of the WER gains achieved by the largest LM.</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">13.18% similar</span>
-                <span>— <a href="/posts/20210214-icassp/">Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants</a></span>
+                <span class="score">27.67% similar</span>
+                <span>— <a href="/posts/20120329-ecir2012-imdb/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
             </div>
         </li>
         

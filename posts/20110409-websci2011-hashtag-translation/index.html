@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="author" content="Manos Tsagkias">
-    <link rel="canonical" href="https://manostsagkias.com/posts/20110120-dir2011-language-identification/">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20110409-websci2011-hashtag-translation/">
     <!--
         The page_title contains the title for a page as shown in the navigation.
         Site name contains the name as defined in the mkdocs.yml
     -->
-    <title>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification - Connecting the Dots</title>
+    <title>Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering - Connecting the Dots</title>
     <!--
         Just add a favicon.ico image to the docs.
     -->
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="../../css/styles.css">
     <script>
         // Inject the current file name for the active page
-        const CURRENT_FILE = "posts/20110120-dir2011-language-identification/";
+        const CURRENT_FILE = "posts/20110409-websci2011-hashtag-translation/";
     </script>
 </head>
 <body><div id="map-overlay" class="hidden">
@@ -79,7 +79,7 @@
         
 
         
-            <h1>Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</h1>
+            <h1>Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</h1>
 
 
     
@@ -87,11 +87,13 @@
     
 
 
+<h5>University of Amsterdam</h5>
 
-<h5>20 January 2011</h5>
+
+<h5>09 April 2011</h5>
 
 
-<h5><b>Keywords:</b> paper, dir, language identification</h5>
+<h5><b>Keywords:</b> paper, web science, machine translation</h5>
 
         
     </header>
@@ -99,11 +101,9 @@
     <main>
         <article>
     <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
-<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by microbloggers for assigning posts to a topic. Second, our framework accounts for the problem that microbloggers in different languages will refer to the same topic using different tokens. Finally, our method does not require special preprocessing of hashtags, reducing barriers to real-world implementation. We present proof-of-concept results for the given Spanish hashtag #33mineros.</p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
-<p><span id="1">[1] Simon Carter, Manos Tsagkias, and Wouter Weerkamp. 2011. <em>Semi-Supervised Priors for Microblog Language Identification</em>. In DIR 2011: Dutch-Belgian Information Retrieval Workshop Amsterdam (pp.
-12-15). University of Amsterdam, Information and Language Processing group.
-<a href="../../pdf/dir2011-microblog-language-identification.pdf">PDF</a></span></p>
+<p><span id="1">[1] Simon Carter, Manos Tsagkias, and Wouter Weerkamp. 2011. <em>Twitter hashtags: Joint Translation and Clustering</em>. In Web Science 2011. <a href="https://hdl.handle.net/11245/1.361265">Uva Link</a>; <a href="../../pdf/websci2011-Twitter_hashtags_Joint_Translation_and_C.pdf">PDF</a>.</span></p>
 </article>
 
 <hr/>
@@ -112,19 +112,6 @@
 <div class="related-links">
     <h3>Related Posts</h3>
     <ol>
-        
-        <li>
-            
-            <blockquote>
-                <p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
-&nbsp;</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">43.14% similar</span>
-                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
-            </div>
-        </li>
         
         <li>
             
@@ -140,7 +127,7 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">42.52% similar</span>
+                <span class="score">53.22% similar</span>
                 <span>— <a href="/posts/20110409-websci2011-twitter-use-in-languages/">Paper at WebScience 2011 — How People use Twitter in Different Languages</a></span>
             </div>
         </li>
@@ -148,12 +135,13 @@ which is likely to require different ways of analysis.</p>
         <li>
             
             <blockquote>
-                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
+                <p>Much of what is discussed in social media is inspired by events in the news and, vice versa, social media provide us with a handle on the impact of news events. We address the following linking task: given a news article, find social media utterances that implicitly reference it. We follow a three-step approach: we derive multiple query models from a given source news article, which are then used to retrieve utterances from a target social media index, resulting in multiple ranked lists that we then merge using data fusion techniques. Query models are created by exploiting the structure of the source article and by using explicitly linked social media utterances that discuss the source article. To combat query drift resulting from the large volume of text, either in the source news article itself or in social media utterances explicitly linked to it, we introduce a graph-based method for selecting discriminative terms.
+&nbsp;</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">40.40% similar</span>
-                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
+                <span class="score">46.22% similar</span>
+                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
             </div>
         </li>
         
@@ -166,8 +154,35 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">39.90% similar</span>
+                <span class="score">41.19% similar</span>
                 <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Offering access to information in microblog posts requires successful language identification. Language identification on sparse and noisy data can be challenging. In this paper we explore the performance of a state-of-the-art n-gram-based language identifier, and we introduce two semi-supervised priors to enhance performance at microblog post level: (i) blogger-basedprior, using previous posts by the same blogger, and (ii) link-based prior, using the pages linked to from the post. We test our models on five languages (Dutch, English, French, German, and Spanish), and a set of 1,000 tweets per language. Results show that our priors improve accuracy, but that there is still room for improvement.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">41.08% similar</span>
+                <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
+&nbsp;</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">39.96% similar</span>
+                <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
             </div>
         </li>
         
@@ -195,21 +210,8 @@ retrieved, violating a standard assumption of language</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">37.48% similar</span>
+                <span class="score">36.80% similar</span>
                 <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
-&nbsp;</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">35.98% similar</span>
-                <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
             </div>
         </li>
         
@@ -221,7 +223,7 @@ retrieved, violating a standard assumption of language</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">35.57% similar</span>
+                <span class="score">31.76% similar</span>
                 <span>— <a href="/posts/20110408-sigir2011-hypergeometric-language-models/">Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding</a></span>
             </div>
         </li>
