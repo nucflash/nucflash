@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20090221-www2009-weps/">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>Paper at WWW 2009 — The University of Amsterdam at Web People Search Benchmark (WePS) - Connecting the Dots</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20090221-www2009-weps/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>Paper at WWW 2009 — The University of Amsterdam at Web People Search Benchmark (WePS)</h1>
+
+
+    
+        <h4>Krisztian Balog, Jiyin He, Katja Hofmann, Valentin Jijkoun, Christof Monz, Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke</h4>
+    
+
+
+<h5>University of Amsterdam</h5>
+
+
+<h5>21 February 2009</h5>
+
+
+<h5><b>Keywords:</b> paper, www, entity search, semantic search, information retrieval</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>In this paper we describe our participation [<a href="#1">1</a>] in the Second Web People Search workshop (WePS2) and detail our approaches. For the clustering task, our focus was on replicating the lessons learned at WEPS1 on the data set made available as part of WEPS2 and on experimenting with a voting-based combination of clustering methods. We found that clustering methods display the same overall behavior on the WEPS1 and WESP2 data sets and that a hierarchical clustering approach delivers the best performance, even outperforming voting-based combinations. For attribute extraction, we explore approaches using pattern matching with manually and automatically constructed patterns. Manual patterns were constructed using expert knowledge and following analysis of sample data. Automatic pattern construction extracts textual and syntactic context around training samples and selects patterns which are expected to perform well based on leave-one-out evaluation. Experimental results show that manually constructed patterns are very eﬀective for obtaining high recall. For automatically extracted patterns performance varied widely depending on the attribute type. Larger amounts of training data may help improve these approaches in the future.</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p><span id="1">[1] Krisztian Balog, Jiyin He, Katja Hofmann, Valentin Jijkoun, Christof Monz, Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke. <em>The University of Amsterdam at WePS2. In 2<sup>nd</sup> Web People Search Evaluation Workshop (WePS 2009)</em>. 18<sup>th</sup> WWW Conference, March 2009. <a href="../../pdf/www2009-weps2.pdf">PDF</a>.</span></p>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>We describe the participation of the University of Amsterdam’s ILPS group in the web, blog, web, entity, and relevance feedback track at TREC 2009. Our main preliminary conclusions are as follows. For the Blog track we find that for top stories identification a blogs to news approach outperforms a simple news to blogs approach. This is interesting, as this approach starts with no input except for a date, whereas the news to blogs approach also has news headlines as input. For the web track, we find that spam is an important issue in the ad hoc task and that Wikipedia- based heuristic optimization approaches help to boost the retrieval performance, which is assumed to potentially reduce the spam in top ranked documents. As for the diversity task, we explored different methods. Initial results show that clustering and a topic model-based approach have similar performance, which are relatively better than a query log based approach. Our performance in the Entity track was downright</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">24.48% similar</span>
+                <span>— <a href="/posts/20091026-trec2009/">Paper at TREC 2009 — The University of Amsterdam at TREC 2009</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <figure id="__figure-caption_1">
+<p><img alt="&quot;Detecting Algorithmic Discrimination&quot; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands." src="https://manostsagkias.wordpress.com/wp-content/uploads/2016/12/img_2240.jpg" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figure 1.</span> &ldquo;Detecting Algorithmic Discrimination&rdquo; by Carlos Castillo, presented at DIR 2016. Delft, the Netherlands.</p>
+</figcaption>
+</figure>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">20.29% similar</span>
+                <span>— <a href="/posts/20161210-dir/">Attending DIR 2016</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>Recent years have witnessed a persistent interest in generating pseudo test collections, both for training and evaluation purposes. We describe a method for generating queries and relevance judgments for microblog search in an unsupervised way. Our starting point is this intuition: tweets with a hashtag are relevant to the topic covered by the hashtag and hence to a suitable query derived from the hashtag. Our baseline method selects all commonly used hashtags, and all associated tweets as relevance judgments; we then generate a query from these tweets. Next, we generate a timestamp for each query, allowing us to use temporal information in the training process. We then enrich the generation process with knowledge derived from an editorial test collection for microblog search.
+&nbsp;</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">19.79% similar</span>
+                <span>— <a href="/posts/20130408-sigir2013-pseudo-test-collections/">Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="references">References</h3>
+<p><span id="1">[1] David Graus, Daan Odijk, Manos Tsagkias, Wouter Weerkamp, and Maarten de Rijke. 2014. <em>Semanticizing search engine queries: the University of Amsterdam at the ERD 2014 challenge</em>. In Proceedings of the first international workshop on Entity recognition &amp; disambiguation (ERD &lsquo;14). Association for Computing Machinery, New York, NY, USA, 69–74. <a href="https://doi.org/10.1145/2633211.2634354">ACM Link</a>; <a href="">PDF</a>.</span></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">19.44% similar</span>
+                <span>— <a href="/posts/20140914-erd2014-semanticizing-search/">Paper at ERD 2014 — Semanticizing Search Engine Queries</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <figure>
+    <img src="https://pbs.twimg.com/media/DZdL3MFX0AACod9?format=jpg&name=medium"/>
+    <figcaption>Starting my talk at ECIR 2018 Industry track. Courtesy of Gabriela Kazai.</figcaption>
+</figure>
+
+<p>European Conference on Information Retrieval (ECIR) is a annual European scientific conference around bhe topics of search engines, recommender systems, text analytics, user modeling, and evaluation. <a href="http://ecir2018.org">This year ECIR was held in Grenoble, France.</a> With more than 250 attendants and 4 days packed with tutorials, workshops, research, and industry talks, it was a great place to be to get updated with the latest and greatest about search engines.</p>
+<p>The theme of this year&rsquo;s Industry Day was to bring lessons learned from industry to academia. What are differences when developing a research algorithm and when we bring to practice? These lessons could inspire and inform our fellow academics for the challenges practitioners face when bring these algorithms to production.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">19.28% similar</span>
+                <span>— <a href="/posts/20180330-ecir2018/">Talk at ECIR 2018 Industry day</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>&nbsp;
+For our experimental evaluation, we use data from Twitter, Digg, Delicious, the New York Times Community, Wikipedia, and the blogosphere to generate query models. We show that different query models, based on different data sources, provide complementary information and manage to retrieve different social media utterances from our target index. As a consequence, data fusion methods manage to significantly boost retrieval performance over individual approaches. Our graph-based term selection method is shown to help improve both effectiveness and efficiency.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">17.79% similar</span>
+                <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>Podcasts display an unevenness characteristic of domains dominated by user generated content, resulting in potentially radical variation of the user preference they enjoy. We report on work that uses easily extractable surface features of podcasts in order to achieve solid performance on two podcast preference prediction tasks: classification of preferred vs. non-preferred podcasts and ranking podcasts by level of preference. We identify features with good discriminative potential by carrying out manual data analysis, resulting in a refinement of the indicators of an existent podcast preference framework. Our preference prediction is useful for topic-independent ranking of podcasts, and can be used to support download suggestion or collection browsing.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">15.05% similar</span>
+                <span>— <a href="/posts/20090304-ecir2009-podcred-features/">Paper at ECIR 2009 — Exploiting Surface Features for the Prediction of Podcast Preference</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>
