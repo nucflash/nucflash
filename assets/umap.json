@@ -3,322 +3,301 @@
         "slug": "posts/20200622-sigir-forum-ecommerce/",
         "title": "Paper at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations",
         "date": "2020-06-22",
-        "x": -2.399322032928467,
-        "y": 7.7963032722473145
+        "x": 4.4790239334106445,
+        "y": -2.6759543418884277
     },
     {
         "slug": "posts/20180330-ecir2018/",
         "title": "Talk at ECIR 2018 Industry day",
         "date": "2018-03-30",
-        "x": -0.3423696458339691,
-        "y": 8.24252986907959
+        "x": 6.640953063964844,
+        "y": -3.038938522338867
     },
     {
         "slug": "posts/20210214-icassp/",
         "title": "Paper at ICASSP 2021 — Error-driven Pruning of Language Models for Virtual Assistants",
         "date": "2021-02-14",
-        "x": -0.6887887120246887,
-        "y": 11.865752220153809
+        "x": 9.658743858337402,
+        "y": 0.054174650460481644
     },
     {
         "slug": "posts/20090221-www2009-weps/",
         "title": "Paper at WWW 2009 — The University of Amsterdam at Web People Search Benchmark (WePS)",
         "date": "2009-02-21",
-        "x": -3.149420738220215,
-        "y": 14.577022552490234
+        "x": 12.553633689880371,
+        "y": 2.561378240585327
     },
     {
         "slug": "posts/20180211-emakina/",
         "title": "Talk at A.I. for Commerce meetup",
         "date": "2018-02-11",
-        "x": -1.8692517280578613,
-        "y": 8.184673309326172
+        "x": 5.189621448516846,
+        "y": -2.7869021892547607
     },
     {
         "slug": "posts/20110914-yahoo-research/",
         "title": "Internship at Yahoo! Research Labs",
         "date": "2011-09-14",
-        "x": -1.6854931116104126,
-        "y": 12.572724342346191
+        "x": 10.904747009277344,
+        "y": 0.02476641722023487
     },
     {
         "slug": "posts/20160101-streamwatchr/",
         "title": "Streamwatchr — Inside the world's playlist",
         "date": "2016-01-01",
-        "x": -2.81266450881958,
-        "y": 16.514141082763672
+        "x": 13.683316230773926,
+        "y": 0.03148115053772926
     },
     {
         "slug": "posts/20110409-websci2011-twitter-use-in-languages/",
         "title": "Paper at WebScience 2011 — How People use Twitter in Different Languages",
         "date": "2011-04-09",
-        "x": -2.918588876724243,
-        "y": 16.319271087646484
+        "x": 13.37330436706543,
+        "y": 0.3961363434791565
     },
     {
         "slug": "posts/20180618-query-engine-upgrade/",
         "title": "New Version for 904Labs Query Intent Engine",
         "date": "2018-06-18",
-        "x": -2.160151958465576,
-        "y": 7.276652812957764
+        "x": 4.084540843963623,
+        "y": -2.8881568908691406
     },
     {
         "slug": "posts/20091026-trec2009/",
         "title": "Paper at TREC 2009 — The University of Amsterdam at TREC 2009",
         "date": "2009-10-26",
-        "x": -2.5114402770996094,
-        "y": 14.344137191772461
+        "x": 12.44882583618164,
+        "y": 1.8994219303131104
     },
     {
         "slug": "posts/20161210-sigir/",
         "title": "Presenting at the Industry Day at SIGIR 2016",
         "date": "2016-12-10",
-        "x": -0.8546117544174194,
-        "y": 8.111019134521484
+        "x": 6.285970211029053,
+        "y": -3.5062718391418457
     },
     {
         "slug": "posts/20101008-wsdm2011-linking-online-news/",
         "title": "Paper at WSDM 2011 — Linking online news and social media",
         "date": "2010-10-08",
-        "x": -1.9418412446975708,
-        "y": 15.246155738830566
+        "x": 12.66439437866211,
+        "y": 1.4573349952697754
     },
     {
         "slug": "posts/20090304-ecir2009-podcred-features/",
         "title": "Paper at ECIR 2009 — Exploiting Surface Features for the Prediction of Podcast Preference",
         "date": "2009-03-04",
-        "x": -0.975710391998291,
-        "y": 13.44400691986084
+        "x": 10.499631881713867,
+        "y": 1.8680944442749023
     },
     {
         "slug": "posts/20180702-aiexpo/",
         "title": "Exhibiting at A.I. Expo Europe 2018",
         "date": "2018-07-02",
-        "x": -0.9770688414573669,
-        "y": 8.833950996398926
+        "x": 5.9611406326293945,
+        "y": -2.3449206352233887
     },
     {
         "slug": "posts/20081202-siren2008-talk-speech-termclouds/",
         "title": "Talk at SIREN 2008 on Speech Term Clouds",
         "date": "2008-12-02",
-        "x": -0.17208591103553772,
-        "y": 12.065149307250977
+        "x": 9.289299011230469,
+        "y": 0.9155874848365784
     },
     {
         "slug": "posts/20120329-ecir2012-imdb/",
         "title": "Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media",
         "date": "2012-04-29",
-        "x": -2.0320498943328857,
-        "y": 14.891135215759277
+        "x": 12.783191680908203,
+        "y": 0.9729019403457642
     },
     {
         "slug": "posts/20170418-historical-moment-904labs/",
         "title": "A historical moment for 904Labs",
         "date": "2017-04-18",
-        "x": -1.2017979621887207,
-        "y": 7.202537536621094
+        "x": 5.372334003448486,
+        "y": -4.215108394622803
     },
     {
         "slug": "posts/20110409-websci2011-hashtag-translation/",
         "title": "Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering",
         "date": "2011-04-09",
-        "x": -2.3158886432647705,
-        "y": 16.332439422607422
+        "x": 13.798517227172852,
+        "y": 0.7904381155967712
     },
     {
         "slug": "posts/20200722-sigir2020/",
         "title": "Paper at SIGIR 2020 — Predicting Entity Popularity to Improve Spoken Entity Recognition by Virtual Assistants",
         "date": "2020-07-22",
-        "x": -0.271260142326355,
-        "y": 11.483723640441895
+        "x": 9.090706825256348,
+        "y": 0.07990896701812744
     },
     {
         "slug": "posts/20180308-frankfurt/",
         "title": "Talk at Frankfurt Data Science meetup",
         "date": "2018-03-08",
-        "x": -0.07948271930217743,
-        "y": 9.493595123291016
+        "x": 6.9566731452941895,
+        "y": -2.0551998615264893
     },
     {
         "slug": "posts/20191118-joining-apple/",
         "title": "Joining Siri at Apple",
         "date": "2019-11-18",
-        "x": -0.15210922062397003,
-        "y": 10.689146995544434
+        "x": 7.6365647315979,
+        "y": -1.376116394996643
     },
     {
         "slug": "posts/20191117-goodbye-904labs/",
         "title": "904Labs: Goodbye and thanks for all the clicks!",
         "date": "2019-11-07",
-        "x": -0.5924696922302246,
-        "y": 6.788051128387451
+        "x": 5.617542266845703,
+        "y": -3.8616740703582764
     },
     {
         "slug": "posts/20110120-dir2011-language-identification/",
         "title": "Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification",
         "date": "2011-01-20",
-        "x": -2.626079559326172,
-        "y": 15.785697937011719
-    },
-    {
-        "slug": "posts/20090330-podteller_draft/",
-        "title": "Untitled",
-        "date": "2014-01-01",
-        "x": -1.742518424987793,
-        "y": 9.807880401611328
+        "x": 13.325209617614746,
+        "y": 0.9459818601608276
     },
     {
         "slug": "posts/20171213-ams-city/",
         "title": "Talk at Amsterdam City A.I. Event",
         "date": "2017-12-13",
-        "x": -0.9397618770599365,
-        "y": 9.352810859680176
+        "x": 6.476900577545166,
+        "y": -1.8065168857574463
     },
     {
         "slug": "posts/20190718-ecommerce-workshop/",
         "title": "Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce",
         "date": "2019-07-18",
-        "x": -2.016578435897827,
-        "y": 7.690482139587402
+        "x": 4.401002407073975,
+        "y": -3.0407705307006836
     },
     {
         "slug": "posts/20171021-ai2future/",
         "title": "Keynote speech at AI2Future",
         "date": "2017-10-21",
-        "x": -0.22604209184646606,
-        "y": 8.992671966552734
+        "x": 6.79848575592041,
+        "y": -2.496065855026245
     },
     {
         "slug": "posts/20180618-query-engine/",
         "title": "What is a Query Intent/Understanding engine?",
         "date": "2018-06-18",
-        "x": -2.6188621520996094,
-        "y": 7.501896858215332
+        "x": 3.9432854652404785,
+        "y": -2.6599771976470947
     },
     {
         "slug": "posts/20180601-techloop/",
         "title": "Talk at TECH Talks Amsterdam",
         "date": "2018-06-01",
-        "x": -0.5602290034294128,
-        "y": 9.613059043884277
+        "x": 6.64798641204834,
+        "y": -1.6179546117782593
     },
     {
         "slug": "posts/20171104-another-historical-moment-904labs/",
         "title": "Another historical moment for 904Labs",
         "date": "2017-11-04",
-        "x": -1.0412168502807617,
-        "y": 6.892980098724365
+        "x": 5.084543704986572,
+        "y": -4.118486404418945
     },
     {
         "slug": "posts/20081120-wicow2008-podcred/",
         "title": "Paper at WICOW 2008 — PodCred: A Framework for Analyzing Podcast Preference",
         "date": "2008-11-20",
-        "x": -0.5282175540924072,
-        "y": 13.511030197143555
+        "x": 10.36936092376709,
+        "y": 1.701586365699768
     },
     {
         "slug": "posts/20110408-sigir2011-hypergeometric-language-models/",
         "title": "Paper at SIGIR 2011 — Hypergeometric Language Models for Republished Article Finding",
         "date": "2011-04-08",
-        "x": -1.3020844459533691,
-        "y": 15.031259536743164
+        "x": 11.829761505126953,
+        "y": 1.926466941833496
     },
     {
         "slug": "posts/20080720-sscs2008-speech-termclouds/",
         "title": "Paper at SSCS 2008 — Using Term Clouds to Represent Segment-Level Semantic Content of Podcasts",
         "date": "2008-07-20",
-        "x": -0.17153237760066986,
-        "y": 12.75071907043457
+        "x": 9.765836715698242,
+        "y": 1.3242779970169067
     },
     {
         "slug": "posts/20101002-kl-divergence/",
         "title": "KL-divergence of Two Documents",
         "date": "2010-12-06",
-        "x": -0.8703019022941589,
-        "y": 14.52828598022461
+        "x": 11.099617004394531,
+        "y": 2.0607783794403076
     },
     {
         "slug": "posts/20110119-ecir2011-query-expansion/",
         "title": "Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts",
         "date": "2011-01-19",
-        "x": -2.026158332824707,
-        "y": 15.840144157409668
-    },
-    {
-        "slug": "posts/20241130-life-log_draft/",
-        "title": "Life Log — An Experiment",
-        "date": "2024-11-30",
-        "x": -2.062852621078491,
-        "y": 13.370796203613281
+        "x": 13.560513496398926,
+        "y": 1.355147123336792
     },
     {
         "slug": "posts/20161210-dir/",
         "title": "Attending DIR 2016",
         "date": "2016-12-10",
-        "x": 0.2182997465133667,
-        "y": 8.546042442321777
-    },
-    {
-        "slug": "posts/20241130-blog-migration_draft/",
-        "title": "Blog Migration No.4",
-        "date": "2024-11-29",
-        "x": -0.13538460433483124,
-        "y": 7.175205230712891
+        "x": 7.204445838928223,
+        "y": -3.0196709632873535
     },
     {
         "slug": "posts/20121108-phd-thesis-mining-social-media/",
         "title": "Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior",
         "date": "2012-11-08",
-        "x": -1.5941007137298584,
-        "y": 14.45141887664795
+        "x": 11.960847854614258,
+        "y": 1.0492199659347534
     },
     {
         "slug": "posts/20140914-erd2014-semanticizing-search/",
         "title": "Paper at ERD 2014 — Semanticizing Search Engine Queries",
         "date": "2014-09-14",
-        "x": -3.0161986351013184,
-        "y": 14.858428001403809
+        "x": 12.83306884765625,
+        "y": 2.4057037830352783
     },
     {
         "slug": "posts/20120623-sigir2012-language-intent-models/",
         "title": "Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior",
         "date": "2012-06-23",
-        "x": -1.6276659965515137,
-        "y": 13.617547035217285
+        "x": 11.485416412353516,
+        "y": 0.7493925094604492
     },
     {
         "slug": "",
         "title": "",
-        "date": "2024-12-12",
-        "x": -1.8832004070281982,
-        "y": 9.168498039245605
+        "date": "2025-02-02",
+        "x": 6.818073272705078,
+        "y": -3.993910551071167
     },
     {
         "slug": "posts/20090903-cikm2009-predicting-comments/",
         "title": "Paper at CIKM 2009 — Predicting the Volume of Comments on Online News Stories",
         "date": "2009-09-03",
-        "x": -2.2930753231048584,
-        "y": 14.122962951660156
+        "x": 12.090176582336426,
+        "y": 1.3918999433517456
     },
     {
         "slug": "about/",
         "title": "About",
         "date": "2024-12-05",
-        "x": -0.741004467010498,
-        "y": 7.538689613342285
+        "x": 6.422750473022461,
+        "y": -4.301301002502441
     },
     {
         "slug": "posts/20080620-sigir2008-speech-termclouds/",
         "title": "Paper at SIGIR 2008 — Term Clouds as Surrogates for User Generated Speech",
         "date": "2008-06-20",
-        "x": -0.3620328903198242,
-        "y": 12.435372352600098
+        "x": 9.670912742614746,
+        "y": 0.7752780318260193
     },
     {
         "slug": "posts/20130408-sigir2013-pseudo-test-collections/",
         "title": "Paper at SIGIR 2013 — Pseudo Test Collections for Training and Tuning Microblog Rankers",
         "date": "2013-04-08",
-        "x": -2.414246082305908,
-        "y": 15.146989822387695
+        "x": 13.193016052246094,
+        "y": 1.8096513748168945
     }
 ]

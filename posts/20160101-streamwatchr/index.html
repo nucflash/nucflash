@@ -101,7 +101,7 @@
     <main>
         <article>
     <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
-<p>Streamwatchr (2013–2016), developed at the University of Amsterdam, leveraged machine learning and named entity extraction to track global music listening behavior in real time through tweets. It offered features like Top-100 charts, interactive maps, and a “radio” stream mode driven by a dynamic recommender system. Using Python and MongoDB, it processed over 438 million tweets, identified 660,941 artists, and linked them to MusicBrainz and YouTube videos. This innovative blend of analytics and entity linking earned it a spot in the Dutch delegation at South by Southwest (SXSW).</p>
+<p>Streamwatchr (2013–2016), developed at the University of Amsterdam, leveraged machine learning and named entity extraction to track global music listening behavior in real time through tweets. It offered features like Top-100 charts, interactive maps, and a &ldquo;radio&rdquo; stream mode driven by a dynamic recommender system. Using Python and MongoDB, it processed over 438 million tweets, identified 660,941 artists, and linked them to MusicBrainz and YouTube videos. This innovative blend of analytics and entity linking earned it a spot in the Dutch delegation at South by Southwest (SXSW).</p>
 <p>Streamwatchr (2013&ndash;2016) was a web application developed at the University of Amsterdam, by Wouter Weerkamp, Maarten de Rijke, and myself. Streamwatchr monitored the Twitter feed for #nowplaying, and  tracked how people interacted with songs, artists, albums, in real-time. In its latest version it also identified which parts of the lyrics were the most sung along!</p>
 <p>Streamwatchr’s innovative approach earned it a place in the Dutch delegation for innovation at the internationally renowned South by Southwest (SXSW) festival.</p>
 <figure>
@@ -110,7 +110,7 @@
     <figcaption>
 </figure>
 
-<p>Streamwatchr provided unique insights into global music listening behavior through features such as Top-100 charts, interactive maps, and a “radio” stream mode. The radio stream played a sequence of YouTube videos, with each song following the next based on the probability of them being played together. This was achieved by linking identified songs to YouTube videos and generating playlists driven by a recommender system. Behind the scenes, the system utilized a directed graph, where nodes represented songs, and edge weights encoded the likelihood of transitioning from one song to another. These weights were dynamically updated with every incoming tweet.</p>
+<p>Streamwatchr provided unique insights into global music listening behavior through features such as Top-100 charts, interactive maps, and a &ldquo;radio&rdquo; stream mode. The radio stream played a sequence of YouTube videos, with each song following the next based on the probability of them being played together. This was achieved by linking identified songs to YouTube videos and generating playlists driven by a recommender system. Behind the scenes, the system utilized a directed graph, where nodes represented songs, and edge weights encoded the likelihood of transitioning from one song to another. These weights were dynamically updated with every incoming tweet.</p>
 <p>The engineering behind Streamwatchr was equally groundbreaking [<a href="#1">1</a>]. It collected music-related tweets in real time, extracted song and artist information, and mapped them to MusicBrainz, a comprehensive music database, and corresponding YouTube video clips. Every aspect of Streamwatchr, from popularity charts and trending music to song recommendations and analytics, was refreshed with each new tweet, ensuring a dynamic and up-to-date user experience.</p>
 <p>Streamwatchr leveraged a tech stack of Python and MongoDB for analytics and recommendations. Its real-time capabilities were powered by efficient data structures and algorithms that minimized the computational overhead required for updates, delivering a seamless and responsive experience.</p>
 <p>The millions of tweets and the hundreds of thousands of artists that Streamwatchr has listened to over the years have been distilled to a handful of noteworthy factoids:</p>
@@ -141,7 +141,7 @@
 </tbody>
 </table>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
-<p><span id='1'/>[1]: Wouter Weerkamp, Manos Tsagkias, and Maarten de Rijke. <em>Inside the world&rsquo;s playlist</em>. In International Conference of Knowledge Management (ICKM) 2013. <a href="https://dl.acm.org/doi/abs/10.1145/2505515.2508216">ACM Library</a>; <a href="../../pdf/cikm2013-streamwatchr-demo.pdf">PDF</a></p>
+<p><span id='1'/>[1] Wouter Weerkamp, Manos Tsagkias, and Maarten de Rijke. <em>Inside the world&rsquo;s playlist</em>. In International Conference of Knowledge Management (ICKM) 2013. <a href="https://dl.acm.org/doi/abs/10.1145/2505515.2508216">ACM Library</a>; <a href="../../pdf/cikm2013-streamwatchr-demo.pdf">PDF</a></p>
 </article>
 
 <hr/>
@@ -165,8 +165,20 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">23.95% similar</span>
+                <span class="score">23.61% similar</span>
                 <span>— <a href="/posts/20110409-websci2011-twitter-use-in-languages/">Paper at WebScience 2011 — How People use Twitter in Different Languages</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">23.21% similar</span>
+                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
             </div>
         </li>
         
@@ -178,20 +190,8 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">23.67% similar</span>
+                <span class="score">23.19% similar</span>
                 <span>— <a href="/posts/20101008-wsdm2011-linking-online-news/">Paper at WSDM 2011 — Linking online news and social media</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>The popularity of microblogging platforms, such as Twitter, renders them valuable real-time information resources for tracking various aspects of worldwide events, e.g., earthquakes, political elections, etc. Such events are usually characterized in microblog posts via the use of hashtags (#). As microbloggers come from different backgrounds, and express themselves in different languages, we witness different &ldquo;translations&rdquo; of hashtags which, however, are about the same event. Language-dependent variants of hashtags can possibly lead to issues in content-analysis. In this paper, we propose a method for translating hashtags, which builds on methods from information retrieval. The method introduced is source and target language independent. Our method is desirable, either instead of, or complimentary, to the direct translation of the hashtag for three reasons. First we return a list of hashtags on the same topic, which takes into account the plurality and variability of hashtags used by</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">23.65% similar</span>
-                <span>— <a href="/posts/20110409-websci2011-hashtag-translation/">Paper at WebScience 2011 — Twitter hashtags: Joint Translation and Clustering</a></span>
             </div>
         </li>
         
@@ -204,7 +204,7 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">23.26% similar</span>
+                <span class="score">22.85% similar</span>
                 <span>— <a href="/posts/20110120-dir2011-language-identification/">Paper at DIR 2011 — Semi-Supervised Priors for Microblog Language Identification</a></span>
             </div>
         </li>
@@ -216,7 +216,7 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">22.61% similar</span>
+                <span class="score">22.20% similar</span>
                 <span>— <a href="/posts/20121108-phd-thesis-mining-social-media/">Ph.D. Thesis — Mining Social Media: Tracking Content and Predicting Behavior</a></span>
             </div>
         </li>
@@ -228,7 +228,7 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">20.58% similar</span>
+                <span class="score">20.24% similar</span>
                 <span>— <a href="/posts/20091026-trec2009/">Paper at TREC 2009 — The University of Amsterdam at TREC 2009</a></span>
             </div>
         </li>
@@ -247,7 +247,7 @@ which is likely to require different ways of analysis.</p>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">19.99% similar</span>
+                <span class="score">19.71% similar</span>
                 <span>— <a href="/posts/20120329-ecir2012-imdb/">Paper at ECIR 2012 — Predicting IMDB Move Ratings Using Social Media</a></span>
             </div>
         </li>
