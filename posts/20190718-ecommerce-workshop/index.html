@@ -124,7 +124,7 @@
             
             <blockquote>
                 <p>As eCommerce is becoming increasingly important, we recruited a small team of researchers from major and not so major players in the field to share views and experiences on theoretical and practical challenges and future directions on eCommerce search and recommendations. The result of our effort, <a href="http://sigir.org/wp-content/uploads/2020/06/p04.pdf">Challenges and Research Opportunities in eCommerce Search and Recommendations</a> is published in <a href="http://sigir.org/forum/issues/june-2020/">June 2020 issue of SIGIR Forum</a>.</p>
-<p>This work is also related to <a href="/posts/20190718-ecommerce-workshop">thoughts on product search that I have shared on an earlier post</a>, as well as to <a href="/posts/20180618-query-engine">904Labs&rsquo; Query Intent engine</a> and its <a href="/posts/20180618-query-engine-upgrade">magnificent results (with examples)</a>.</p>
+<p>This work is also related to <a href="/posts/20190718-ecommerce-workshop">thoughts on product search that I have shared on an earlier post</a>, as well as to <a href="/posts/20170618-query-intent-engine">904Labs&rsquo; Query Intent engine</a> and its <a href="/posts/20180618-query-intent-engine-upgrade">magnificent results (with examples)</a>.</p>
 <h3 id="references">References</h3>
             </blockquote>
             
@@ -149,26 +149,18 @@
         <li>
             
             <blockquote>
-                <p>In the last couple of weeks, our team has been busy tweaking our engine and pushing it even further. Our Query Intent/Understanding engine was doing already a good job, mapping query free text to product attributes such as category, or brands. However, we&rsquo;ve never tested going deeper into particular product attributes, such the product weight or even, wattage. Our engineers managed to extend the logic and the scalability of the algorithm to support very fine grained suggestions, if such fine-grained information exists in the index. It is quite a feat and I&rsquo;m very proud of our team!</p>
+                <p>On top of the engineering feat, the algorithm itself is pretty lean and has quite a few distinctive features that are hard to find in other engines: it does not depend on external dependencies (read Wikipedia), nor it needs periodic re-training. The only thing that a customer has to do is to plug in our system to a Apache Solr/Elasticsearch, and 904Labs Query Intent engine is built incrementally, one click/add-to-basket/purchase at a time. Oh, and it doesn&rsquo;t write anything on your index. Magic!</p>
+<p>Here&rsquo;s a few interesting examples that came out from today&rsquo;s experimentation:</p>
+<p>(the examples are in Dutch; I try to translate the queries into English. Field attributes and values may be partially redacted for anonymity)</p>
+<h2 id="some-relatively-simple-cases">Some relatively simple cases</h2>
+<ul>
+<li>The system learns to map the query: <code>lampen</code> (lamps) to Solr&rsquo;s directive: <code>category:Lampen</code>. Learning of this mapping is automatic and based on only from user interactions.</li>
+</ul>
             </blockquote>
             
             <div class="snippet-meta">
-                <span class="score">41.49% similar</span>
-                <span>— <a href="/posts/20180618-query-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
-            </div>
-        </li>
-        
-        <li>
-            
-            <blockquote>
-                <p>In the past year, at <a href="https://904labs.com">904Labs A.I. for Search</a>, we&rsquo;ve put a lot of effort to optimize and push further the technology behind query intent/understanding engines. If you are in the search engine/information retrieval community, you know the term and how challenging the problem is. But if you are not familiar with the problem, it is hard to grasp its importance and challenges. Here&rsquo;s my attempt to explain it in simple words.</p>
-<p><em>A Query Intent/Understanding engine aims at identifying the intent of a user&rsquo;s query and ultimately at translating it to a set of search directives.</em></p>
-<p>Consider a user coming to your e-shop and typing in the search box: &ldquo;red shoes&rdquo;. The query may look pretty straightforward to you when it comes to what products to show to the user but, for a machine, it&rsquo;s pretty hard to figure out what the person meant.</p>
-            </blockquote>
-            
-            <div class="snippet-meta">
-                <span class="score">39.17% similar</span>
-                <span>— <a href="/posts/20180618-query-engine/">What is a Query Intent/Understanding engine?</a></span>
+                <span class="score">39.13% similar</span>
+                <span>— <a href="/posts/20180618-query-intent-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
             </div>
         </li>
         
@@ -182,6 +174,18 @@
             <div class="snippet-meta">
                 <span class="score">35.06% similar</span>
                 <span>— <a href="/posts/20170418-historical-moment-904labs/">A historical moment for 904Labs</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>To get into the machine&rsquo;s shoes (pun intended) think for a moment that you were born and raised in a warehouse, which is isolated from the rest of the world but has all the inventory of an e-shop. You&rsquo;ve never left the warehouse so you don&rsquo;t know anything about the world. It&rsquo;s quite grim world but bare with me. One day someone slips a message under the door of the warehouse with the words &ldquo;red shoes&rdquo;. Now your task is to select a set of products that satisfies that person&rsquo;s information need. Obviously you know nothing about that mysterious person, let alone their preferences, and you barely understand the language of the message–perhaps you are able to recognize characters and words and match them to words found on the labels of products, but that&rsquo;s pretty much it.</p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">34.14% similar</span>
+                <span>— <a href="/posts/20170618-query-intent-engine/">What is a Query Intent Engine?</a></span>
             </div>
         </li>
         

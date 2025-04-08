@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20170618-query-intent-engine/">
+    <meta name="author" content="Μάνος Τσαγκιάς">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>What is a Query Intent Engine? - Manos Tsagkias</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20170618-query-intent-engine/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>What is a Query Intent Engine?</h1>
+
+<h3>A beginner's guide</h3>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+
+<h5>18 June 2017</h5>
+
+
+<h5><b>Keywords:</b> 904Labs, information-retrieval, semantic-search</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>Query Intent—also known as Query Understanding—engines are machine learning systems that aim at capturing the semantics of the query and create a mapping to a set of boolean instructions for searching an index of documents. </p>
+<blockquote>
+<p><em>Update —</em> For examples of what a semantic query intent engine can do, check out this post detailing the <a href="../20180618-query-intent-engine-upgrade/">achievements of 904Labs&rsquo; latest query intent engine</a>!</p>
+</blockquote>
+<p>In the past year, at <a href="https://904labs.com">904Labs A.I. for Search</a>, we&rsquo;ve put a lot of effort to optimize and push further the technology behind query intent engines. If you are in the search engine (academically also known as Information Retrieval) community, you know the term and how challenging the problem is. But if you are not familiar with the problem, it is hard to grasp its importance and challenges. Here&rsquo;s my attempt to explain it in simple words.</p>
+<p><em>A query intent engine aims at identifying the intent of a user&rsquo;s query and ultimately at translating it to a set of search directives.</em></p>
+<p>Consider a user coming to your e-shop and typing in the search box: &ldquo;red shoes&rdquo;. The query may look pretty straightforward to you when it comes to what products to show to the user but, for a machine, it&rsquo;s pretty hard to figure out what the person meant.</p>
+<p>To get into the machine&rsquo;s shoes (pun intended) think for a moment that you were born and raised in a warehouse, which is isolated from the rest of the world but has all the inventory of an e-shop. You&rsquo;ve never left the warehouse so you don&rsquo;t know anything about the world. It&rsquo;s quite grim world but bare with me. One day someone slips a message under the door of the warehouse with the words &ldquo;red shoes&rdquo;. Now your task is to select a set of products that satisfies that person&rsquo;s information need. Obviously you know nothing about that mysterious person, let alone their preferences, and you barely understand the language of the message–perhaps you are able to recognize characters and words and match them to words found on the labels of products, but that&rsquo;s pretty much it.</p>
+<p>In such a surreal world, you can imagine that it is quite difficult, even for you, a human, to select a set of products that relate to &ldquo;red shoes&rdquo;. The challenge lies in that much of the important, contextual, information that we have access to from our constant interactions with the real world by living in it, it is very much missing in this artificial setting: We don&rsquo;t know whether the user is a he or a she (and therefore we don&rsquo;t know if we should pick male or female type of shoes), we don&rsquo;t know what is the &ldquo;hot&rdquo; color of the season, nor the most popular brand, nor whether the person is looking for sneakers or boots or high-heels. There are  lots of unknowns.</p>
+<p>A query intent engine is a machine learning algorithm that tries to make sense of the world for machines, or other entities, which are locked up in a similar warehouse as the one we described above and have no access to contextual information. A query intent algorithm aims at mapping free text (a user query) to a series of directives (rules) that when applied, they will yield a useful set of products for the user.  In our &ldquo;red shoes&rdquo; example, we are looking for directives that look as the following: &ldquo;filter on products that have attribute:red and category:shoes&rdquo;. At a first glance, the mapping looks simple but as of now you&rsquo;ve seen from our warehouse setting that it can be quite daunting.</p>
+<p>Researchers and practitioners have been working on this problem for quite some time and progress has been made; however the community has still some way to go before solving it. At the core of current solutions, there is a lot of complex technology such as neural networks that power NLP (Natural Language Processing) tools and other pipelines that require lots of human annotations (read expensive). These approaches yield relatively good accuracy, however, putting these systems into production may still be a challenging engineering problem–from setting up the data pipelining to scaling up, to retraining, and to monitoring system effectiveness and efficiency.</p>
+<p>At 904Labs we&rsquo;ve developed a query intent engine that hooks up on an e-shop&rsquo;s data, bootstraps a knowledge graph, and it learns the mapping to directives automatically, i.e.,  without supervision (read without human annotations). It doesn&rsquo;t require retraining nor external dependencies, and you can use it straight away, today, on your own Apache Solr or Elasticsearch index (from which we only read and never write and we never lock you in). If that sounds appealing, <a href="mailto:info@904labs.com?subject=I read about your Query Intent engine, and I want to give a try. Please get in touch."><del>get in touch for a one month free trial!</del></a>.</p>
+<blockquote>
+<p><em>Update —</em> For examples of what a semantic query intent engine can do, check out this post detailing the <a href="../20180618-query-intent-engine-upgrade/">achievements of 904Labs&rsquo; latest query intent engine</a>!</p>
+</blockquote>
+</article>
+
+<hr/>
+
+
+<div class="related-links">
+    <h3>Related Posts</h3>
+    <ol>
+        
+        <li>
+            
+            <blockquote>
+                <p>On top of the engineering feat, the algorithm itself is pretty lean and has quite a few distinctive features that are hard to find in other engines: it does not depend on external dependencies (read Wikipedia), nor it needs periodic re-training. The only thing that a customer has to do is to plug in our system to a Apache Solr/Elasticsearch, and 904Labs Query Intent engine is built incrementally, one click/add-to-basket/purchase at a time. Oh, and it doesn&rsquo;t write anything on your index. Magic!</p>
+<p>Here&rsquo;s a few interesting examples that came out from today&rsquo;s experimentation:</p>
+<p>(the examples are in Dutch; I try to translate the queries into English. Field attributes and values may be partially redacted for anonymity)</p>
+<h2 id="some-relatively-simple-cases">Some relatively simple cases</h2>
+<ul>
+<li>The system learns to map the query: <code>lampen</code> (lamps) to Solr&rsquo;s directive: <code>category:Lampen</code>. Learning of this mapping is automatic and based on only from user interactions.</li>
+</ul>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">44.97% similar</span>
+                <span>— <a href="/posts/20180618-query-intent-engine-upgrade/">New Version for 904Labs Query Intent Engine</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>As eCommerce is becoming increasingly important, we recruited a small team of researchers from major and not so major players in the field to share views and experiences on theoretical and practical challenges and future directions on eCommerce search and recommendations. The result of our effort, <a href="http://sigir.org/wp-content/uploads/2020/06/p04.pdf">Challenges and Research Opportunities in eCommerce Search and Recommendations</a> is published in <a href="http://sigir.org/forum/issues/june-2020/">June 2020 issue of SIGIR Forum</a>.</p>
+<p>This work is also related to <a href="/posts/20190718-ecommerce-workshop">thoughts on product search that I have shared on an earlier post</a>, as well as to <a href="/posts/20170618-query-intent-engine">904Labs&rsquo; Query Intent engine</a> and its <a href="/posts/20180618-query-intent-engine-upgrade">magnificent results (with examples)</a>.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">37.42% similar</span>
+                <span>— <a href="/posts/20200622-sigir-forum-ecommerce/">Paper at SIGIR Forum — Challenges and Research Opportunities in eCommerce Search and Recommendations</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h2 id="the-vocabulary-gap-is-still-an-open-problem">The vocabulary gap is still an open problem.</h2>
+<p>People refer to products in different ways that products are described in the catalogue. Neural networks, learning to rank, query intent engines are all important. Our experience at <a href="https://904labs.com">904Labs</a> shown that a query intent engine that boosts specific product categories given a query, boosts our learning to rank system by more than 16% in additional revenue. These results suggest that effective initial ranking is very important for effective learning to rank. To this end, we foresee an increasing interest in methods that can re-rank the entire collection and not only the top-N documents. This is particularly important for larger shops with large inventories (more than hundred of thousands of items) where a query can return hundreds of items, and only the top few are re-ranked.</p>
+<h2 id="e-commerce-search-is-as-much-as-about-exploration-as-it-is-about-finding-the-best-match">E-commerce search is as much as about exploration as it is about finding the best match.</h2>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">32.87% similar</span>
+                <span>— <a href="/posts/20190718-ecommerce-workshop/">Inlieu of an Invited Talk—Thoughts on the Future of Search in E-commerce</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I am very happy that our paper <em>Language Intent Models for Inferring User Browsing Behavior</em> by Manos Tsagkias, and Roi Blanco [<a href="/posts/#1">1</a>] has been accepted at SIGIR 2013, which will be held in Portland, Oregon, 12–16 August 2012. The paper was realized during my <a href="/posts/20110914-yahoo-research">three-month internship at Yahoo! Research Barcelona during September–December 2011</a>.</p>
+<h3 id="references">References</h3>
+<p><span id="1"/>[1] Manos Tsagkias and Roi Blanco. 2012. <em>Language intent models for inferring user browsing behavior</em>. In Proceedings of the 35<sup>th</sup> international ACM SIGIR conference on research and development in information retrieval (SIGIR &lsquo;12). Association for Computing Machinery, New York, NY, USA, 335–344. <a href="https://doi.org/10.1145/2348283.2348330">ACM Link</a>. <a href="/pdf/sigir2012-Language_Intent_Models_for_Inferring_Use.pdf">PDF</a></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">32.58% similar</span>
+                <span>— <a href="/posts/20120623-sigir2012-language-intent-models/">Paper at SIGIR 2012 — Language Intent Models for Inferring User Browsing Behavior</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>This paper [<a href="/posts/#1">1</a>] describes the University of Amsterdam&rsquo;s participation in the short track of the <a href="https://www.sigir.org/files/forum/2014D/p063.pdf">Entity Recognition &amp; Disambiguation Challenge 2014 (ERD 2014)</a>. We describe how we adapt the <a href="https://github.com/semanticize/semanticizer">Semanticizer</a>&mdash;an open-source entity linking framework developed primarily at the University of Amsterdam&mdash;to the task of the ERD challenge: linking named entities in search engine queries. We steer the Semanticizer&rsquo;s linking towards named entities by adapting an existing training corpus, and extend the Semanticizer&rsquo;s set of features with contextual features that aim to leverage the limited context provided by search queries. With an F1 score of 0.6062 our final system run achieves median performance, and better than mean performance (0.5329).</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.78% similar</span>
+                <span>— <a href="/posts/20140914-erd2014-semanticizing-search/">Paper at ERD 2014 — Semanticizing Search Engine Queries</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <p>I moved to Barcelona in the first week of September for a three-month internship at Yahoo! Research Labs. I’m very excited about it, and I&rsquo;m looking forward to getting to know the people here and the problems they are working on.</p>
+<p>Update: My work at Yahoo! Research Labs resulted in a publication at SIGIR 2012 [<a href="/posts/#1">1</a>]; see <a href="/posts/20120623-sigir2012-language-intent-models">post for the abstract</a>.</p>
+<h3 id="references">References</h3>
+<p><span id="1"/>[1] Manos Tsagkias and Roi Blanco. 2012. <em>Language intent models for inferring user browsing behavior</em>. In Proceedings of the 35<sup>th</sup> international ACM SIGIR conference on research and development in information retrieval (SIGIR &lsquo;12). Association for Computing Machinery, New York, NY, USA, 335–344. <a href="https://doi.org/10.1145/2348283.2348330">ACM Link</a>. <a href="/pdf/sigir2012-Language_Intent_Models_for_Inferring_Use.pdf">PDF</a></p>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">26.55% similar</span>
+                <span>— <a href="/posts/20110914-yahoo-research/">Internship at Yahoo! Research Labs</a></span>
+            </div>
+        </li>
+        
+        <li>
+            
+            <blockquote>
+                <h3 id="abstract">Abstract</h3>
+<p>We propose a retrieval model for searching microblog posts for a given topic of interest. We develop a language modeling approach tailored to microblogging characteristics, where redundancy-based IR methods cannot be used in a straightforward manner. We enhance this model with two groups of quality indicators: textual and microblog specific. Additionally, we propose a dynamic query expansion model for microblog post retrieval. Experimental results on Twitter data reveal the usefulness of boolean search, and demonstrate the utility of quality indicators and query expansion in microblog search.</p>
+<h3 id="references">References</h3>
+            </blockquote>
+            
+            <div class="snippet-meta">
+                <span class="score">24.13% similar</span>
+                <span>— <a href="/posts/20110119-ecir2011-query-expansion/">Paper at ECIR 2011 — Incorporating Query Expansion and Quality Indicators in Searching Microblog Posts</a></span>
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+
+    <script>
+        var base_url = "../..";
+    </script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>
