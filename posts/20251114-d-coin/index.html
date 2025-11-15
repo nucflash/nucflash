@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        for IE/Edge only
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Manos Tsagkias">
+    <link rel="canonical" href="https://manostsagkias.com/posts/20251114-d-coin/">
+    <meta name="author" content="Μάνος Τσαγκιάς">
+    <!--
+        The page_title contains the title for a page as shown in the navigation.
+        Site name contains the name as defined in the mkdocs.yml
+    -->
+    <title>From GameStop to D-Coins: A Proposal for Continuous Democratic Expression - Manos Tsagkias</title>
+    <!--
+        Just add a favicon.ico image to the docs.
+    -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href=../../img/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=../../img/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=../../img/favicon-16x16.png>
+    <link rel="manifest" href=/site.webmanifest>
+      <link href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css" rel="stylesheet">
+      <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script>
+        // Inject the current file name for the active page
+        const CURRENT_FILE = "posts/20251114-d-coin/";
+    </script>
+</head>
+<body><div id="map-overlay" class="hidden">
+    
+    <button id="map-close" onclick="toggleMap()">&times;</button>
+    <main>
+<article>
+<p>
+    Hover over the dots to explore related posts. Closer dots are more semantically related, and the red dot marks the current page. 
+</p>
+</article>
+</main>
+    
+    <div id="map-container"></div>
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Type to search the map ..." />
+    </div>    
+</div>
+
+    
+    <header>
+        <!-- Navigation menu -->
+        
+        <nav>
+            <ul class="nav-bar">
+                <!-- Left-aligned 'Home' link -->
+                <li class="nav-left">
+                    <a href="../../">Home</a>
+                </li>
+                
+                <li class="nav-right">
+                    <!-- Dynamic Navigation Items from `nav` -->
+                    
+                        <a href="../../about/">About</a>
+                    
+                    <!-- Right-aligned 'Map' link -->
+                    <a href="#" onclick="toggleMap()">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        
+            <h1>From GameStop to D-Coins: A Proposal for Continuous Democratic Expression</h1>
+
+
+    
+        <h4>Manos Tsagkias</h4>
+    
+
+
+
+
+<h5>09 April 2025</h5>
+
+
+<h5><b>Keywords:</b> democracy coin, d-coin, liquid democracy, quadratic voting, democratic participation, continuous democracy</h5>
+
+        
+    </header>
+
+    <main>
+        <article>
+    <blockquote>
+<p><em>14 November 2025—Note:</em> A backbone for D-Coin that uses blockchain and supports one-person-one-vote, quadratic voting, and delegation is now available at <a href="https://ai.democracy.earth">https://ai.democracy.earth</a>. </p>
+</blockquote>
+<h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>This article proposes D-Coins, non-monetary civic tokens that let citizens continuously allocate influence to policies, projects, or delegates. Drawing on quadratic voting, storable votes, liquid democracy and civic token pilots, it sketches a blockchain-optional design, key incentives and risks, argues that schools are ideal sandboxes for experimentation, and outlines open problems around participation, identity, and legitimacy.</p>
+<div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#economic-protest-and-the-need-for-new-civic-signals">Economic Protest and the Need for New Civic Signals</a></li>
+<li><a href="#tokenized-civic-engagement-concepts-and-economic-principles">Tokenized Civic Engagement: Concepts and Economic Principles</a></li>
+<li><a href="#liquid-democracy-and-delegation-systems">Liquid Democracy and Delegation Systems</a></li>
+<li><a href="#blockchain-experiments-in-participatory-governance">Blockchain Experiments in Participatory Governance</a></li>
+<li><a href="#the-d-coin-vision-continuous-democratic-expression">The D-Coin Vision: Continuous Democratic Expression</a></li>
+<li><a href="#implementation-ideas-for-a-blockchain-backed-civic-system">Implementation Ideas for a Blockchain-Backed Civic System</a></li>
+<li><a href="#challenges-and-open-questions">Challenges and Open Questions</a></li>
+<li><a href="#conclusion-toward-a-more-responsive-democracy">Conclusion: Toward a More Responsive Democracy</a></li>
+</ul>
+</div>
+<h2 id="economic-protest-and-the-need-for-new-civic-signals">Economic Protest and the Need for New Civic Signals<a class="headerlink" href="#economic-protest-and-the-need-for-new-civic-signals" title="Permanent link">&para;</a></h2>
+<p>In early 2021, an unusual form of <strong>economic protest</strong> captured
+headlines during the GameStop saga. A swarm of retail investors from the
+WallStreetBets community coordinated to buy up GameStop stock, driving
+its price to extreme heights. Many participants framed this as a protest
+against Wall Street hedge funds&mdash;a way to <strong>&ldquo;harm those who shorted&rdquo;</strong>
+the stock and push back against financial
+elites&nbsp;<a href="https://nichegamer.com/report-surging-gamestop-stock-prices-inspires-economic-protest-against-wall-street-and-hedge-funds/#:~:text=Surging%20GameStop%20stock%20prices%20have,to%20harm%20those%20who%20shorted">[1]</a>.
+This episode highlighted a broader phenomenon: when people feel their
+voices are unheard in traditional political channels, they may resort to
+<strong>markets as proxies for voice</strong>. Whether it&rsquo;s bidding up a stock,
+hoarding cryptocurrency in response to inflation fears, or other market
+actions, citizens often &ldquo;vote&rdquo; with their dollars when they lack direct
+influence over policy.</p>
+<p>Political economist Albert O. Hirschman famously described how people
+respond to frustration with institutions: they either exercise
+<strong>&ldquo;voice&rdquo;</strong> (speaking up, voting, protesting) or <strong>&ldquo;exit&rdquo;</strong>
+(withdrawing, voting with their feet or wallets). The GameStop incident
+was a vivid example of exit-as-voice&mdash;a disconnect between the
+public&rsquo;s desire to send a message and the available democratic channels
+to do so. It raises a provocative question: <em>What if we created better
+channels for ongoing civic voice, so that people wouldn&rsquo;t have to use
+stock markets or other indirect means to signal their preferences?</em></p>
+<h2 id="tokenized-civic-engagement-concepts-and-economic-principles">Tokenized Civic Engagement: Concepts and Economic Principles<a class="headerlink" href="#tokenized-civic-engagement-concepts-and-economic-principles" title="Permanent link">&para;</a></h2>
+<p>One visionary proposal to enhance democratic participation is to
+introduce <strong>tokenized civic engagement</strong>&mdash;giving citizens digital
+tokens that they can allocate to signal support for policies, projects,
+or representatives. Imagine each citizen receives a certain number of
+<strong>&ldquo;Democracy Coins&rdquo; (D-Coins)</strong> from the state on a regular basis (say,
+monthly). These tokens don&rsquo;t represent money to spend on goods, but
+rather <strong>credits to spend on democracy</strong>. Citizens could allocate
+D-Coins to back the issues they care about most&mdash;effectively <strong>voting
+with tokens</strong> to express not just what they support, but how strongly
+they support it. Unlike a binary yes/no vote once every few years, this
+system would allow continuous and granular preference signaling.</p>
+<p>This idea builds on concepts in economics and political theory about
+letting people <strong>signal preference intensity</strong>. In standard elections,
+each person gets one vote per issue or candidate, no matter how
+passionate (or apathetic) they are. Scholars have long noted that this
+<strong>one-person-one-vote</strong> system fails to capture intensity of
+preferences&nbsp;<a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181002#:~:text=Democracy%20www,of%20AEA%20Papers%20and">[2]</a>&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=Storable%20Votes%20and%20Quadratic%20Voting,thumb%20in">[3]</a>.
+Two proposed solutions in the literature are <strong>Storable Votes</strong> and
+<strong>Quadratic Voting</strong>, which allocate &ldquo;voice credits&rdquo; to voters that they
+can distribute across multiple
+decisions&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=Storable%20Votes%20and%20Quadratic%20Voting,thumb%20in">[3]</a>.
+For example, with storable votes, each voter might get a budget of votes
+to allocate as they see fit across many issues, spending more votes on
+issues they care deeply about. With quadratic voting (QV), individuals
+buy votes using credits or money, and the <strong>cost of votes increases
+quadratically</strong>&mdash;e.g. 1 vote costs 1 token, 2 votes cost 4 tokens, 3
+votes cost 9 tokens,
+etc.&nbsp;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531#:~:text=Democracy%20papers,in%20the%20votes%20they%20buy">[4]</a>.
+This pricing means people will only spend a lot of their credits on an
+issue if they feel extremely strongly about it, allowing intensity to be
+expressed while soft-capping any one person&rsquo;s influence.</p>
+<p>Notably, quadratic voting has moved from theory into practice in recent
+years. For instance, the Colorado General Assembly experimented with QV
+in 2019 to set budget priorities. State legislators had a limited pot of
+money and many proposed bills; after weeks of indecision, they used a QV
+poll (with each lawmaker given an equal budget of voice credits) to
+<strong>prioritize spending bills</strong>. The result was <em>&ldquo;a clear prioritization
+of the budget bills in question, giving caucus leaders a more informed
+and nuanced understanding of what the group
+supported.&rdquo;</em>&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=Working%20with%20RadicalxChange%20Foundation%20and,a%20more%20informed%20and%20nuanced">[5]</a>
+This success led to further QV trials in Colorado&rsquo;s executive agencies
+in 2020 and even continued polls in subsequent years. In essence, QV
+enabled decision-makers to gauge not just which proposals had majority
+support, but which had the greatest intensity of support within the
+group.</p>
+<p>From a welfare perspective, research indicates these innovative voting
+methods can improve collective decisions <em>if</em> designed well. A
+controlled experiment by Casella and Sanchez (2019) compared storable
+votes and quadratic voting on California ballot initiatives. They found
+that <strong>both systems allowed passionate minorities to win occasionally
+and increased average welfare</strong> compared to simple majority
+voting&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=Storable%20Votes%20and%20Quadratic%20Voting,thumb%20in">[3]</a>.
+In their simulation, quadratic voting in particular led to more minority
+victories and higher average welfare&mdash;meaning some issues the majority
+didn&rsquo;t favor still won because a minority cared much more about them,
+which overall made people better
+off&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=California%20residents%20using%20data%20on,thumb%20in">[6]</a>.
+However, the study also cautioned that QV can produce some <strong>inefficient
+outcomes</strong> (cases where a minority wins even though the cost outweighs
+benefits) if people don&rsquo;t strategize
+perfectly&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=California%20residents%20using%20data%20on,thumb%20in">[6]</a>.
+These findings suggest that while <em>&ldquo;voting with tokens&rdquo;</em> can capture
+preference intensity and potentially improve satisfaction, the rules
+have to be carefully calibrated. For instance, making sure each citizen
+has equal token endowments (as in a D-Coin system) avoids simply giving
+more power to the rich. Mechanisms like quadratic costs or limited
+budgets are crucial to prevent a token-based system from devolving into
+plutocracy.</p>
+<h2 id="liquid-democracy-and-delegation-systems">Liquid Democracy and Delegation Systems<a class="headerlink" href="#liquid-democracy-and-delegation-systems" title="Permanent link">&para;</a></h2>
+<p>Another pillar of the <strong>next-generation democracy movement</strong> is the
+concept of <strong>liquid democracy</strong>&mdash;a hybrid between direct and
+representative democracy. In a liquid democracy, citizens can either
+vote on issues directly or <strong>delegate their vote</strong> to someone else they
+trust, <em>and they can change these delegations at any time</em>. This creates
+a fluid network of representation that, in theory, combines broad
+participation with expert decision-making. If you&rsquo;re not knowledgeable
+about a policy area, you might delegate your voting power to a friend or
+public figure who is; but you retain ultimate control and can take back
+your proxy if you disagree with how they vote. Proponents argue this
+system is more flexible and responsive than our fixed-election,
+representative model.</p>
+<p>The idea of liquid democracy isn&rsquo;t just theoretical&mdash;it has been
+tested in both political and digital contexts. The Pirate Party in
+several countries (notably Germany) famously used a liquid democracy
+platform (LiquidFeedback) for internal decision-making in the 2010s.
+More recently, the concept has been adopted within blockchain
+communities. A 2024 study by Stanford researchers examined liquid
+democracy in the wild by analyzing <strong>18 blockchain-based &ldquo;DAOs&rdquo;
+(decentralized autonomous organizations)</strong> that allow token-holders to
+delegate
+votes&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=platforms%20governed%20by%20users%20rather,online%20hubs%20to%20coordinate%20delegation">[7]</a>.
+They found that on average about <strong>17% of governance tokens were
+delegated</strong> rather than voted
+directly&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=setting%2C%20analyzing%20data%20from%20over,participation%2C%20particularly%20when%20paired%20with">[8]</a>.
+Interestingly, smaller token holders were more likely to delegate to
+larger holders, and the most active participants tended to accumulate
+many proxies&mdash;a somewhat <strong>bottom-up pattern of delegation</strong> where
+those who put in effort earn more
+influence&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=platforms%20governed%20by%20users%20rather,online%20hubs%20to%20coordinate%20delegation">[7]</a>.
+This suggests that some users do take advantage of the opportunity to
+hand off their voting power to perceived experts or leaders. The study
+also noted that introducing user-friendly delegation tools (like an
+&ldquo;online hub&rdquo; to find and delegate to representatives) significantly
+<strong>increased both delegation rates and overall voter turnout</strong> in these
+communities&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=average%2C%2017,posing%20an%20important%20challenge%20to">[9]</a>.
+In other words, with the right tools, liquid democracy can lower
+barriers to participation&mdash;people who might not vote on a complex
+proposal themselves are willing to participate if they can easily select
+a proxy aligned with their views.</p>
+<p>However, the experience with liquid democracy so far also reveals
+challenges. The same Stanford study reported that despite delegation
+features, <strong>participation remained relatively low</strong> in absolute terms&mdash;
+many token holders neither voted nor delegated, which <em>&ldquo;poses an
+important challenge to liquid
+democracy&rdquo;</em>&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=democracy%20can%20foster%20bottom,contemplated%20in%20existing%20theoretical%20literature">[10]</a>.
+Simply giving people the ability to vote or delegate continuously
+doesn&rsquo;t guarantee they will engage; apathy and information overload are
+still hurdles. Moreover, there is a risk of power concentrating in the
+hands of a few popular delegates, effectively creating de facto
+representatives. In the DAOs studied, there was &ldquo;substantial clumping&rdquo;
+of delegations to a few
+individuals&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=setting%2C%20analyzing%20data%20from%20over,participation%2C%20particularly%20when%20paired%20with">[8]</a>.
+This mirrors concerns from earlier trials in political settings. An NBER
+laboratory experiment (Campbell et al. 2022) found that when people had
+the option to delegate to better-informed &ldquo;experts,&rdquo; they did so at
+unexpectedly high rates&mdash;and as a result, the system ended up
+<strong>underperforming simple direct voting</strong> in terms of decision
+quality&nbsp;<a href="https://www.nber.org/papers/w30794#:~:text=Under%20Liquid%20Democracy%20,follows%20a%20tightly%20controlled%20design">[11]</a>.
+The intuition is that if everyone delegates to a few people, you lose
+the wisdom of the crowd and risk those few making errors.
+<strong>Over-delegation can reduce the diversity of input</strong>, undercutting the
+theoretical benefits of liquid
+democracy&nbsp;<a href="https://www.nber.org/papers/w30794#:~:text=Under%20Liquid%20Democracy%20,follows%20a%20tightly%20controlled%20design">[11]</a>.</p>
+<p>These mixed outcomes suggest that liquid democracy, while promising,
+needs careful design and perhaps limits or incentives to avoid blind
+delegation. Nevertheless, it remains a compelling model for empowering
+citizens continuously. Notably, projects like the <strong>Democracy Earth
+Foundation</strong> have tried to implement liquid democracy on blockchain.
+Democracy Earth&rsquo;s platform, <em>Sovereign</em>, was envisioned as a secure,
+incorruptible system for communities to <strong>&ldquo;propose bills, vote or
+delegate and debate on them&rdquo;</strong> using blockchain-based
+tokens&nbsp;<a href="https://participedia.net/case/4675#:~:text=Democracy%20Earth%20aims%20to%20develop,the%20philosophy%20of%20liquid%20democracy">[12]</a>.
+By leveraging distributed ledger technology, such platforms aim to
+ensure transparency and tamper-resistance in vote tallying, while the
+philosophy of liquid democracy ensures flexibility in participation.
+This fusion of blockchain and liquid democracy could be a key component
+in a future D-Coin system: tokens could be delegated to trusted proxies,
+and every transaction of delegation or vote would be immutably recorded
+for accountability.</p>
+<h2 id="blockchain-experiments-in-participatory-governance">Blockchain Experiments in Participatory Governance<a class="headerlink" href="#blockchain-experiments-in-participatory-governance" title="Permanent link">&para;</a></h2>
+<p>Beyond theoretical designs, there have been a number of real-world
+pilots and platforms exploring <strong>blockchain-based democratic
+participation</strong> and <strong>tokenized civic engagement</strong>. These provide
+valuable lessons about what works and what challenges remain:</p>
+<ul>
+<li>
+<p><strong>Quadratic Voting in Government:</strong> As mentioned, Colorado&rsquo;s state
+  government became a pioneer by applying quadratic voting in practice
+  (albeit not on a public blockchain). They partnered with civic-tech
+  nonprofits (like RadicalxChange and Democracy Earth) to run internal
+  polls with
+  QV&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=Working%20with%20RadicalxChange%20Foundation%20and,a%20more%20informed%20and%20nuanced">[5]</a>.
+  The fact that legislators found this useful for setting priorities
+  suggests that even in small groups, token-based voting can extract
+  richer information than hand-raising or simple majority votes. It&rsquo;s
+  easy to imagine scaling this up with blockchain: a state could issue
+  digital <strong>voice credits</strong> to every citizen to vote on budgeting or
+  policy referenda, with votes weighted quadratically to balance
+  majority rule and minority intensity.</p>
+</li>
+<li>
+<p><strong>Democracy Tokens for Cities:</strong> Some city governments have started
+  experimenting with token rewards to boost civic engagement. Notably,
+  the Seoul Metropolitan Government in South Korea announced plans for a
+  city-wide cryptocurrency called <strong>&ldquo;S-Coin&rdquo;</strong>. The idea was to reward
+  citizens with S-Coins for doing civic-minded activities&mdash;like using
+  public services, paying municipal taxes, or participating in opinion
+  polls&mdash;which they could later redeem for city perks or tax
+  discounts&nbsp;<a href="https://www.paymentsdive.com/ex/mpt/news/seoul-south-korea-to-set-up-blockchain-system-to-award-citizens?#:~:text=The%20Metropolitan%20Government%20of%20Seoul%2C,report%20by%20The%20South%20African">[13]</a>.
+  In essence, Seoul is creating a <strong>blockchain-based loyalty program for
+  citizenship</strong>, using tokens to incentivize engagement. By 2019, Seoul
+  had budgeted significant funds for this project, recognizing that
+  <em>&ldquo;rewarding active citizens with the S-Coin will provide them with a
+  sense of importance and that their voice and vote
+  matter.&rdquo;</em>&nbsp;<a href="https://www.blockchain-council.org/blockchain/seoul-eyes-release-of-city-wide-crypto-for-smart-city-development/#:~:text=Development%20www.blockchain,is%20a%20good%20way">[14]</a>.
+  While the implementation details (and any results) are still emerging,
+  S-Coin reflects a governmental embrace of crypto-economic principles
+  for civic purposes. It is a close cousin to the D-Coin concept: a
+  state-backed token issued to all citizens to encourage and channel
+  participation.</p>
+</li>
+<li>
+<p><strong>Local Civic Wallets and Rewards:</strong> In Europe, the EU-funded
+  <strong>CommonsHood</strong> project in Turin, Italy, explored how a blockchain
+  wallet app could support local civic
+  action&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=blockchain,the%20needs%20and%20resources%20of">[15]</a>.
+  In pilot experiments, the app was used to <strong>tokenize social and
+  economic assets in a community</strong>, including a system to reward civic
+  participation&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=pilot%20experimentations%20on%20the%20app,differences%20with%20other%20urban%20digital">[16]</a>.
+  For example, in one Turin suburb, young volunteers who contributed to
+  community projects or local associations earned digital tokens
+  (cheekily named after the local postal code) in their
+  wallet&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=identity%2C%20as%20exemplified%20by%20naming,and%20exchange%20places%20made%20the">[17]</a>.
+  These tokens weren&rsquo;t just symbolic&mdash;participants could exchange them
+  for coupons or discounts at local businesses, tying community service
+  to real economic
+  benefit&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=associations%20and%20receive%20reward%20tokens,digital%20coupons%20issued%20by%20local">[18]</a>.
+  Importantly, the designers and local stakeholders decided the tokens
+  would be an <strong>acknowledgment of participation rather than a wage or
+  prize</strong>, to keep the spirit one of civic duty and avoid perverse
+  incentives&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=reward%20token%20is%20considered%20by,participation%20places%2C%20and%20as%20an">[19]</a>.
+  Early observations indicated that while the tokens had only modest
+  monetary value, the platform helped visualize and <strong>encourage
+  in-person social activities</strong> (all coupons had to be redeemed
+  face-to-face)&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=The%20digital%20interactions%20are%20intended,of%20tokens%20are%20prob%02ably%20not">[20]</a>.
+  This suggests that even small token rewards, when transparently
+  managed on a blockchain, can boost engagement and build a culture of
+  participation.</p>
+</li>
+<li>
+<p><strong>Real-Time Feedback Platforms:</strong> In South Burlington, Vermont (USA),
+  a pilot in 2019 tested a blockchain-based <strong>&ldquo;virtual town hall&rdquo;</strong>
+  system for ongoing citizen
+  feedback&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=A%20nine,button%20issues%20in%20real%20time">[21]</a>&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=How%20could%20mobile%20devices%2C%20blockchain%2C,make%20local%20government%20more%20representative">[22]</a>.
+  The city partnered with a tech company to deploy a mobile app where
+  residents could weigh in on local issues (development projects,
+  budgeting, services, etc.) in real time. Although the project
+  primarily focused on secure feedback and AI analysis, one of the
+  explicit research questions was: <em>&ldquo;Can incentive mechanisms be used
+  for increasing citizen
+  engagement?&rdquo;</em>&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[23]</a>.
+  While the pilot did not issue a cryptocurrency, it&rsquo;s clear that
+  designers were considering gamified incentives (like points or tokens)
+  to encourage people to use the app. The South Burlington experiment
+  underscores a key advantage of digital platforms: they can gather
+  <strong>ongoing input on &ldquo;hot-button issues in real
+  time&rdquo;</strong>&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=A%20nine,button%20issues%20in%20real%20time">[21]</a>,
+  potentially enabling governments to make more responsive
+  decisions&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[24]</a>.
+  Blockchain adds value by securing the input (preventing tampering or
+  spam) and possibly by allowing <strong>verification that each participant is
+  unique</strong> (avoiding fake multiple accounts) without sacrificing
+  anonymity.</p>
+</li>
+<li>
+<p><strong>Decentralized Governance in Web3:</strong> Many blockchain projects
+  themselves have become testing grounds for democratic innovations.
+  Outside of government, decentralized communities have tried everything
+  from <strong>token-weighted voting</strong> (often one token = one vote, as in many
+  DAO governance systems) to more novel approaches like <strong>conviction
+  voting</strong> (a continuous voting mechanism where support for a proposal
+  grows the longer you lock tokens behind
+  it)&nbsp;<a href="https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4#:~:text=Governance%20Attack%20Vectors%20in%20DAOs%3A,Technical">[25]</a>&nbsp;<a href="https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4#:~:text=Conviction%20Voting%20is%20a%20continuous,Technical">[26]</a>.
+  These experiments, while in the private/crypto realm, inform
+  public-sector use. For instance, the idea of <strong>continuous voting</strong>&mdash;
+  that people can change their votes at any time instead of waiting for
+  the next election&mdash;has been implemented in some blockchain protocols
+  (e.g. EOS and others allow continuous vote updating for
+  delegates)&nbsp;<a href="https://www.findas.org/tokenomics-review/coins/the-tokenomics-of-eos/r/Af9qAnQo9nDqtnTDr8biTT#:~:text=EOS%20Tokenomics%3A%20A%20Comprehensive%20Guide,dynamic%20and%20responsive%20governance">[27]</a>.
+  This could translate to a civic setting where D-Coins are not spent in
+  one-off votes, but can be <strong>reallocated over time</strong>. If you change
+  your mind or if a new issue becomes urgent, you could redirect your
+  token support dynamically. Such fluid systems have the benefit of
+  agility, but need safeguards (as one author quipped, continuous voting
+  turns &ldquo;vote buying&rdquo; into &ldquo;vote renting&rdquo;&mdash;an attacker would have to
+  continuously pay to maintain influence, which raises the cost of
+  manipulation)&nbsp;<a href="https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475#:~:text=,vote%20buying%27%20becomes%20%27vote%20renting">[28]</a>.</p>
+</li>
+</ul>
+<p>In summary, real-world projects are beginning to blend <strong>blockchain
+technology with democratic participation</strong>. They range from
+government-issued reward tokens to grassroots voting platforms and DAO
+governance models. The common thread is leveraging the unique properties
+of blockchain&mdash;transparency, security, smart-contract automation&mdash;to
+either <strong>record votes and preferences more reliably</strong> or <strong>incentivize
+citizens</strong> in new ways. These precedents lay important groundwork for a
+broader proposal of a <strong>blockchain-backed civic signaling system</strong> using
+something like D-Coins.</p>
+<h2 id="the-d-coin-vision-continuous-democratic-expression">The D-Coin Vision: Continuous Democratic Expression<a class="headerlink" href="#the-d-coin-vision-continuous-democratic-expression" title="Permanent link">&para;</a></h2>
+<p>Bringing these threads together leads to an ambitious but increasingly
+plausible vision: a <strong>blockchain-backed civic signaling system</strong> where
+every citizen is empowered to signal their preferences in an ongoing,
+flexible, and meaningful way. Let&rsquo;s paint the picture of how a D-Coin
+system might work:</p>
+<p>Every citizen receives an allotment of <strong>D-Coins (Democracy Coins)</strong> at
+regular intervals (for example, 100 tokens per month). These tokens are
+issued by a public authority&mdash;essentially <strong>state-backed civic
+credits</strong>&mdash;but they are <em>not</em> convertible to money or any other asset.
+Their sole purpose is to be allocated toward democratic choices. Through
+a secure digital platform (web and mobile), citizens could browse a menu
+of public issues, policy proposals, budget items, or even elected
+officials&rsquo; performance, and then allocate their D-Coins to whatever they
+support. The act of allocating tokens is akin to voting, but with
+degrees: you might put all 100 tokens on a single cause you fervently
+care about, or distribute them among several issues (e.g. 30 tokens to
+education reform, 20 to a climate initiative, 50 split among various
+local infrastructure projects). Crucially, you could also <strong>rebalance
+your allocations at any time</strong>. If a new issue arises or if you change
+your priorities, you can reclaim tokens from one cause and move them to
+another. In this sense, D-Coins enable <em>continuous referenda</em>&mdash;a
+living, breathing snapshot of the populace&rsquo;s will.</p>
+<p>Such a system would operationalize many of the concepts we&rsquo;ve discussed.
+It&rsquo;s effectively <strong>quadratic voting for the masses</strong>, without the math
+barrier: by giving a fixed budget of tokens to each person, we
+inherently limit how much impact any individual can have, while allowing
+them to amplify certain votes. If one citizen really wanted to push a
+single issue every month, they could&mdash;but they&rsquo;d have to sacrifice
+influencing anything else. Another citizen might spread their 100 tokens
+thinly to signal moderate support for a dozen programs. The aggregate
+result would be a rich signal of not just what <em>fraction</em> of citizens
+support an initiative, but <strong>how strongly</strong> the citizenry cares about
+each initiative relative to others. It&rsquo;s as if everyone gets to write a
+tiny piece of the budget or policy agenda, adjusting it continuously.</p>
+<p>This D-Coin model also incorporates the spirit of <strong>liquid democracy</strong>.
+Those who don&rsquo;t have time or desire to micromanage their tokens could
+delegate their monthly D-Coin allotment to a proxy&mdash;for example, a
+trusted community leader or an NGO that aligns with their values. That
+proxy could allocate tokens on their behalf (perhaps even using smart
+contracts that allow conditional or revocable delegation). Unlike
+electing a representative for a fixed term, this delegation is
+<em>on-demand and issue-specific</em>. If your proxy does something unexpected,
+you can withdraw your tokens next month or redirect them elsewhere
+immediately. In practice, we might see the rise of <strong>token curators or
+civic fund managers</strong>&mdash;individuals or organizations specializing in
+tracking policy proposals and allocating tokens effectively, who attract
+delegations from like-minded citizens. This would mirror what we see in
+DAO governance to some extent (as observed, active participants
+accumulated delegated tokens in crypto
+communities&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=setting%2C%20analyzing%20data%20from%20over,participation%2C%20particularly%20when%20paired%20with">[8]</a>),
+but the key difference is one of scale and legitimacy: here every adult
+citizen has equal tokens by constitutional design, making it a
+one-person-one-share system at the base, with delegation layered on top
+by choice.</p>
+<p>From the government&rsquo;s perspective, the D-Coin platform would function as
+a <strong>real-time barometer of public preferences</strong>. It brings direct
+democracy into everyday governance, but in a more nuanced way than
+constant yes/no referendums. For example, a city council could look at
+the D-Coin allocations of its residents to see which issues have the
+highest total token support this month. Perhaps public transit expansion
+has 1,250,000 tokens of support behind it citywide, whereas a proposal
+to build a new stadium has only 300,000 tokens&mdash;even if both have,
+say, 60% of people in favor, the intensity differs. This information is
+invaluable. It can guide officials on what the mandate is <em>between
+elections</em>, helping set agendas and budgets that reflect current public
+will. It could also enhance accountability: officials would need to
+either act in line with the evident priorities of the public or be
+prepared to explain why they are diverging. Knowing that citizens have
+this signaling power continuously might pressure governments to be more
+responsive, closing the feedback loop that is often painfully slow in
+representative systems.</p>
+<p>The D-Coin system also ties back to the initial problem of economic
+protest. If implemented, citizens would have a constructive outlet for
+their policy frustrations. Instead of attempting a <strong>blunt protest via
+markets</strong> (like the GameStop rush) or stewing in frustration until the
+next election, they could pour their D-Coins into a form of direct
+protest or support. For instance, if a controversial bill is making its
+way through the legislature, opponents could allocate tokens en masse to
+a &ldquo;Stop Bill X&rdquo; issue&mdash;a signal that would be immediately visible on
+the public blockchain dashboard. It&rsquo;s a bit like a petition, but with
+state-sanctioned digital weight behind it. Similarly, if people strongly
+approve of something (say a proposed Green New Deal), they could
+pre-emptively allocate tokens to show overwhelming support, perhaps
+swaying undecided lawmakers. In short, D-Coins would enable a kind of
+<strong>economy of civic influence</strong>, where every citizen has a budget of
+influence to spend as they see fit.</p>
+<h2 id="implementation-ideas-for-a-blockchain-backed-civic-system">Implementation Ideas for a Blockchain-Backed Civic System<a class="headerlink" href="#implementation-ideas-for-a-blockchain-backed-civic-system" title="Permanent link">&para;</a></h2>
+<p>Designing and implementing a D-Coin system would be a significant
+endeavor, touching technology, law, and social behavior. Here are some
+key implementation ideas drawn from existing research and projects:</p>
+<ul>
+<li>
+<p><strong>Digital Identity and Security:</strong> A fundamental requirement is to
+  ensure that each person gets their rightful share of D-Coins (and no
+  more). Blockchain alone doesn&rsquo;t solve identity&mdash;we&rsquo;d likely need a
+  robust digital ID or verification system (possibly tied to government
+  ID registries) to <strong>prevent fraud or duplicate accounts</strong>. Projects
+  like Estonia&rsquo;s e-residency and others have shown digital ID can be
+  done securely. To maintain anonymity in preference signaling
+  (important for privacy), one approach could be issuing D-Coins to a
+  citizen&rsquo;s cryptographic wallet in a way that the <strong>government knows
+  each eligible person received tokens, but doesn&rsquo;t track how they use
+  them</strong>. Zero-knowledge proofs or blind signatures could allow
+  verification that each user is legit without linking their votes to
+  their identity. This is analogous to how some blockchain voting
+  prototypes work&mdash;ensuring one-person-one-vote while keeping the vote
+  secret.</p>
+</li>
+<li>
+<p><strong>Token Mechanics:</strong> We must decide how the tokens behave. Likely,
+  D-Coins would be <strong>non-transferable</strong> except for delegation within the
+  platform&mdash;you shouldn&rsquo;t be able to sell or trade them to someone
+  else for cash, as that would undermine equality (rich actors could buy
+  up others&rsquo; tokens). They might also <strong>expire or refresh regularly</strong>.
+  For example, each month you get 100 new tokens and perhaps unused
+  tokens don&rsquo;t carry over indefinitely (or there&rsquo;s a cap), to encourage
+  active usage and prevent hoarding. This echoes the idea of Seattle&rsquo;s
+  democracy vouchers (for campaign finance), where unused vouchers in an
+  election cycle simply expire&mdash;use it or lose it, so that everyone is
+  incentivized to participate equally. The periodic issuance also
+  mirrors how Quadratic Voting experiments give fresh credits for each
+  decision or period. By making tokens continuously issued, we ensure
+  <em>the currency of influence remains evenly distributed over time</em>.</p>
+</li>
+<li>
+<p><strong>User Interface and Experience:</strong> To succeed, the system needs a
+  <strong>simple and engaging interface</strong>. Users should be able to see at a
+  glance what issues or proposals are open for support, how many tokens
+  they and others have allocated, and what impact it&rsquo;s making. We can
+  draw inspiration from familiar apps&mdash;imagine something like a cross
+  between a polling app and a stock trading app. Instead of stock
+  tickers, you have issues with rising or falling token support. A
+  citizen might get a notification: &ldquo;You have received 100 D-Coins for
+  May. Allocate them to the issues you care about!&rdquo; We should also allow
+  easy delegation through the UI: for those not inclined to constant
+  engagement, an option like &ldquo;Delegate my monthly tokens to
+  [Environmental NGO]&rdquo; with one click, would channel their influence
+  to that organization&rsquo;s wallet each month. Research from the DAO
+  context suggests coordination hubs increased
+  participation&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=average%2C%2017,posing%20an%20important%20challenge%20to">[9]</a>,
+  so an in-app directory of potential delegates (with profiles
+  explaining their positions) could help citizens find someone to trust
+  if they don&rsquo;t want to self-manage tokens.</p>
+</li>
+<li>
+<p><strong>Integration with Decision-Making:</strong> What happens after the tokens
+  are allocated? One model is <strong>advisory but public pressure</strong>&mdash;the
+  D-Coin tallies are published and presented to lawmakers or officials
+  as a real-time mandate. This itself could be powerful; even if not
+  legally binding, media and civic groups could hold leaders accountable
+  by pointing to the token totals (&ldquo;95,000 citizens representing 12
+  million tokens oppose X&rdquo;). Another model is <strong>institutionalizing
+  responses</strong>: for instance, a government could commit that any proposal
+  which gathers above a certain threshold of D-Coins will be formally
+  debated or put to a binding referendum. It could also tie into
+  participatory budgeting&mdash;perhaps a small percentage of the city or
+  national budget is allocated directly in proportion to token votes on
+  various public projects (similar to how some cities let residents vote
+  on community projects). The <strong>Colorado QV experiment</strong> is instructive
+  here: they used the outcome of the token vote to set funding
+  priorities&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=state%E2%80%99s%20first%20experiment%20with%20QV,2">[29]</a>.
+  A city could similarly say, &ldquo;each year, 10% of discretionary funds
+  will be allocated according to the distribution of D-Coins among
+  spending categories signaled by citizens.&rdquo;</p>
+</li>
+<li>
+<p><strong>Blockchain Infrastructure:</strong> Choosing the right blockchain setup is
+  important. A <strong>public, permissionless blockchain</strong> (like Ethereum or a
+  similar network) would maximize transparency&mdash;anyone can
+  independently verify the totals&mdash;but might pose scalability and cost
+  issues (each token transaction might carry a fee). A <strong>permissioned
+  blockchain</strong> operated by a public consortium could be more efficient
+  and still provide an open ledger of votes. The data recorded would be
+  simple transactions: citizen X allocated Y tokens to issue Z at
+  time T. This could be aggregated into a continuously updating
+  &ldquo;scoreboard&rdquo; of issues. Smart contracts could enforce rules (e.g. no
+  transfers except delegate contracts, monthly refresh of balances,
+  threshold triggers for proposals, etc.). Importantly, all code should
+  be open source and auditable to build trust. Given the sensitivity,
+  one might even use a bespoke blockchain for D-Coin or layer two
+  solutions to ensure that <strong>voting is free (no gas fees for users)</strong>
+  and fast, while anchoring final results to a public chain for
+  security.</p>
+</li>
+<li>
+<p><strong>Incentives and Gamification:</strong> To avoid the pitfall of low
+  participation, the system could incorporate incentives. Seoul&rsquo;s S-Coin
+  approach of <strong>rewarding participation</strong> offers one idea: perhaps
+  citizens earn small civic rewards for using their D-Coins (for
+  example, a badge, recognition, or even tangible perks like a transit
+  credit if they allocate tokens consistently). Care is needed to not
+  skew the actual votes&mdash;we wouldn&rsquo;t want people allocating tokens
+  randomly just to get a reward. But gentle nudges, like a progress
+  tracker (&ldquo;You&rsquo;ve allocated 80 of 100 tokens this month&rdquo;) or social
+  elements (&ldquo;Your neighborhood has 60% participation this month, can you
+  help reach 70%?&rdquo;), could improve engagement. The Vermont pilot&rsquo;s
+  question&mdash;can incentives increase engagement?&mdash;might find an
+  answer in modest token-based
+  rewards&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[23]</a>.
+  Another idea is <strong>public deliberation tie-ins</strong>: the platform could
+  encourage discussion or let people post arguments alongside issues,
+  blending deliberative democracy with token voting. This way, D-Coins
+  become not just a static vote but part of a living debate, which might
+  deepen citizens&rsquo; involvement over time.</p>
+</li>
+</ul>
+<h2 id="challenges-and-open-questions">Challenges and Open Questions<a class="headerlink" href="#challenges-and-open-questions" title="Permanent link">&para;</a></h2>
+<p>A D-Coin system, while exciting, comes with a host of <strong>open questions
+and challenges</strong> that must be addressed to make it viable and
+trustworthy:</p>
+<ul>
+<li>
+<p><strong>Will People Participate?</strong> Continuous democracy requires continuous
+  effort from citizens. Experience from liquid democracy and even
+  traditional civic engagement shows participation often starts strong
+  and then
+  dwindles&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=democracy%20can%20foster%20bottom,contemplated%20in%20existing%20theoretical%20literature">[10]</a>.
+  Many citizens are busy or disinterested in policy minutiae. How do we
+  ensure widespread and ongoing use of D-Coins, rather than just a small
+  activist subset each month? This raises questions of civic culture and
+  education&mdash;perhaps schools would need to teach &ldquo;digital civics&rdquo; so
+  that new generations see token voting as a normal duty, like jury
+  service or voting in elections. Additionally, if delegation is too
+  easy, will we end up replicating representative democracy by another
+  name (with most people delegating and tuning out)? Finding the balance
+  between easy participation and encouraging direct input is crucial.</p>
+</li>
+<li>
+<p><strong>Digital Divide and Accessibility:</strong> Any high-tech platform risks
+  leaving out those with limited internet access or low digital
+  literacy, often older or marginalized citizens. If D-Coins became a
+  key channel for voice, it&rsquo;s essential to ensure <strong>universal access</strong>.
+  This might mean providing alternative interfaces (like kiosks at
+  libraries or SMS-based token allocation for those without smartphones)
+  or community support programs to help people get onboarded. We must
+  avoid creating a democracy that&rsquo;s more responsive to the digitally
+  savvy while others fall behind.</p>
+</li>
+<li>
+<p><strong>Privacy vs Transparency:</strong> Blockchain&rsquo;s transparency is a
+  double-edged sword. On one hand, it builds trust&mdash;everyone can see
+  the aggregate results and be sure they weren&rsquo;t tampered with. On the
+  other hand, if each person&rsquo;s allocations are traceable, it could lead
+  to <strong>pressures or vote buying</strong>. For genuine democracy, the <em>secret
+  ballot</em> principle is important; people should be free to express
+  political preferences without fear of retaliation or coercion.
+  Techniques like <strong>anonymous tokens</strong> or using one-way aggregators
+  (where individual votes are private but totals are public) need to be
+  employed. Perhaps identities are masked by default (represented by
+  random wallet addresses) and the system periodically shuffles or mixes
+  token trails so that no one can build a dossier of how John Doe spent
+  his D-Coins over time.</p>
+</li>
+<li>
+<p><strong>Manipulation and Security:</strong> While outright buying of tokens from
+  others could be banned, <strong>bribery and collusion</strong> are perennial
+  concerns. Could special interests attempt to bribe citizens
+  off-platform (&ldquo;allocate your D-Coins to support our project and we&rsquo;ll
+  pay you in cash&rdquo;)? Monitoring and enforcement against such behavior
+  would be challenging, though making tokens non-transferable and
+  anonymous helps. Additionally, the system must be secure against cyber
+  attacks. A hostile actor might try to flood the platform with fake
+  issues or spam to confuse users (content moderation will be needed for
+  user-submitted proposals). Smart contracts must be audited to avoid
+  exploits that could, say, siphon tokens or falsify results.
+  Essentially, the integrity of the system has to be ironclad, because
+  any high-profile failure could erode public trust quickly.</p>
+</li>
+<li>
+<p><strong>Legitimacy and Legal Status:</strong> A big question is how to embed
+  D-Coins into the <strong>constitutional and legal framework</strong>. Is the token
+  allocation considered an official vote or just a public consultation?
+  If it&rsquo;s advisory, politicians might ignore it, especially if it
+  conflicts with their agenda or with the interests of powerful lobbies
+ &mdash;diminishing citizens&rsquo; faith in the system over time. If it&rsquo;s
+  binding, we venture into new territory of direct democracy: can we
+  legally allow a continuously updated mandate to override legislative
+  decisions? Perhaps a middle ground is to treat D-Coin outcomes as a
+  new kind of mandate that <em>must be formally considered</em> at set
+  intervals. For example, each quarter, the legislature is required to
+  hold hearings on the top X issues by token support, or the executive
+  must publicly respond to the top citizen priorities. This would
+  institutionalize responsiveness without fully handing law-making over
+  to token votes. In any case, legislation or even constitutional
+  amendments might be needed to recognize this form of participation.</p>
+</li>
+<li>
+<p><strong>Quality of Deliberation:</strong> Critics might worry that a
+  popularity-based, real-time system could lead to <strong>impulsive or
+  short-termist decision-making</strong>. Democracies have checks and balances
+  and slow processes in part to filter out knee-jerk passions and ensure
+  minority rights. If officials started pandering solely to the token
+  totals, would that reduce nuanced policy debate? On the flip side,
+  could well-funded interests astroturf campaigns to sway public opinion
+  and thus token allocations (similar to how media campaigns can sway
+  polls)? Ensuring that the public is informed and that there&rsquo;s healthy
+  deliberation around the issues listed on the D-Coin platform is an
+  open challenge. One idea is to pair the token voting with deliberative
+  panels or AI-curated pro/con arguments visible to voters, so that the
+  choice isn&rsquo;t just a click based on whims but an informed decision
+  process.</p>
+</li>
+<li>
+<p><strong>Measuring Impact and Accountability:</strong> Finally, an open question is
+  how to measure the success of such a system. What benchmarks indicate
+  that tokenized democracy is &ldquo;working&rdquo;? Is it higher satisfaction with
+  government? More policy alignment with public preferences? And who is
+  accountable if the system produces a bad outcome&mdash;say, an
+  ill-advised but popular policy gets support and is implemented with
+  negative results? In representative democracy, we at least know whom
+  to vote out. In a direct token system, <em>&ldquo;the people&rdquo;</em> themselves are
+  the decision-makers to a larger degree. This might require new norms
+  of accountability, where perhaps expert oversight committees review
+  the top token-supported proposals for feasibility, or a mechanism to
+  quickly reverse course if a fervor of the moment leads to a
+  detrimental choice (not unlike how any governance system needs
+  checks).</p>
+</li>
+</ul>
+<p>Each of these challenges is substantial, but none appear insurmountable.
+They will require iterative experimentation, much like earlier pilots
+but on a larger scale. The path forward could involve <strong>gradual
+implementation</strong>: for example, start a D-Coin program at the city level
+or for a specific domain (say, a &ldquo;climate action token&rdquo; that citizens
+allocate among environmental programs), study the outcomes, and refine
+the rules before scaling up.</p>
+<h2 id="conclusion-toward-a-more-responsive-democracy">Conclusion: Toward a More Responsive Democracy<a class="headerlink" href="#conclusion-toward-a-more-responsive-democracy" title="Permanent link">&para;</a></h2>
+<p>The convergence of ideas from economics, political science, and
+blockchain technology is opening up new frontiers for democratic
+innovation. What began as disparate threads&mdash;quadratically weighted
+voting schemes, liquid delegation models, crypto tokens for community
+building&mdash;are now weaving into a cohesive vision of a 21<sup>st</sup>-century
+democracy that is both <strong>participatory and continuous</strong>. The personal
+reflection on events like the GameStop revolt underscores a real hunger
+in society for more agency and voice. By channeling that energy into a
+structured civic token system, we have the opportunity to make democracy
+not just an event every few years, but an <strong>everyday engagement</strong>.</p>
+<p>This research survey has shown that the building blocks for such a
+system are already being tested: from Colorado&rsquo;s use of quadratic voting
+to Seoul&rsquo;s citizen tokens, from Democracy Earth&rsquo;s blockchain voting
+platform to local experiments rewarding volunteers. The D-Coin concept
+synthesizes these into a bold proposal: a democratically issued digital
+token that empowers citizens to signal their preferences, invest in
+their values, and hold their government to account on an ongoing basis.
+It is a vision both <strong>visionary and grounded</strong>&mdash;visionary in its
+potential to transform governance, yet grounded in existing science and
+trials that hint at what&rsquo;s possible.</p>
+<p>Of course, realizing this vision will take <em>careful design, broad public
+buy-in, and iterative refinement</em>. It will raise new questions for
+economists (how do we fine-tune the token incentives?), for political
+scientists (how does this affect legitimacy and participation?), and for
+technologists (how to secure and scale the platform?). But if
+successful, the payoff is profound: a democracy that learns in real
+time, that treats citizens as constant collaborators in governance
+rather than periodic voters, and that harnesses the wisdom of crowds
+without losing the signal of intense preferences. In such a democracy,
+<strong>protest by stock market might become obsolete</strong>, because citizens will
+have far more direct and constructive ways to make themselves heard.</p>
+<p>As we stand at the crossroads of technology and governance, the
+exploration of blockchain-based democratic participation isn&rsquo;t just
+academic&mdash;it&rsquo;s a crucial endeavor for the future of civic life. The
+open questions invite all of us&mdash;researchers, policymakers, and
+citizens&mdash;to experiment and participate in designing this future. The
+promise of D-Coins and similar innovations is to ultimately <strong>renew
+democratic accountability and engagement</strong> for the modern era, ensuring
+that government of the people, by the people, and for the people is not
+only preserved, but also continually reinvented with the people&rsquo;s active
+input.</p>
+<p><strong>Sources:</strong></p>
+<ul>
+<li>Casella, A. &amp; Sanchez, L. (2019). <em>Storable Votes and Quadratic
+  Voting: An Experiment on Four California Propositions</em>. NBER Working
+  Paper
+  25510&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=Storable%20Votes%20and%20Quadratic%20Voting,thumb%20in">[3]</a>.</li>
+<li>Weyl, E. G., et al. (2018). <em>Quadratic Voting in Democratic Politics</em>.
+  (Applications in Colorado&rsquo;s budgeting
+  process)&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=Working%20with%20RadicalxChange%20Foundation%20and,a%20more%20informed%20and%20nuanced">[5]</a>.</li>
+<li>Campbell, J., et al. (2022). <em>Liquid Democracy: Two Experiments on
+  Delegation in Voting</em>. NBER Working Paper
+  30794&nbsp;<a href="https://www.nber.org/papers/w30794#:~:text=Under%20Liquid%20Democracy%20,follows%20a%20tightly%20controlled%20design">[11]</a>.</li>
+<li>Hall, A. &amp; Miyazaki, S. (2024). <em>What Happens When Anyone Can Be Your
+  Representative? Empirical Study of Liquid Democracy in Crypto DAOs</em>.
+  Stanford GSB Working
+  Paper&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=platforms%20governed%20by%20users%20rather,online%20hubs%20to%20coordinate%20delegation">[7]</a>&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=democracy%20can%20foster%20bottom,contemplated%20in%20existing%20theoretical%20literature">[10]</a>.</li>
+<li>Democracy Earth Foundation (2017). <em>Building a Blockchain-based Liquid
+  Democracy
+  Platform</em>&nbsp;<a href="https://participedia.net/case/4675#:~:text=Democracy%20Earth%20aims%20to%20develop,the%20philosophy%20of%20liquid%20democracy">[12]</a>.</li>
+<li>Seoul Metropolitan Government (2019). Announcement of <strong>S-Coin</strong>
+  blockchain reward system for citizen
+  engagement&nbsp;<a href="https://www.paymentsdive.com/ex/mpt/news/seoul-south-korea-to-set-up-blockchain-system-to-award-citizens?#:~:text=The%20Metropolitan%20Government%20of%20Seoul%2C,report%20by%20The%20South%20African">[13]</a>.</li>
+<li>Viano, C. (2024). <em>Context-based civic blockchain: Localising
+  blockchain for local civic participation</em>. Digital Geography and
+  Society, 6,
+  100090&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=ABSTRACT%20Experiments%20in%20alternative%20forms,communities%20by%20tokenising%20social%20and">[30]</a>&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=associations%20and%20receive%20reward%20tokens,digital%20coupons%20issued%20by%20local">[18]</a>.</li>
+<li>Westrope, A. (2019). <em>Blockchain Civic Engagement Tool to be Tested in
+  Vermont</em>. GovTech
+  News&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[23]</a>&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=A%20nine,button%20issues%20in%20real%20time">[21]</a>.</li>
+<li><strong>Additional references on blockchain governance and continuous
+  voting:</strong> Giveth (2019) on conviction
+  voting&nbsp;<a href="https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475#:~:text=,vote%20buying%27%20becomes%20%27vote%20renting">[31]</a>;
+  RadXChange Foundation on Colorado Quadratic Voting
+  experiments&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=Working%20with%20RadicalxChange%20Foundation%20and,a%20more%20informed%20and%20nuanced">[5]</a>;
+  Niche Gamer report on GameStop as economic
+  protest&nbsp;<a href="https://nichegamer.com/report-surging-gamestop-stock-prices-inspires-economic-protest-against-wall-street-and-hedge-funds/#:~:text=Surging%20GameStop%20stock%20prices%20have,to%20harm%20those%20who%20shorted">[1]</a>.</li>
+</ul>
+<hr />
+<p>&nbsp;<a href="https://nichegamer.com/report-surging-gamestop-stock-prices-inspires-economic-protest-against-wall-street-and-hedge-funds/#:~:text=Surging%20GameStop%20stock%20prices%20have,to%20harm%20those%20who%20shorted">[1]</a>
+Report: Surging GameStop Stock Prices Inspires Economic Protest Against
+Wall Street and Hedge Funds - Niche Gamer</p>
+<p><a href="https://nichegamer.com/report-surging-gamestop-stock-prices-inspires-economic-protest-against-wall-street-and-hedge-funds/">https://nichegamer.com/report-surging-gamestop-stock-prices-inspires-economic-protest-against-wall-street-and-hedge-funds/</a></p>
+<p>&nbsp;<a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181002#:~:text=Democracy%20www,of%20AEA%20Papers%20and">[2]</a>
+Quadratic Voting: How Mechanism Design Can Radicalize Democracy</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181002">https://www.aeaweb.org/articles?id=10.1257/pandp.20181002</a></p>
+<p>&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=Storable%20Votes%20and%20Quadratic%20Voting,thumb%20in">[3]</a>
+&nbsp;<a href="https://www.nber.org/papers/w25510#:~:text=California%20residents%20using%20data%20on,thumb%20in">[6]</a>
+Storable Votes and Quadratic Voting. An Experiment on Four California
+Propositions | NBER</p>
+<p><a href="https://www.nber.org/papers/w25510">https://www.nber.org/papers/w25510</a></p>
+<p>&nbsp;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531#:~:text=Democracy%20papers,in%20the%20votes%20they%20buy">[4]</a>
+Quadratic Voting: How Mechanism Design Can Radicalize Democracy</p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531</a></p>
+<p>&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=Working%20with%20RadicalxChange%20Foundation%20and,a%20more%20informed%20and%20nuanced">[5]</a>
+&nbsp;<a href="https://www.radicalxchange.org/wiki/colorado-qv/#:~:text=state%E2%80%99s%20first%20experiment%20with%20QV,2">[29]</a>
+Quadratic Voting in Colorado - RadicalxChange</p>
+<p><a href="https://www.radicalxchange.org/wiki/colorado-qv/">https://www.radicalxchange.org/wiki/colorado-qv/</a></p>
+<p>&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=platforms%20governed%20by%20users%20rather,online%20hubs%20to%20coordinate%20delegation">[7]</a>
+&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=setting%2C%20analyzing%20data%20from%20over,participation%2C%20particularly%20when%20paired%20with">[8]</a>
+&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=average%2C%2017,posing%20an%20important%20challenge%20to">[9]</a>
+&nbsp;<a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use#:~:text=democracy%20can%20foster%20bottom,contemplated%20in%20existing%20theoretical%20literature">[10]</a>
+What Happens When Anyone Can Be Your Representative? Studying the Use of
+Liquid Democracy for High-Stakes Decisions in Online Platforms |
+Stanford Graduate School of Business</p>
+<p><a href="https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use">https://www.gsb.stanford.edu/faculty-research/working-papers/what-happens-when-anyone-can-be-your-representative-studying-use</a></p>
+<p>&nbsp;<a href="https://www.nber.org/papers/w30794#:~:text=Under%20Liquid%20Democracy%20,follows%20a%20tightly%20controlled%20design">[11]</a>
+Liquid Democracy. Two Experiments on Delegation in Voting | NBER</p>
+<p><a href="https://www.nber.org/papers/w30794">https://www.nber.org/papers/w30794</a></p>
+<p>&nbsp;<a href="https://participedia.net/case/4675#:~:text=Democracy%20Earth%20aims%20to%20develop,the%20philosophy%20of%20liquid%20democracy">[12]</a>
+Democracy Earth Web App for Public Participation&mdash;Participedia</p>
+<p><a href="https://participedia.net/case/4675">https://participedia.net/case/4675</a></p>
+<p>&nbsp;<a href="https://www.paymentsdive.com/ex/mpt/news/seoul-south-korea-to-set-up-blockchain-system-to-award-citizens?#:~:text=The%20Metropolitan%20Government%20of%20Seoul%2C,report%20by%20The%20South%20African">[13]</a>
+Seoul, South Korea to set up blockchain system to award citizens |
+Payments Dive</p>
+<p><a href="https://www.paymentsdive.com/ex/mpt/news/seoul-south-korea-to-set-up-blockchain-system-to-award-citizens">https://www.paymentsdive.com/ex/mpt/news/seoul-south-korea-to-set-up-blockchain-system-to-award-citizens</a></p>
+<p>&nbsp;<a href="https://www.blockchain-council.org/blockchain/seoul-eyes-release-of-city-wide-crypto-for-smart-city-development/#:~:text=Development%20www.blockchain,is%20a%20good%20way">[14]</a>
+Seoul Eyes Release of City-Wide Crypto For Smart City Development</p>
+<p><a href="https://www.blockchain-council.org/blockchain/seoul-eyes-release-of-city-wide-crypto-for-smart-city-development/">https://www.blockchain-council.org/blockchain/seoul-eyes-release-of-city-wide-crypto-for-smart-city-development/</a></p>
+<p>&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=blockchain,the%20needs%20and%20resources%20of">[15]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=pilot%20experimentations%20on%20the%20app,differences%20with%20other%20urban%20digital">[16]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=identity%2C%20as%20exemplified%20by%20naming,and%20exchange%20places%20made%20the">[17]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=associations%20and%20receive%20reward%20tokens,digital%20coupons%20issued%20by%20local">[18]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=reward%20token%20is%20considered%20by,participation%20places%2C%20and%20as%20an">[19]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=The%20digital%20interactions%20are%20intended,of%20tokens%20are%20prob%02ably%20not">[20]</a>
+&nbsp;<a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf#:~:text=ABSTRACT%20Experiments%20in%20alternative%20forms,communities%20by%20tokenising%20social%20and">[30]</a>
+Context-based civic blockchain: Localising blockchain for local civic
+participation.</p>
+<p><a href="https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf">https://iris.unito.it/retrieve/5c3c0339-5085-4032-9277-18865db15955/1-s2.0-S2666378324000126-main%20%281%29.pdf</a></p>
+<p>&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=A%20nine,button%20issues%20in%20real%20time">[21]</a>
+&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=How%20could%20mobile%20devices%2C%20blockchain%2C,make%20local%20government%20more%20representative">[22]</a>
+&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[23]</a>
+&nbsp;<a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html#:~:text=,ongoing%20citizen%20feedback%20and%20data">[24]</a>
+Blockchain Civic Engagement Tool to Be Tested in Vermont</p>
+<p><a href="https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html">https://www.govtech.com/biz/Blockchain-Civic-Engagement-Tool-to-be-Tested-in-Vermont.html</a></p>
+<p>&nbsp;<a href="https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4#:~:text=Governance%20Attack%20Vectors%20in%20DAOs%3A,Technical">[25]</a>
+&nbsp;<a href="https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4#:~:text=Conviction%20Voting%20is%20a%20continuous,Technical">[26]</a>
+Governance Attack Vectors in DAOs: A Comprehensive Analysis of ...</p>
+<p><a href="https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4">https://olympixai.medium.com/governance-attack-vectors-in-daos-a-comprehensive-analysis-of-identification-and-prevention-e27c08d45ae4</a></p>
+<p>&nbsp;<a href="https://www.findas.org/tokenomics-review/coins/the-tokenomics-of-eos/r/Af9qAnQo9nDqtnTDr8biTT#:~:text=EOS%20Tokenomics%3A%20A%20Comprehensive%20Guide,dynamic%20and%20responsive%20governance">[27]</a>
+EOS Tokenomics: A Comprehensive Guide to Its Economic Model</p>
+<p><a href="https://www.findas.org/tokenomics-review/coins/the-tokenomics-of-eos/r/Af9qAnQo9nDqtnTDr8biTT">https://www.findas.org/tokenomics-review/coins/the-tokenomics-of-eos/r/Af9qAnQo9nDqtnTDr8biTT</a></p>
+<p>&nbsp;<a href="https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475#:~:text=,vote%20buying%27%20becomes%20%27vote%20renting">[28]</a>
+&nbsp;<a href="https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475#:~:text=,vote%20buying%27%20becomes%20%27vote%20renting">[31]</a>
+Conviction Voting: A Novel Continuous Decision Making Alternative ...</p>
+<p><a href="https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475">https://blog.giveth.io/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475</a></p>
+</article>
+
+<hr/>
+
+
+    </main>
+    
+    <footer>
+        <p>
+            Powered by MkDocs; design follows <a href="https://github.com/goessner">Stefan Gössner</a>'s <a href="https://github.com/goessner/mdmath">md-math</a>.
+        </p>
+    </footer>
+
+    <script>
+        var base_url = "../..";
+    </script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dexie/dist/dexie.min.js"></script>
+      <script src="../../js/d3-umap.js"></script>
+      <script src="../../search/main.js"></script>
+    <script type="module">
+        import { search } from '/js/onnx.js';
+    </script>
+</body>
+</html>
